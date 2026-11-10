@@ -1,0 +1,5 @@
+bandit==1.9.4
+semgrep==1.182.1
+cwe2==3.0.0
+jsonschema==4.25.1
+pytest==8.4.2

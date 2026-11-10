@@ -2,3 +2,7 @@ __pycache__/
 *.pyc
 semgrep-rules/
 .venv/
+rules/semgrep-python-security.yaml
+datasets/securityeval/cases/
+datasets/securityeval/_clone/
+evidence/*/work/
