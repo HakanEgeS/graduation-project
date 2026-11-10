@@ -1,0 +1,101 @@
+[
+ {
+  "tool": "bandit",
+  "rule_id": "B413",
+  "file": "holdout/vuln/h04_des_cipher.py",
+  "line": 1,
+  "severity": "HIGH",
+  "cwes": [
+   "CWE-327"
+  ],
+  "message": "The pyCrypto library and its module DES are no longer actively maintained and have been deprecated. Consider using pyca/cryptography library."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B304",
+  "file": "holdout/vuln/h04_des_cipher.py",
+  "line": 5,
+  "severity": "HIGH",
+  "cwes": [
+   "CWE-327"
+  ],
+  "message": "Use of insecure cipher Crypto.Cipher.DES.new. Replace with a known secure cipher such as AES."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B306",
+  "file": "holdout/vuln/h05_mktemp.py",
+  "line": 5,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-377"
+  ],
+  "message": "Use of insecure and deprecated function (mktemp)."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B103",
+  "file": "holdout/vuln/h06_chmod_world.py",
+  "line": 5,
+  "severity": "HIGH",
+  "cwes": [
+   "CWE-732"
+  ],
+  "message": "Chmod setting a permissive mask 0o777 on file (path)."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B102",
+  "file": "holdout/vuln/h07_exec_plugin.py",
+  "line": 10,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Use of exec detected."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B402",
+  "file": "holdout/vuln/h11_cleartext_ftp.py",
+  "line": 1,
+  "severity": "HIGH",
+  "cwes": [
+   "CWE-319"
+  ],
+  "message": "A FTP-related module is being imported.  FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B321",
+  "file": "holdout/vuln/h11_cleartext_ftp.py",
+  "line": 5,
+  "severity": "HIGH",
+  "cwes": [
+   "CWE-319"
+  ],
+  "message": "FTP-related functions are being called. FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B608",
+  "file": "holdout/vuln/h15_sqli_fstring_cross.py",
+  "line": 10,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-89"
+  ],
+  "message": "Possible SQL injection vector through string-based query construction."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B605",
+  "file": "holdout/vuln/h16_cmdi_fstring_cross.py",
+  "line": 11,
+  "severity": "HIGH",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Starting a process with a shell, possible injection detected, security issue."
+ }
+]

@@ -1,0 +1,38 @@
+[
+ {
+  "tool": "semgrep",
+  "rule_id": "use-raise-for-status",
+  "file": "holdout/vuln/h02_ssrf.py",
+  "line": 10,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "There's an HTTP request made with requests, but the raise_for_status() utility method isn't used. This can result in request errors going unnoticed and your code behaving in unexpected ways, such as i"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "tempfile-insecure",
+  "file": "holdout/vuln/h05_mktemp.py",
+  "line": 5,
+  "severity": "ERROR",
+  "cwes": [],
+  "message": "Use tempfile.NamedTemporaryFile instead. From the official Python documentation: THIS FUNCTION IS UNSAFE AND SHOULD NOT BE USED. The file name may refer to a file that did not exist at some point, but"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "unspecified-open-encoding",
+  "file": "holdout/vuln/h05_mktemp.py",
+  "line": 6,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "Missing 'encoding' parameter. 'open()' uses device locale encodings by default, corrupting files with special characters. Specify the encoding to ensure cross-platform support when opening files in te"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "unspecified-open-encoding",
+  "file": "holdout/vuln/h17_path_join_open.py",
+  "line": 12,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "Missing 'encoding' parameter. 'open()' uses device locale encodings by default, corrupting files with special characters. Specify the encoding to ensure cross-platform support when opening files in te"
+ }
+]

@@ -1,0 +1,5409 @@
+{
+ "$schema": "https://docs.oasis-open.org/sarif/sarif/v2.1.0/errata01/os/schemas/sarif-schema-2.1.0.json",
+ "version": "2.1.0",
+ "runs": [
+  {
+   "tool": {
+    "driver": {
+     "name": "vulnreview",
+     "version": "0.2.0",
+     "informationUri": "https://github.com/HakanEgeS/graduation-project",
+     "rules": [
+      {
+       "id": "CWE-20",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-20"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-20"
+        ]
+       }
+      },
+      {
+       "id": "CWE-611",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-611"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-611"
+        ]
+       }
+      },
+      {
+       "id": "CWE-116+CWE-79",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-116, CWE-79"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-116",
+         "external/cwe/cwe-79"
+        ]
+       }
+      },
+      {
+       "id": "CWE-502",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-502"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-502"
+        ]
+       }
+      },
+      {
+       "id": "CWE-601",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-601"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-601"
+        ]
+       }
+      },
+      {
+       "id": "CWE-22+CWE-23+CWE-36+CWE-73+CWE-99",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-22, CWE-23, CWE-36, CWE-73, CWE-99"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-22",
+         "external/cwe/cwe-23",
+         "external/cwe/cwe-36",
+         "external/cwe/cwe-73",
+         "external/cwe/cwe-99"
+        ]
+       }
+      },
+      {
+       "id": "CWE-22",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-22"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-22"
+        ]
+       }
+      },
+      {
+       "id": "CWE-939",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-939"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-939"
+        ]
+       }
+      },
+      {
+       "id": "CWE-22+CWE-377",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-22, CWE-377"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-22",
+         "external/cwe/cwe-377"
+        ]
+       }
+      },
+      {
+       "id": "CWE-78",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-78"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-78"
+        ]
+       }
+      },
+      {
+       "id": "CWE-78+CWE-88",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-78, CWE-88"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-78",
+         "external/cwe/cwe-88"
+        ]
+       }
+      },
+      {
+       "id": "CWE-79+CWE-94",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-79, CWE-94"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-79",
+         "external/cwe/cwe-94"
+        ]
+       }
+      },
+      {
+       "id": "CWE-116",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-116"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-116"
+        ]
+       }
+      },
+      {
+       "id": "CWE-79",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-79"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-79"
+        ]
+       }
+      },
+      {
+       "id": "CWE-259",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-259"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-259"
+        ]
+       }
+      },
+      {
+       "id": "CWE-89",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-89"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-89"
+        ]
+       }
+      },
+      {
+       "id": "CWE-90",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-90"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-90"
+        ]
+       }
+      },
+      {
+       "id": "CWE-116+CWE-94+CWE-95",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-116, CWE-94, CWE-95"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-116",
+         "external/cwe/cwe-94",
+         "external/cwe/cwe-95"
+        ]
+       }
+      },
+      {
+       "id": "CWE-95",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-95"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-95"
+        ]
+       }
+      },
+      {
+       "id": "CWE-377",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-377"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-377"
+        ]
+       }
+      },
+      {
+       "id": "CWE-116+CWE-185+CWE-186+CWE-20",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-116, CWE-185, CWE-186, CWE-20"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-116",
+         "external/cwe/cwe-185",
+         "external/cwe/cwe-186",
+         "external/cwe/cwe-20"
+        ]
+       }
+      },
+      {
+       "id": "CWE-117",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-117"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-117"
+        ]
+       }
+      },
+      {
+       "id": "CWE-327",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-327"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-327"
+        ]
+       }
+      },
+      {
+       "id": "CWE-209+CWE-497",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-209, CWE-497"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-209",
+         "external/cwe/cwe-497"
+        ]
+       }
+      },
+      {
+       "id": "CWE-94",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-94"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-94"
+        ]
+       }
+      },
+      {
+       "id": "CWE-215+CWE-489+CWE-668",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-215, CWE-489, CWE-668"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-215",
+         "external/cwe/cwe-489",
+         "external/cwe/cwe-668"
+        ]
+       }
+      },
+      {
+       "id": "CWE-489",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-489"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-489"
+        ]
+       }
+      },
+      {
+       "id": "CWE-295",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-295"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-295"
+        ]
+       }
+      },
+      {
+       "id": "CWE-400",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-400"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-400"
+        ]
+       }
+      },
+      {
+       "id": "CWE-614",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-614"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-614"
+        ]
+       }
+      },
+      {
+       "id": "CWE-1004",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-1004"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-1004"
+        ]
+       }
+      },
+      {
+       "id": "CWE-319",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-319"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-319"
+        ]
+       }
+      },
+      {
+       "id": "CWE-326",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-326"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-326"
+        ]
+       }
+      },
+      {
+       "id": "CWE-326+CWE-327",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-326, CWE-327"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-326",
+         "external/cwe/cwe-327"
+        ]
+       }
+      },
+      {
+       "id": "CWE-327+CWE-328+CWE-916",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-327, CWE-328, CWE-916"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-327",
+         "external/cwe/cwe-328",
+         "external/cwe/cwe-916"
+        ]
+       }
+      },
+      {
+       "id": "CWE-330",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-330"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-330"
+        ]
+       }
+      },
+      {
+       "id": "CWE-287",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-287"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-287"
+        ]
+       }
+      },
+      {
+       "id": "CWE-200",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-200"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-200"
+        ]
+       }
+      },
+      {
+       "id": "CWE-605",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-605"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-605"
+        ]
+       }
+      },
+      {
+       "id": "CWE-611+CWE-827",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-611, CWE-827"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-611",
+         "external/cwe/cwe-827"
+        ]
+       }
+      },
+      {
+       "id": "CWE-643",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-643"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-643"
+        ]
+       }
+      },
+      {
+       "id": "CWE-703",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-703"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-703"
+        ]
+       }
+      },
+      {
+       "id": "CWE-276+CWE-732",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-276, CWE-732"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-276",
+         "external/cwe/cwe-732"
+        ]
+       }
+      },
+      {
+       "id": "CWE-400+CWE-776",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-400, CWE-776"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-400",
+         "external/cwe/cwe-776"
+        ]
+       }
+      },
+      {
+       "id": "CWE-918",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-918"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-918"
+        ]
+       }
+      }
+     ],
+     "properties": {
+      "engines": {
+       "bandit": "bandit 1.9.4",
+       "semgrep": "1.182.1",
+       "semgrep_full": "1.182.1",
+       "codeql": "2.27.4"
+      }
+     }
+    }
+   },
+   "originalUriBaseIds": {
+    "BENCHROOT": {
+     "description": {
+      "text": "Benchmark root (bench/)"
+     }
+    }
+   },
+   "results": [
+    {
+     "ruleId": "CWE-20",
+     "level": "warning",
+     "message": {
+      "text": "[bandit] Use of unsafe yaml load. Allows instantiation of arbitrary objects. Consider yaml.safe_load()."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-020/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 10
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-020/author_1.py:10:CWE-20"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B506"
+      ],
+      "candidateCwes": [
+       "CWE-20"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-20",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Using xml.etree.ElementTree to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-020/author_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 1
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-020/author_2.py:1:CWE-20"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B405"
+      ],
+      "candidateCwes": [
+       "CWE-20"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-611",
+     "level": "error",
+     "message": {
+      "text": "[semgrep] The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential "
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-020/author_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 1
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-020/author_2.py:1:CWE-611"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:use-defused-xml"
+      ],
+      "candidateCwes": [
+       "CWE-611"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-20",
+     "level": "warning",
+     "message": {
+      "text": "[bandit] Using xml.etree.ElementTree.fromstring to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.fromstring with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-020/author_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 8
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-020/author_2.py:8:CWE-20"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B314"
+      ],
+      "candidateCwes": [
+       "CWE-20"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-116+CWE-79",
+     "level": "error",
+     "message": {
+      "text": "[semgrep] Be careful with `flask.make_response()`. If this response is rendered onto a webpage, this could create a cross-site scripting (XSS) vulnerability. `flask.make_response()` will not autoescape HTML. If | [codeql] Cross-site scripting vulnerability due to a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-020/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 10
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-020/codeql_1.py:10:CWE-116+CWE-79"
+     },
+     "properties": {
+      "tools": [
+       "codeql",
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:make-response-with-unknown-content",
+       "codeql:py/reflective-xss"
+      ],
+      "candidateCwes": [
+       "CWE-116",
+       "CWE-79"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-502",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Consider possible security implications associated with pickle module."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-020/codeql_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 2
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-020/codeql_2.py:2:CWE-502"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B403"
+      ],
+      "candidateCwes": [
+       "CWE-502"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-502",
+     "level": "error",
+     "message": {
+      "text": "[bandit] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue. | [semgrep] Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relev | [semgrep] Detected the use of an insecure deserialization library in a Flask route. These libraries are prone to code execution vulnerabilities. Ensure user data does not enter this function. To fix this, try t | [codeql] Unsafe deserialization depends on a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-020/codeql_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 15
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-020/codeql_2.py:15:CWE-502"
+     },
+     "properties": {
+      "tools": [
+       "bandit",
+       "codeql",
+       "semgrep"
+      ],
+      "rules": [
+       "bandit:B301",
+       "semgrep:avoid-pickle",
+       "semgrep:insecure-deserialization",
+       "codeql:py/unsafe-deserialization"
+      ],
+      "candidateCwes": [
+       "CWE-502"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-116+CWE-79",
+     "level": "error",
+     "message": {
+      "text": "[codeql] Cross-site scripting vulnerability due to a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-020/codeql_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 16
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-020/codeql_2.py:16:CWE-116+CWE-79"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/reflective-xss"
+      ],
+      "candidateCwes": [
+       "CWE-116",
+       "CWE-79"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-601",
+     "level": "error",
+     "message": {
+      "text": "[semgrep] Data from request is passed to redirect(). This is an open redirect and could be exploited. Consider using 'url_for()' to generate links to known locations. If you must use a URL to unknown pages, con"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-020/codeql_3.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 14
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-020/codeql_3.py:14:CWE-601"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:open-redirect__security"
+      ],
+      "candidateCwes": [
+       "CWE-601"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-20",
+     "level": "error",
+     "message": {
+      "text": "[codeql] This regular expression has an unescaped '.' before 'example.com/', so it might match more hosts than expected."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-020/codeql_3.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 15
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-020/codeql_3.py:15:CWE-20"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/incomplete-hostname-regexp"
+      ],
+      "candidateCwes": [
+       "CWE-20"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-601",
+     "level": "warning",
+     "message": {
+      "text": "[codeql] Untrusted URL redirection depends on a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-020/codeql_3.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 17
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-020/codeql_3.py:17:CWE-601"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/url-redirection"
+      ],
+      "candidateCwes": [
+       "CWE-601"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-601",
+     "level": "error",
+     "message": {
+      "text": "[semgrep] Data from request is passed to redirect(). This is an open redirect and could be exploited. Consider using 'url_for()' to generate links to known locations. If you must use a URL to unknown pages, con"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-020/codeql_4.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 11
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-020/codeql_4.py:11:CWE-601"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:open-redirect__security"
+      ],
+      "candidateCwes": [
+       "CWE-601"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-20",
+     "level": "error",
+     "message": {
+      "text": "[codeql] The string [example.com](1) may be at an arbitrary position in the sanitized URL."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-020/codeql_4.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 12
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-020/codeql_4.py:12:CWE-20"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/incomplete-url-substring-sanitization"
+      ],
+      "candidateCwes": [
+       "CWE-20"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-601",
+     "level": "warning",
+     "message": {
+      "text": "[codeql] Untrusted URL redirection depends on a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-020/codeql_4.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 13
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-020/codeql_4.py:13:CWE-601"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/url-redirection"
+      ],
+      "candidateCwes": [
+       "CWE-601"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-22+CWE-23+CWE-36+CWE-73+CWE-99",
+     "level": "error",
+     "message": {
+      "text": "[codeql] This path depends on a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-022/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 13
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-022/author_1.py:13:CWE-22+CWE-23+CWE-36+CWE-73+CWE-99"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/path-injection"
+      ],
+      "candidateCwes": [
+       "CWE-22",
+       "CWE-23",
+       "CWE-36",
+       "CWE-73",
+       "CWE-99"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-22",
+     "level": "warning",
+     "message": {
+      "text": "[bandit] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-022/author_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 8
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-022/author_2.py:8:CWE-22"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B310"
+      ],
+      "candidateCwes": [
+       "CWE-22"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-939",
+     "level": "warning",
+     "message": {
+      "text": "[semgrep] Detected a dynamic value being used with urllib. urllib supports 'file://' schemes, so a dynamic value controlled by a malicious actor may allow them to read arbitrary files. Audit uses of urllib call"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-022/author_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 8
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-022/author_2.py:8:CWE-939"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:dynamic-urllib-use-detected"
+      ],
+      "candidateCwes": [
+       "CWE-939"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-22",
+     "level": "warning",
+     "message": {
+      "text": "[semgrep] Found request data in a call to 'open'. Ensure the request data is validated or sanitized, otherwise it could result in path traversal attacks and therefore sensitive data being leaked. To mitigate, c"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-022/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 12
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-022/codeql_1.py:12:CWE-22"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:path-traversal-open"
+      ],
+      "candidateCwes": [
+       "CWE-22"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-22+CWE-23+CWE-36+CWE-73+CWE-99",
+     "level": "error",
+     "message": {
+      "text": "[semgrep] Found request data in a call to 'open'. Ensure the request data is validated or sanitized, otherwise it could result in path traversal attacks. | [codeql] This path depends on a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-022/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 13
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-022/codeql_1.py:13:CWE-22+CWE-23+CWE-36+CWE-73+CWE-99"
+     },
+     "properties": {
+      "tools": [
+       "codeql",
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:path-traversal-open__injection",
+       "codeql:py/path-injection"
+      ],
+      "candidateCwes": [
+       "CWE-22",
+       "CWE-23",
+       "CWE-36",
+       "CWE-73",
+       "CWE-99"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-22+CWE-377",
+     "level": "error",
+     "message": {
+      "text": "[bandit] Probable insecure usage of temp file/directory. | [codeql] This file extraction depends on a [potentially untrusted source](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-022/codeql_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 11
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-022/codeql_2.py:11:CWE-22+CWE-377"
+     },
+     "properties": {
+      "tools": [
+       "bandit",
+       "codeql"
+      ],
+      "rules": [
+       "bandit:B108",
+       "codeql:py/tarslip"
+      ],
+      "candidateCwes": [
+       "CWE-22",
+       "CWE-377"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-78",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Consider possible security implications associated with the subprocess module."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-078/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 1
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-078/author_1.py:1:CWE-78"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B404"
+      ],
+      "candidateCwes": [
+       "CWE-78"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-78",
+     "level": "error",
+     "message": {
+      "text": "[bandit] subprocess call with shell=True identified, security issue. | [semgrep] Detected subprocess function 'call' without a static string. If this data can be controlled by a malicious actor, it may be an instance of command injection. Audit the use of this call to ensure it is | [semgrep] Found 'subprocess' function 'call' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which "
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-078/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 8
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-078/author_1.py:8:CWE-78"
+     },
+     "properties": {
+      "tools": [
+       "bandit",
+       "semgrep"
+      ],
+      "rules": [
+       "bandit:B602",
+       "semgrep:dangerous-subprocess-use-audit",
+       "semgrep:subprocess-shell-true"
+      ],
+      "candidateCwes": [
+       "CWE-78"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-78",
+     "level": "error",
+     "message": {
+      "text": "[semgrep] Request data detected in os.system. This could be vulnerable to a command injection and should be avoided. If this must be done, use the 'subprocess' module instead and pass the arguments as a list. S"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-078/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 12
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-078/codeql_1.py:12:CWE-78"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:command-injection-os-system"
+      ],
+      "candidateCwes": [
+       "CWE-78"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-78+CWE-88",
+     "level": "error",
+     "message": {
+      "text": "[bandit] Starting a process with a shell, possible injection detected, security issue. | [semgrep] Found dynamic content used in a system call. This is dangerous if external data can reach this function call because it allows a malicious actor to execute commands. Use the 'subprocess' module instea | [semgrep] Found user-controlled data used in a system call. This could allow a malicious actor to execute commands. Use the 'subprocess' module instead, which is easier to use without accidentally exposing a co | [semgrep] User data detected in os.system. This could be vulnerable to a command injection and should be avoided. If this must be done, use the 'subprocess' module instead and pass the arguments as a list. | [codeql] This command line depends on a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-078/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 13
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-078/codeql_1.py:13:CWE-78+CWE-88"
+     },
+     "properties": {
+      "tools": [
+       "bandit",
+       "codeql",
+       "semgrep"
+      ],
+      "rules": [
+       "bandit:B605",
+       "semgrep:dangerous-system-call-audit",
+       "semgrep:dangerous-system-call__security",
+       "semgrep:os-system-injection",
+       "codeql:py/command-line-injection"
+      ],
+      "candidateCwes": [
+       "CWE-78",
+       "CWE-88"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-79+CWE-94",
+     "level": "error",
+     "message": {
+      "text": "[bandit] By default, jinja2 sets autoescape to False. Consider using autoescape=True or use the select_autoescape function to mitigate XSS vulnerabilities. | [semgrep] Detected direct use of jinja2. If not done properly, this may bypass HTML escaping which opens up the application to cross-site scripting (XSS) vulnerabilities. Prefer using the Flask method 'render_t | [codeql] Using jinja2 templates with autoescape=False can potentially allow XSS attacks."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-079/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 13
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-079/codeql_1.py:13:CWE-79+CWE-94"
+     },
+     "properties": {
+      "tools": [
+       "bandit",
+       "codeql",
+       "semgrep"
+      ],
+      "rules": [
+       "bandit:B701",
+       "semgrep:direct-use-of-jinja2",
+       "codeql:py/jinja2/autoescape-false"
+      ],
+      "candidateCwes": [
+       "CWE-79",
+       "CWE-94"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-116",
+     "level": "warning",
+     "message": {
+      "text": "[semgrep] Detected a Jinja2 environment without autoescaping. Jinja2 does not autoescape by default. This is dangerous if you are rendering to a browser because this allows for cross-site scripting (XSS) attack"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-079/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 13
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-079/codeql_1.py:13:CWE-116"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:missing-autoescape-disabled"
+      ],
+      "candidateCwes": [
+       "CWE-116"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-79",
+     "level": "warning",
+     "message": {
+      "text": "[semgrep] Detected direct use of jinja2. If not done properly, this may bypass HTML escaping which opens up the application to cross-site scripting (XSS) vulnerabilities. Prefer using the Flask method 'render_t"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-079/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 15
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-079/codeql_1.py:15:CWE-79"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:direct-use-of-jinja2"
+      ],
+      "candidateCwes": [
+       "CWE-79"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-116+CWE-79",
+     "level": "error",
+     "message": {
+      "text": "[semgrep] Be careful with `flask.make_response()`. If this response is rendered onto a webpage, this could create a cross-site scripting (XSS) vulnerability. `flask.make_response()` will not autoescape HTML. If | [codeql] Cross-site scripting vulnerability due to a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-079/codeql_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 12
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-079/codeql_2.py:12:CWE-116+CWE-79"
+     },
+     "properties": {
+      "tools": [
+       "codeql",
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:make-response-with-unknown-content",
+       "codeql:py/reflective-xss"
+      ],
+      "candidateCwes": [
+       "CWE-116",
+       "CWE-79"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-116+CWE-79",
+     "level": "error",
+     "message": {
+      "text": "[semgrep] Be careful with `flask.make_response()`. If this response is rendered onto a webpage, this could create a cross-site scripting (XSS) vulnerability. `flask.make_response()` will not autoescape HTML. If | [codeql] Cross-site scripting vulnerability due to a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-079/sonar_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 14
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-079/sonar_1.py:14:CWE-116+CWE-79"
+     },
+     "properties": {
+      "tools": [
+       "codeql",
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:make-response-with-unknown-content",
+       "codeql:py/reflective-xss"
+      ],
+      "candidateCwes": [
+       "CWE-116",
+       "CWE-79"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-116+CWE-79",
+     "level": "error",
+     "message": {
+      "text": "[semgrep] Be careful with `flask.make_response()`. If this response is rendered onto a webpage, this could create a cross-site scripting (XSS) vulnerability. `flask.make_response()` will not autoescape HTML. If | [semgrep] Detected user input flowing into a manually constructed HTML string. You may be accidentally bypassing secure methods of rendering HTML by manually constructing HTML and this could create a cross-site | [semgrep] Detected user input flowing into a manually constructed HTML string. You may be accidentally bypassing secure methods of rendering HTML by manually constructing HTML and this could create a cross-site | [codeql] Cross-site scripting vulnerability due to a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-080/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 12
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-080/author_1.py:12:CWE-116+CWE-79"
+     },
+     "properties": {
+      "tools": [
+       "codeql",
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:make-response-with-unknown-content",
+       "semgrep:raw-html-format",
+       "semgrep:raw-html-format__injection",
+       "codeql:py/reflective-xss"
+      ],
+      "candidateCwes": [
+       "CWE-116",
+       "CWE-79"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-259",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Possible hardcoded password: ''"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-089/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 8
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-089/author_1.py:8:CWE-259"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B106"
+      ],
+      "candidateCwes": [
+       "CWE-259"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-89",
+     "level": "error",
+     "message": {
+      "text": "[bandit] Possible SQL injection vector through string-based query construction. | [semgrep] Detected possible formatted SQL query. Use parameterized queries instead. | [semgrep] Avoiding SQL string concatenation: untrusted input concatenated with raw SQL query can result in SQL Injection. In order to execute raw query safely, prepared statement should be used. SQLAlchemy prov"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-089/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 16
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-089/author_1.py:16:CWE-89"
+     },
+     "properties": {
+      "tools": [
+       "bandit",
+       "semgrep"
+      ],
+      "rules": [
+       "bandit:B608",
+       "semgrep:formatted-sql-query",
+       "semgrep:sqlalchemy-execute-raw-query"
+      ],
+      "candidateCwes": [
+       "CWE-89"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-259",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Possible hardcoded password: ''"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-089/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 7
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-089/codeql_1.py:7:CWE-259"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B106"
+      ],
+      "candidateCwes": [
+       "CWE-259"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-89",
+     "level": "error",
+     "message": {
+      "text": "[bandit] Possible SQL injection vector through string-based query construction. | [semgrep] Detected possible formatted SQL query. Use parameterized queries instead. | [semgrep] Avoiding SQL string concatenation: untrusted input concatenated with raw SQL query can result in SQL Injection. In order to execute raw query safely, prepared statement should be used. SQLAlchemy prov"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-089/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 16
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-089/codeql_1.py:16:CWE-89"
+     },
+     "properties": {
+      "tools": [
+       "bandit",
+       "semgrep"
+      ],
+      "rules": [
+       "bandit:B608",
+       "semgrep:formatted-sql-query",
+       "semgrep:sqlalchemy-execute-raw-query"
+      ],
+      "candidateCwes": [
+       "CWE-89"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-90",
+     "level": "error",
+     "message": {
+      "text": "[codeql] LDAP query parameter (DN) depends on a [user-provided value](1). | [codeql] LDAP query parameter (filter) depends on a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-090/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 22
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-090/codeql_1.py:22:CWE-90"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/ldap-injection",
+       "codeql:py/ldap-injection"
+      ],
+      "candidateCwes": [
+       "CWE-90"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-90",
+     "level": "error",
+     "message": {
+      "text": "[codeql] LDAP query parameter (DN) depends on a [user-provided value](1). | [codeql] LDAP query parameter (filter) depends on a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-090/codeql_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 22
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-090/codeql_2.py:22:CWE-90"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/ldap-injection",
+       "codeql:py/ldap-injection"
+      ],
+      "candidateCwes": [
+       "CWE-90"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-78",
+     "level": "warning",
+     "message": {
+      "text": "[bandit] Use of exec detected."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-094/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 13
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-094/codeql_1.py:13:CWE-78"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B102"
+      ],
+      "candidateCwes": [
+       "CWE-78"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-116+CWE-94+CWE-95",
+     "level": "error",
+     "message": {
+      "text": "[semgrep] Detected the use of exec(). exec() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evalu | [semgrep] Detected user data flowing into exec. This is code injection and should be avoided. | [codeql] This code execution depends on a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-094/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 13
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-094/codeql_1.py:13:CWE-116+CWE-94+CWE-95"
+     },
+     "properties": {
+      "tools": [
+       "codeql",
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:exec-detected",
+       "semgrep:exec-injection",
+       "codeql:py/code-injection"
+      ],
+      "candidateCwes": [
+       "CWE-116",
+       "CWE-94",
+       "CWE-95"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-95",
+     "level": "warning",
+     "message": {
+      "text": "[semgrep] Found user data in a call to 'exec'. This is extremely dangerous because it can enable an attacker to execute arbitrary remote code on the system. Instead, refactor your code to not use 'eval' and ins"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-094/sonar_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 11
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-094/sonar_1.py:11:CWE-95"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:user-exec-format-string"
+      ],
+      "candidateCwes": [
+       "CWE-95"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-78",
+     "level": "warning",
+     "message": {
+      "text": "[bandit] Use of exec detected."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-094/sonar_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 12
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-094/sonar_1.py:12:CWE-78"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B102"
+      ],
+      "candidateCwes": [
+       "CWE-78"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-116+CWE-94+CWE-95",
+     "level": "error",
+     "message": {
+      "text": "[semgrep] Detected the use of exec(). exec() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evalu | [semgrep] Detected user data flowing into exec. This is code injection and should be avoided. | [codeql] This code execution depends on a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-094/sonar_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 12
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-094/sonar_1.py:12:CWE-116+CWE-94+CWE-95"
+     },
+     "properties": {
+      "tools": [
+       "codeql",
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:exec-detected",
+       "semgrep:exec-injection",
+       "codeql:py/code-injection"
+      ],
+      "candidateCwes": [
+       "CWE-116",
+       "CWE-94",
+       "CWE-95"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-78",
+     "level": "warning",
+     "message": {
+      "text": "[bandit] Use of possibly insecure function - consider using safer ast.literal_eval."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-095/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 5
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-095/author_1.py:5:CWE-78"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B307"
+      ],
+      "candidateCwes": [
+       "CWE-78"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-95",
+     "level": "warning",
+     "message": {
+      "text": "[semgrep] Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evalu"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-095/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 5
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-095/author_1.py:5:CWE-95"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:eval-detected"
+      ],
+      "candidateCwes": [
+       "CWE-95"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-22+CWE-23+CWE-36+CWE-73+CWE-99",
+     "level": "error",
+     "message": {
+      "text": "[codeql] This path depends on a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-099/sonar_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 12
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-099/sonar_1.py:12:CWE-22+CWE-23+CWE-36+CWE-73+CWE-99"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/path-injection"
+      ],
+      "candidateCwes": [
+       "CWE-22",
+       "CWE-23",
+       "CWE-36",
+       "CWE-73",
+       "CWE-99"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-78",
+     "level": "error",
+     "message": {
+      "text": "[semgrep] Request data detected in os.system. This could be vulnerable to a command injection and should be avoided. If this must be done, use the 'subprocess' module instead and pass the arguments as a list. S"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-116/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 14
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-116/author_1.py:14:CWE-78"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:command-injection-os-system"
+      ],
+      "candidateCwes": [
+       "CWE-78"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-78+CWE-88",
+     "level": "error",
+     "message": {
+      "text": "[bandit] Starting a process with a shell, possible injection detected, security issue. | [semgrep] Found dynamic content used in a system call. This is dangerous if external data can reach this function call because it allows a malicious actor to execute commands. Use the 'subprocess' module instea | [semgrep] Found user-controlled data used in a system call. This could allow a malicious actor to execute commands. Use the 'subprocess' module instead, which is easier to use without accidentally exposing a co | [semgrep] User data detected in os.system. This could be vulnerable to a command injection and should be avoided. If this must be done, use the 'subprocess' module instead and pass the arguments as a list. | [codeql] This command line depends on a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-116/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 15
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-116/author_1.py:15:CWE-78+CWE-88"
+     },
+     "properties": {
+      "tools": [
+       "bandit",
+       "codeql",
+       "semgrep"
+      ],
+      "rules": [
+       "bandit:B605",
+       "semgrep:dangerous-system-call-audit",
+       "semgrep:dangerous-system-call__security",
+       "semgrep:os-system-injection",
+       "codeql:py/command-line-injection"
+      ],
+      "candidateCwes": [
+       "CWE-78",
+       "CWE-88"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-377",
+     "level": "warning",
+     "message": {
+      "text": "[bandit] Probable insecure usage of temp file/directory."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-116/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 16
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-116/author_1.py:16:CWE-377"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B108"
+      ],
+      "candidateCwes": [
+       "CWE-377"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-116+CWE-185+CWE-186+CWE-20",
+     "level": "error",
+     "message": {
+      "text": "[codeql] This regular expression does not match script end tags like </script >."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-116/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 11
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-116/codeql_1.py:11:CWE-116+CWE-185+CWE-186+CWE-20"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/bad-tag-filter"
+      ],
+      "candidateCwes": [
+       "CWE-116",
+       "CWE-185",
+       "CWE-186",
+       "CWE-20"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-117",
+     "level": "warning",
+     "message": {
+      "text": "[codeql] This log entry depends on a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-117/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 15
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-117/codeql_1.py:15:CWE-117"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/log-injection"
+      ],
+      "candidateCwes": [
+       "CWE-117"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-327",
+     "level": "error",
+     "message": {
+      "text": "[bandit] The pyCrypto library and its module AES are no longer actively maintained and have been deprecated. Consider using pyca/cryptography library."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-1204/sonar_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 1
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-1204/sonar_1.py:1:CWE-327"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B413"
+      ],
+      "candidateCwes": [
+       "CWE-327"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-327",
+     "level": "error",
+     "message": {
+      "text": "[bandit] The pyCrypto library and its module pad are no longer actively maintained and have been deprecated. Consider using pyca/cryptography library."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-1204/sonar_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 2
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-1204/sonar_1.py:2:CWE-327"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B413"
+      ],
+      "candidateCwes": [
+       "CWE-327"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-89",
+     "level": "warning",
+     "message": {
+      "text": "[bandit] Possible SQL injection vector through string-based query construction."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-200/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 14
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-200/author_1.py:14:CWE-89"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B608"
+      ],
+      "candidateCwes": [
+       "CWE-89"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-89",
+     "level": "error",
+     "message": {
+      "text": "[semgrep] Avoiding SQL string concatenation: untrusted input concatenated with raw SQL query can result in SQL Injection. In order to execute raw query safely, prepared statement should be used. SQLAlchemy prov"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-200/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 15
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-200/author_1.py:15:CWE-89"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:sqlalchemy-execute-raw-query"
+      ],
+      "candidateCwes": [
+       "CWE-89"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-209+CWE-497",
+     "level": "warning",
+     "message": {
+      "text": "[codeql] [Stack trace information](1) flows to this location and may be exposed to an external user."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-209/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 19
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-209/codeql_1.py:19:CWE-209+CWE-497"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/stack-trace-exposure"
+      ],
+      "candidateCwes": [
+       "CWE-209",
+       "CWE-497"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-94",
+     "level": "error",
+     "message": {
+      "text": "[bandit] A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-215/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 12
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-215/codeql_1.py:12:CWE-94"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B201"
+      ],
+      "candidateCwes": [
+       "CWE-94"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-215+CWE-489+CWE-668",
+     "level": "error",
+     "message": {
+      "text": "[semgrep] top-level app.run(...) is ignored by flask. Consider putting app.run(...) behind a guard, like inside a function | [codeql] A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-215/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 12
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-215/codeql_1.py:12:CWE-215+CWE-489+CWE-668"
+     },
+     "properties": {
+      "tools": [
+       "codeql",
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:avoid_using_app_run_directly",
+       "codeql:py/flask-debug"
+      ],
+      "candidateCwes": [
+       "CWE-215",
+       "CWE-489",
+       "CWE-668"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-489",
+     "level": "warning",
+     "message": {
+      "text": "[semgrep] Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' u"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-215/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 12
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-215/codeql_1.py:12:CWE-489"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:debug-enabled"
+      ],
+      "candidateCwes": [
+       "CWE-489"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-259",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Possible hardcoded password: 'admin'"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-259/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 5
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-259/author_1.py:5:CWE-259"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B105"
+      ],
+      "candidateCwes": [
+       "CWE-259"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-259",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Possible hardcoded password: 'password'"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-259/author_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 8
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-259/author_2.py:8:CWE-259"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B106"
+      ],
+      "candidateCwes": [
+       "CWE-259"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-295",
+     "level": "error",
+     "message": {
+      "text": "[bandit] Call to requests with verify=False disabling SSL certificate checks, security issue. | [semgrep] Certificate verification has been explicitly disabled. This permits insecure connections to insecure servers. Re-enable certification validation. | [codeql] This request may run without certificate validation because [it is disabled](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-295/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 4
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-295/codeql_1.py:4:CWE-295"
+     },
+     "properties": {
+      "tools": [
+       "bandit",
+       "codeql",
+       "semgrep"
+      ],
+      "rules": [
+       "bandit:B501",
+       "semgrep:disabled-cert-validation__security",
+       "codeql:py/request-without-cert-validation"
+      ],
+      "candidateCwes": [
+       "CWE-295"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-400",
+     "level": "warning",
+     "message": {
+      "text": "[bandit] Call to requests without timeout"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-295/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 4
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-295/codeql_1.py:4:CWE-400"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B113"
+      ],
+      "candidateCwes": [
+       "CWE-400"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-614",
+     "level": "warning",
+     "message": {
+      "text": "[semgrep] Found a Flask cookie with insecurely configured properties.  By default the secure, httponly and samesite ar configured insecurely. cookies should be handled securely by setting `secure=True`, `httpon | [codeql] Cookie is added to response without the 'secure' flag being set."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-319/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 29
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-319/author_1.py:29:CWE-614"
+     },
+     "properties": {
+      "tools": [
+       "codeql",
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:secure-set-cookie",
+       "codeql:py/insecure-cookie"
+      ],
+      "candidateCwes": [
+       "CWE-614"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-1004",
+     "level": "warning",
+     "message": {
+      "text": "[codeql] Sensitive server cookie is set without HttpOnly flag."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-319/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 29
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-319/author_1.py:29:CWE-1004"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/client-exposed-cookie"
+      ],
+      "candidateCwes": [
+       "CWE-1004"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-319",
+     "level": "error",
+     "message": {
+      "text": "[bandit] A FTP-related module is being imported.  FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-319/author_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 1
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-319/author_2.py:1:CWE-319"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B402"
+      ],
+      "candidateCwes": [
+       "CWE-319"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-319",
+     "level": "error",
+     "message": {
+      "text": "[bandit] FTP-related functions are being called. FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol. | [semgrep] The 'FTP' class sends information unencrypted. Consider using the 'FTP_TLS' class instead."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-319/author_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 11
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-319/author_2.py:11:CWE-319"
+     },
+     "properties": {
+      "tools": [
+       "bandit",
+       "semgrep"
+      ],
+      "rules": [
+       "bandit:B321",
+       "semgrep:use-ftp-tls"
+      ],
+      "candidateCwes": [
+       "CWE-319"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-327",
+     "level": "error",
+     "message": {
+      "text": "[bandit] The pyCrypto library and its module RSA are no longer actively maintained and have been deprecated. Consider using pyca/cryptography library."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-326/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 1
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-326/author_1.py:1:CWE-327"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B413"
+      ],
+      "candidateCwes": [
+       "CWE-327"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-326",
+     "level": "error",
+     "message": {
+      "text": "[bandit] RSA key sizes below 2048 bits are considered breakable.  | [semgrep] Detected an insufficient key size for RSA. NIST recommends a key size of 3072 or higher. | [codeql] Creation of an RSA key uses [1024](1) bits, which is below 2048 and considered breakable."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-326/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 9
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-326/author_1.py:9:CWE-326"
+     },
+     "properties": {
+      "tools": [
+       "bandit",
+       "codeql",
+       "semgrep"
+      ],
+      "rules": [
+       "bandit:B505",
+       "semgrep:insufficient-rsa-key-size__security",
+       "codeql:py/weak-crypto-key"
+      ],
+      "candidateCwes": [
+       "CWE-326"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-327",
+     "level": "error",
+     "message": {
+      "text": "[bandit] The pyCrypto library and its module DSA are no longer actively maintained and have been deprecated. Consider using pyca/cryptography library."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-326/author_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 1
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-326/author_2.py:1:CWE-327"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B413"
+      ],
+      "candidateCwes": [
+       "CWE-327"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-326",
+     "level": "error",
+     "message": {
+      "text": "[bandit] DSA key sizes below 2048 bits are considered breakable.  | [semgrep] Detected an insufficient key size for DSA. NIST recommends a key size of 2048 or higher. | [codeql] Creation of an DSA key uses [1024](1) bits, which is below 2048 and considered breakable."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-326/author_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 9
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-326/author_2.py:9:CWE-326"
+     },
+     "properties": {
+      "tools": [
+       "bandit",
+       "codeql",
+       "semgrep"
+      ],
+      "rules": [
+       "bandit:B505",
+       "semgrep:insufficient-dsa-key-size__security",
+       "codeql:py/weak-crypto-key"
+      ],
+      "candidateCwes": [
+       "CWE-326"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-327",
+     "level": "error",
+     "message": {
+      "text": "[bandit] The pyCrypto library and its module * are no longer actively maintained and have been deprecated. Consider using pyca/cryptography library."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-327/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 1
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-327/codeql_1.py:1:CWE-327"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B413"
+      ],
+      "candidateCwes": [
+       "CWE-327"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-327",
+     "level": "warning",
+     "message": {
+      "text": "[semgrep] Detected DES cipher or Triple DES algorithm which is considered insecure. This algorithm is not cryptographically secure and can be reversed easily. Use a secure symmetric cipher from the cryptodome p"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-327/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 9
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-327/codeql_1.py:9:CWE-327"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:insecure-cipher-algorithm-des"
+      ],
+      "candidateCwes": [
+       "CWE-327"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-327",
+     "level": "error",
+     "message": {
+      "text": "[codeql] [The cryptographic algorithm DES](1) is broken or weak, and should not be used."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-327/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 10
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-327/codeql_1.py:10:CWE-327"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/weak-cryptographic-algorithm"
+      ],
+      "candidateCwes": [
+       "CWE-327"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-326+CWE-327",
+     "level": "error",
+     "message": {
+      "text": "[bandit] ssl.wrap_socket call with no SSL/TLS protocol version specified, the default SSLv23 could be insecure, possible security issue. | [semgrep] 'ssl.wrap_socket()' is deprecated. This function creates an insecure socket without server name indication or hostname matching. Instead, create an SSL context using 'ssl.SSLContext()' and use that to | [codeql] Call to deprecated method ssl.wrap_socket does not specify a protocol, which may result in an insecure default being used."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-327/codeql_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 11
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-327/codeql_2.py:11:CWE-326+CWE-327"
+     },
+     "properties": {
+      "tools": [
+       "bandit",
+       "codeql",
+       "semgrep"
+      ],
+      "rules": [
+       "bandit:B504",
+       "semgrep:ssl-wrap-socket-is-deprecated",
+       "codeql:py/insecure-default-protocol"
+      ],
+      "candidateCwes": [
+       "CWE-326",
+       "CWE-327"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-327+CWE-328+CWE-916",
+     "level": "error",
+     "message": {
+      "text": "[bandit] Use of weak MD5 hash for security. Consider usedforsecurity=False | [codeql] [Sensitive data (certificate)](1) is used in a hashing algorithm (MD5) that is insecure."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-327/codeql_3.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 8
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-327/codeql_3.py:8:CWE-327+CWE-328+CWE-916"
+     },
+     "properties": {
+      "tools": [
+       "bandit",
+       "codeql"
+      ],
+      "rules": [
+       "bandit:B324",
+       "codeql:py/weak-sensitive-data-hashing"
+      ],
+      "candidateCwes": [
+       "CWE-327",
+       "CWE-328",
+       "CWE-916"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-327+CWE-328+CWE-916",
+     "level": "error",
+     "message": {
+      "text": "[codeql] [Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-327/codeql_4.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 7
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-327/codeql_4.py:7:CWE-327+CWE-328+CWE-916"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/weak-sensitive-data-hashing"
+      ],
+      "candidateCwes": [
+       "CWE-327",
+       "CWE-328",
+       "CWE-916"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-327",
+     "level": "error",
+     "message": {
+      "text": "[semgrep] An encryption mode of operation is being used without proper message authentication. This can potentially result in the encrypted content to be decrypted by an attacker. Consider instead use an AEAD m"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-329/sonar_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 10
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-329/sonar_1.py:10:CWE-327"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:crypto-mode-without-authentication"
+      ],
+      "candidateCwes": [
+       "CWE-327"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-330",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-330/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 8
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-330/author_1.py:8:CWE-330"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B311"
+      ],
+      "candidateCwes": [
+       "CWE-330"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-330",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-331/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 9
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-331/author_1.py:9:CWE-330"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B311"
+      ],
+      "candidateCwes": [
+       "CWE-330"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-330",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-339/mitre_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 11
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-339/mitre_1.py:11:CWE-330"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B311"
+      ],
+      "candidateCwes": [
+       "CWE-330"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-287",
+     "level": "error",
+     "message": {
+      "text": "[semgrep] Detected JWT token decoded with 'verify=False'. This bypasses any integrity checks for the token which means the token could be tampered with by malicious actors. Ensure that the JWT token is verified"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-347/sonar_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 8
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-347/sonar_2.py:8:CWE-287"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:unverified-jwt-decode"
+      ],
+      "candidateCwes": [
+       "CWE-287"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-377",
+     "level": "error",
+     "message": {
+      "text": "[bandit] Use of insecure and deprecated function (mktemp). | [codeql] Call to deprecated function tempfile.mktemp may be insecure."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-377/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 8
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-377/codeql_1.py:8:CWE-377"
+     },
+     "properties": {
+      "tools": [
+       "bandit",
+       "codeql"
+      ],
+      "rules": [
+       "bandit:B306",
+       "codeql:py/insecure-temporary-file"
+      ],
+      "candidateCwes": [
+       "CWE-377"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-377",
+     "level": "error",
+     "message": {
+      "text": "[bandit] Use of insecure and deprecated function (mktemp). | [codeql] Call to deprecated function tempfile.mktemp may be insecure."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-379/sonar_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 10
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-379/sonar_1.py:10:CWE-377"
+     },
+     "properties": {
+      "tools": [
+       "bandit",
+       "codeql"
+      ],
+      "rules": [
+       "bandit:B306",
+       "codeql:py/insecure-temporary-file"
+      ],
+      "candidateCwes": [
+       "CWE-377"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-400",
+     "level": "error",
+     "message": {
+      "text": "[codeql] This regular expression depends on a [user-provided value](1) and is executed by [re.search](2)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-400/sonar_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 18
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-400/sonar_1.py:18:CWE-400"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/regex-injection"
+      ],
+      "candidateCwes": [
+       "CWE-400"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-79",
+     "level": "warning",
+     "message": {
+      "text": "[semgrep] Detected data rendered directly to the end user via 'HttpResponse' or a similar object. This bypasses Django's built-in cross-site scripting (XSS) defenses and could result in an XSS vulnerability. Us"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-425/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 12
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-425/author_1.py:12:CWE-79"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:direct-use-of-httpresponse"
+      ],
+      "candidateCwes": [
+       "CWE-79"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-22+CWE-23+CWE-36+CWE-73+CWE-99",
+     "level": "error",
+     "message": {
+      "text": "[codeql] This path depends on a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-434/pearce_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 12
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-434/pearce_1.py:12:CWE-22+CWE-23+CWE-36+CWE-73+CWE-99"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/path-injection"
+      ],
+      "candidateCwes": [
+       "CWE-22",
+       "CWE-23",
+       "CWE-36",
+       "CWE-73",
+       "CWE-99"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-22+CWE-23+CWE-36+CWE-73+CWE-99",
+     "level": "error",
+     "message": {
+      "text": "[codeql] This path depends on a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-434/pearce_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 15
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-434/pearce_2.py:15:CWE-22+CWE-23+CWE-36+CWE-73+CWE-99"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/path-injection"
+      ],
+      "candidateCwes": [
+       "CWE-22",
+       "CWE-23",
+       "CWE-36",
+       "CWE-73",
+       "CWE-99"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-259",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Possible hardcoded password: 'admin'"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-454/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 11
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-454/author_1.py:11:CWE-259"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B105"
+      ],
+      "candidateCwes": [
+       "CWE-259"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-502",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Consider possible security implications associated with pickle module."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-502/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 1
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-502/author_1.py:1:CWE-502"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B403"
+      ],
+      "candidateCwes": [
+       "CWE-502"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-502",
+     "level": "warning",
+     "message": {
+      "text": "[semgrep] Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relev"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-502/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 13
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-502/author_1.py:13:CWE-502"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:avoid-pickle"
+      ],
+      "candidateCwes": [
+       "CWE-502"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-502",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Consider possible security implications associated with pickle module."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-502/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 2
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-502/codeql_1.py:2:CWE-502"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B403"
+      ],
+      "candidateCwes": [
+       "CWE-502"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-502",
+     "level": "warning",
+     "message": {
+      "text": "[bandit] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue. | [semgrep] Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relev"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-502/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 9
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-502/codeql_1.py:9:CWE-502"
+     },
+     "properties": {
+      "tools": [
+       "bandit",
+       "semgrep"
+      ],
+      "rules": [
+       "bandit:B301",
+       "semgrep:avoid-pickle"
+      ],
+      "candidateCwes": [
+       "CWE-502"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-502",
+     "level": "warning",
+     "message": {
+      "text": "[semgrep] Avoid using `cPickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the rele | [semgrep] Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relev"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-502/mitre_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 11
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-502/mitre_1.py:11:CWE-502"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:avoid-cPickle",
+       "semgrep:avoid-pickle"
+      ],
+      "candidateCwes": [
+       "CWE-502"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-20",
+     "level": "warning",
+     "message": {
+      "text": "[bandit] Use of unsafe yaml load. Allows instantiation of arbitrary objects. Consider yaml.safe_load()."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-502/sonar_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 11
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-502/sonar_1.py:11:CWE-20"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B506"
+      ],
+      "candidateCwes": [
+       "CWE-20"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-502",
+     "level": "error",
+     "message": {
+      "text": "[semgrep] Detected the use of an insecure deserialization library in a Flask route. These libraries are prone to code execution vulnerabilities. Ensure user data does not enter this function. To fix this, try t | [codeql] Unsafe deserialization depends on a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-502/sonar_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 11
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-502/sonar_1.py:11:CWE-502"
+     },
+     "properties": {
+      "tools": [
+       "codeql",
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:insecure-deserialization",
+       "codeql:py/unsafe-deserialization"
+      ],
+      "candidateCwes": [
+       "CWE-502"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-259",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Possible hardcoded password: ''"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-521/sonar_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 11
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-521/sonar_2.py:11:CWE-259"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B105"
+      ],
+      "candidateCwes": [
+       "CWE-259"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-259",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Possible hardcoded password: ''"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-522/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 9
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-522/author_1.py:9:CWE-259"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B106"
+      ],
+      "candidateCwes": [
+       "CWE-259"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-327+CWE-328+CWE-916",
+     "level": "error",
+     "message": {
+      "text": "[bandit] Use of weak MD5 hash for security. Consider usedforsecurity=False | [semgrep] It looks like MD5 is used as a password hash. MD5 is not considered a secure password hash because it can be cracked by an attacker in a short amount of time. Use a suitable password hashing function  | [codeql] [Sensitive data (password)](1) is used in a hashing algorithm (MD5) that is insecure for password hashing, since it is not a computationally expensive hash function."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-522/pearce_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 17
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-522/pearce_1.py:17:CWE-327+CWE-328+CWE-916"
+     },
+     "properties": {
+      "tools": [
+       "bandit",
+       "codeql",
+       "semgrep"
+      ],
+      "rules": [
+       "bandit:B324",
+       "semgrep:md5-used-as-password",
+       "codeql:py/weak-sensitive-data-hashing"
+      ],
+      "candidateCwes": [
+       "CWE-327",
+       "CWE-328",
+       "CWE-916"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-259",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Possible hardcoded password: ''"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-522/pearce_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 18
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-522/pearce_1.py:18:CWE-259"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B106"
+      ],
+      "candidateCwes": [
+       "CWE-259"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-601",
+     "level": "error",
+     "message": {
+      "text": "[semgrep] Data from request is passed to redirect(). This is an open redirect and could be exploited. Consider using 'url_for()' to generate links to known locations. If you must use a URL to unknown pages, con"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-601/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 11
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-601/codeql_1.py:11:CWE-601"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:open-redirect__security"
+      ],
+      "candidateCwes": [
+       "CWE-601"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-601",
+     "level": "warning",
+     "message": {
+      "text": "[codeql] Untrusted URL redirection depends on a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-601/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 12
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-601/codeql_1.py:12:CWE-601"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/url-redirection"
+      ],
+      "candidateCwes": [
+       "CWE-601"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-601",
+     "level": "warning",
+     "message": {
+      "text": "[semgrep] Data from request (target) is passed to redirect(). This is an open redirect and could be exploited. Ensure you are redirecting to safe URLs by using django.utils.http.is_safe_url(). See https://cwe.m"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-601/sonar_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 7
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-601/sonar_1.py:7:CWE-601"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:open-redirect"
+      ],
+      "candidateCwes": [
+       "CWE-601"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-601",
+     "level": "error",
+     "message": {
+      "text": "[semgrep] Data from request is passed to redirect(). This is an open redirect and could be exploited. Consider using 'url_for()' to generate links to known locations. If you must use a URL to unknown pages, con"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-601/sonar_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 11
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-601/sonar_2.py:11:CWE-601"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:open-redirect__security"
+      ],
+      "candidateCwes": [
+       "CWE-601"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-601",
+     "level": "warning",
+     "message": {
+      "text": "[codeql] Untrusted URL redirection depends on a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-601/sonar_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 12
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-601/sonar_2.py:12:CWE-601"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/url-redirection"
+      ],
+      "candidateCwes": [
+       "CWE-601"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-200",
+     "level": "note",
+     "message": {
+      "text": "[semgrep] Running `socket.bind` to 0.0.0.0, or empty string could unexpectedly expose the server publicly as it binds to all available interfaces. Consider instead getting correct address from an environment va"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-605/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 8
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-605/author_1.py:8:CWE-200"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:avoid-bind-to-all-interfaces"
+      ],
+      "candidateCwes": [
+       "CWE-200"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-605",
+     "level": "warning",
+     "message": {
+      "text": "[bandit] Possible binding to all interfaces."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-605/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 9
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-605/author_1.py:9:CWE-605"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B104"
+      ],
+      "candidateCwes": [
+       "CWE-605"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-200",
+     "level": "warning",
+     "message": {
+      "text": "[codeql] Binding a socket to all interfaces (using ['0.0.0.0'](1)) is a security risk."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-605/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 9
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-605/author_1.py:9:CWE-200"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/bind-socket-all-network-interfaces"
+      ],
+      "candidateCwes": [
+       "CWE-200"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-611+CWE-827",
+     "level": "error",
+     "message": {
+      "text": "[codeql] XML parsing depends on a [user-provided value](1) without guarding against external entity expansion."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-611/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 17
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-611/author_1.py:17:CWE-611+CWE-827"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/xxe"
+      ],
+      "candidateCwes": [
+       "CWE-611",
+       "CWE-827"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-611+CWE-827",
+     "level": "error",
+     "message": {
+      "text": "[codeql] XML parsing depends on a [user-provided value](1) without guarding against external entity expansion."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-611/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 13
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-611/codeql_1.py:13:CWE-611+CWE-827"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/xxe"
+      ],
+      "candidateCwes": [
+       "CWE-611",
+       "CWE-827"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-20",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Using xml.sax to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.sax with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-611/sonar_4.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 1
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-611/sonar_4.py:1:CWE-20"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B406"
+      ],
+      "candidateCwes": [
+       "CWE-20"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-611",
+     "level": "error",
+     "message": {
+      "text": "[semgrep] The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential "
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-611/sonar_4.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 1
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-611/sonar_4.py:1:CWE-611"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:use-defused-xml"
+      ],
+      "candidateCwes": [
+       "CWE-611"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-20",
+     "level": "warning",
+     "message": {
+      "text": "[bandit] Using xml.sax.make_parser to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.sax.make_parser with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-611/sonar_4.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 7
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-611/sonar_4.py:7:CWE-20"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B317"
+      ],
+      "candidateCwes": [
+       "CWE-20"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-22+CWE-23+CWE-36+CWE-73+CWE-99",
+     "level": "error",
+     "message": {
+      "text": "[codeql] This path depends on a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-641/sonar_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 13
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-641/sonar_1.py:13:CWE-22+CWE-23+CWE-36+CWE-73+CWE-99"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/path-injection"
+      ],
+      "candidateCwes": [
+       "CWE-22",
+       "CWE-23",
+       "CWE-36",
+       "CWE-73",
+       "CWE-99"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-20",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Using xml.etree.ElementTree to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-643/sonar_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 2
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-643/sonar_1.py:2:CWE-20"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B405"
+      ],
+      "candidateCwes": [
+       "CWE-20"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-611",
+     "level": "error",
+     "message": {
+      "text": "[semgrep] The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential "
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-643/sonar_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 2
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-643/sonar_1.py:2:CWE-611"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:use-defused-xml"
+      ],
+      "candidateCwes": [
+       "CWE-611"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-20",
+     "level": "warning",
+     "message": {
+      "text": "[bandit] Using xml.etree.ElementTree.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.parse with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-643/sonar_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 4
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-643/sonar_1.py:4:CWE-20"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B314"
+      ],
+      "candidateCwes": [
+       "CWE-20"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-643",
+     "level": "error",
+     "message": {
+      "text": "[codeql] XPath expression depends on a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-643/sonar_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 17
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-643/sonar_1.py:17:CWE-643"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/xpath-injection"
+      ],
+      "candidateCwes": [
+       "CWE-643"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-703",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-703/author_3.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 6
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-703/author_3.py:6:CWE-703"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B101"
+      ],
+      "candidateCwes": [
+       "CWE-703"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-400",
+     "level": "error",
+     "message": {
+      "text": "[codeql] This regular expression depends on a [user-provided value](1) and is executed by [re.search](2)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-730/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 13
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-730/codeql_1.py:13:CWE-400"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/regex-injection"
+      ],
+      "candidateCwes": [
+       "CWE-400"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-400",
+     "level": "error",
+     "message": {
+      "text": "[codeql] This regular expression depends on a [user-provided value](1) and is executed by [re.search](2)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-730/codeql_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 12
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-730/codeql_2.py:12:CWE-400"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/regex-injection"
+      ],
+      "candidateCwes": [
+       "CWE-400"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-276+CWE-732",
+     "level": "error",
+     "message": {
+      "text": "[bandit] Chmod setting a permissive mask 0o755 on file (test.bin). | [semgrep] These permissions `0o755` are widely permissive and grant access to more people than may be necessary. A good default is `0o644` which gives read and write access to yourself and read access to everyo | [codeql] Overly permissive mask in chmod sets file to world readable."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-732/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 10
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-732/author_1.py:10:CWE-276+CWE-732"
+     },
+     "properties": {
+      "tools": [
+       "bandit",
+       "codeql",
+       "semgrep"
+      ],
+      "rules": [
+       "bandit:B103",
+       "semgrep:insecure-file-permissions",
+       "codeql:py/overly-permissive-file"
+      ],
+      "candidateCwes": [
+       "CWE-276",
+       "CWE-732"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-78",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Starting a process with a shell: Seems safe, but may be changed in the future, consider rewriting without shell | [bandit] Starting a process with a partial executable path"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-732/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 11
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-732/author_1.py:11:CWE-78"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B605",
+       "bandit:B607"
+      ],
+      "candidateCwes": [
+       "CWE-78"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-327",
+     "level": "error",
+     "message": {
+      "text": "[bandit] Use of weak MD5 hash for security. Consider usedforsecurity=False | [semgrep] Detected use of an insecure MD4 or MD5 hash function. These functions have known vulnerabilities and are considered deprecated. Consider using 'SHA256' or a similar function instead."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-759/mitre_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 8
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-759/mitre_1.py:8:CWE-327"
+     },
+     "properties": {
+      "tools": [
+       "bandit",
+       "semgrep"
+      ],
+      "rules": [
+       "bandit:B324",
+       "semgrep:insecure-hash-function"
+      ],
+      "candidateCwes": [
+       "CWE-327"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-327+CWE-328+CWE-916",
+     "level": "error",
+     "message": {
+      "text": "[codeql] [Sensitive data (password)](1) is used in a hashing algorithm (MD5) that is insecure for password hashing, since it is not a computationally expensive hash function."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-759/mitre_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 9
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-759/mitre_1.py:9:CWE-327+CWE-328+CWE-916"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/weak-sensitive-data-hashing"
+      ],
+      "candidateCwes": [
+       "CWE-327",
+       "CWE-328",
+       "CWE-916"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-20",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Using xml.etree.ElementTree to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-776/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 2
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-776/codeql_1.py:2:CWE-20"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B405"
+      ],
+      "candidateCwes": [
+       "CWE-20"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-611",
+     "level": "error",
+     "message": {
+      "text": "[semgrep] The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential "
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-776/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 2
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-776/codeql_1.py:2:CWE-611"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:use-defused-xml"
+      ],
+      "candidateCwes": [
+       "CWE-611"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-20",
+     "level": "warning",
+     "message": {
+      "text": "[bandit] Using xml.etree.ElementTree.fromstring to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.fromstring with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-776/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 14
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-776/codeql_1.py:14:CWE-20"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B314"
+      ],
+      "candidateCwes": [
+       "CWE-20"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-400+CWE-776",
+     "level": "error",
+     "message": {
+      "text": "[codeql] XML parsing depends on a [user-provided value](1) without guarding against uncontrolled entity expansion."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-776/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 14
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-776/codeql_1.py:14:CWE-400+CWE-776"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/xml-bomb"
+      ],
+      "candidateCwes": [
+       "CWE-400",
+       "CWE-776"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-259",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Possible hardcoded password: 'password'"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-798/author_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 7
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-798/author_1.py:7:CWE-259"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B106"
+      ],
+      "candidateCwes": [
+       "CWE-259"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-259",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Possible hardcoded password: 'myPa55word'"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-798/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 12
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-798/codeql_1.py:12:CWE-259"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B105"
+      ],
+      "candidateCwes": [
+       "CWE-259"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-918",
+     "level": "warning",
+     "message": {
+      "text": "[semgrep] User data flows into the host portion of this manually-constructed URL. This could allow an attacker to send data to their own server, potentially exposing sensitive data such as cookies or authorizat | [semgrep] User data flows into the host portion of this manually-constructed URL. This could allow an attacker to send data to their own server, potentially exposing sensitive data such as cookies or authorizat"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-918/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 12
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-918/codeql_1.py:12:CWE-918"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:tainted-url-host",
+       "semgrep:tainted-url-host__injection"
+      ],
+      "candidateCwes": [
+       "CWE-918"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-400",
+     "level": "warning",
+     "message": {
+      "text": "[bandit] Call to requests without timeout"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-918/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 13
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-918/codeql_1.py:13:CWE-400"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B113"
+      ],
+      "candidateCwes": [
+       "CWE-400"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-918",
+     "level": "error",
+     "message": {
+      "text": "[codeql] The full URL of this request depends on a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-918/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 13
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-918/codeql_1.py:13:CWE-918"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/full-ssrf"
+      ],
+      "candidateCwes": [
+       "CWE-918"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-116+CWE-79",
+     "level": "error",
+     "message": {
+      "text": "[codeql] Cross-site scripting vulnerability due to a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-918/codeql_1.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 14
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-918/codeql_1.py:14:CWE-116+CWE-79"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/reflective-xss"
+      ],
+      "candidateCwes": [
+       "CWE-116",
+       "CWE-79"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-918",
+     "level": "error",
+     "message": {
+      "text": "[semgrep] Data from request object is passed to a new server-side request. This could lead to a server-side request forgery (SSRF). To mitigate, ensure that schemes and hosts are validated against an allowlist,"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-918/codeql_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 14
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-918/codeql_2.py:14:CWE-918"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:ssrf-injection-requests"
+      ],
+      "candidateCwes": [
+       "CWE-918"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-400",
+     "level": "warning",
+     "message": {
+      "text": "[bandit] Call to requests without timeout"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-918/codeql_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 16
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-918/codeql_2.py:16:CWE-400"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B113"
+      ],
+      "candidateCwes": [
+       "CWE-400"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-918",
+     "level": "error",
+     "message": {
+      "text": "[codeql] Part of the URL of this request depends on a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-918/codeql_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 16
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-918/codeql_2.py:16:CWE-918"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/partial-ssrf"
+      ],
+      "candidateCwes": [
+       "CWE-918"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-116+CWE-79",
+     "level": "error",
+     "message": {
+      "text": "[codeql] Cross-site scripting vulnerability due to a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "securityeval/CWE-918/codeql_2.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 17
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "securityeval/CWE-918/codeql_2.py:17:CWE-116+CWE-79"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/reflective-xss"
+      ],
+      "candidateCwes": [
+       "CWE-116",
+       "CWE-79"
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

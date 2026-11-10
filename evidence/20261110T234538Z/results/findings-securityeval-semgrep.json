@@ -1,0 +1,750 @@
+[
+ {
+  "tool": "semgrep",
+  "rule_id": "use-defused-xml",
+  "file": "securityeval/CWE-020/author_2.py",
+  "line": 1,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-611"
+  ],
+  "message": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential "
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "make-response-with-unknown-content",
+  "file": "securityeval/CWE-020/codeql_1.py",
+  "line": 10,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-79"
+  ],
+  "message": "Be careful with `flask.make_response()`. If this response is rendered onto a webpage, this could create a cross-site scripting (XSS) vulnerability. `flask.make_response()` will not autoescape HTML. If"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "avoid-pickle",
+  "file": "securityeval/CWE-020/codeql_2.py",
+  "line": 15,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-502"
+  ],
+  "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relev"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "insecure-deserialization",
+  "file": "securityeval/CWE-020/codeql_2.py",
+  "line": 15,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-502"
+  ],
+  "message": "Detected the use of an insecure deserialization library in a Flask route. These libraries are prone to code execution vulnerabilities. Ensure user data does not enter this function. To fix this, try t"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "open-redirect__security",
+  "file": "securityeval/CWE-020/codeql_3.py",
+  "line": 14,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-601"
+  ],
+  "message": "Data from request is passed to redirect(). This is an open redirect and could be exploited. Consider using 'url_for()' to generate links to known locations. If you must use a URL to unknown pages, con"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "open-redirect__security",
+  "file": "securityeval/CWE-020/codeql_4.py",
+  "line": 11,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-601"
+  ],
+  "message": "Data from request is passed to redirect(). This is an open redirect and could be exploited. Consider using 'url_for()' to generate links to known locations. If you must use a URL to unknown pages, con"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "dynamic-urllib-use-detected",
+  "file": "securityeval/CWE-022/author_2.py",
+  "line": 8,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-939"
+  ],
+  "message": "Detected a dynamic value being used with urllib. urllib supports 'file://' schemes, so a dynamic value controlled by a malicious actor may allow them to read arbitrary files. Audit uses of urllib call"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "path-traversal-open",
+  "file": "securityeval/CWE-022/codeql_1.py",
+  "line": 12,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-22"
+  ],
+  "message": "Found request data in a call to 'open'. Ensure the request data is validated or sanitized, otherwise it could result in path traversal attacks and therefore sensitive data being leaked. To mitigate, c"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "path-traversal-open__injection",
+  "file": "securityeval/CWE-022/codeql_1.py",
+  "line": 13,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-22"
+  ],
+  "message": "Found request data in a call to 'open'. Ensure the request data is validated or sanitized, otherwise it could result in path traversal attacks."
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "dangerous-subprocess-use-audit",
+  "file": "securityeval/CWE-078/author_1.py",
+  "line": 8,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Detected subprocess function 'call' without a static string. If this data can be controlled by a malicious actor, it may be an instance of command injection. Audit the use of this call to ensure it is"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "subprocess-shell-true",
+  "file": "securityeval/CWE-078/author_1.py",
+  "line": 8,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Found 'subprocess' function 'call' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which "
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "command-injection-os-system",
+  "file": "securityeval/CWE-078/codeql_1.py",
+  "line": 12,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Request data detected in os.system. This could be vulnerable to a command injection and should be avoided. If this must be done, use the 'subprocess' module instead and pass the arguments as a list. S"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "dangerous-system-call-audit",
+  "file": "securityeval/CWE-078/codeql_1.py",
+  "line": 13,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Found dynamic content used in a system call. This is dangerous if external data can reach this function call because it allows a malicious actor to execute commands. Use the 'subprocess' module instea"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "dangerous-system-call__security",
+  "file": "securityeval/CWE-078/codeql_1.py",
+  "line": 13,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Found user-controlled data used in a system call. This could allow a malicious actor to execute commands. Use the 'subprocess' module instead, which is easier to use without accidentally exposing a co"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "os-system-injection",
+  "file": "securityeval/CWE-078/codeql_1.py",
+  "line": 13,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "User data detected in os.system. This could be vulnerable to a command injection and should be avoided. If this must be done, use the 'subprocess' module instead and pass the arguments as a list."
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "direct-use-of-jinja2",
+  "file": "securityeval/CWE-079/codeql_1.py",
+  "line": 13,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-79"
+  ],
+  "message": "Detected direct use of jinja2. If not done properly, this may bypass HTML escaping which opens up the application to cross-site scripting (XSS) vulnerabilities. Prefer using the Flask method 'render_t"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "missing-autoescape-disabled",
+  "file": "securityeval/CWE-079/codeql_1.py",
+  "line": 13,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-116"
+  ],
+  "message": "Detected a Jinja2 environment without autoescaping. Jinja2 does not autoescape by default. This is dangerous if you are rendering to a browser because this allows for cross-site scripting (XSS) attack"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "direct-use-of-jinja2",
+  "file": "securityeval/CWE-079/codeql_1.py",
+  "line": 15,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-79"
+  ],
+  "message": "Detected direct use of jinja2. If not done properly, this may bypass HTML escaping which opens up the application to cross-site scripting (XSS) vulnerabilities. Prefer using the Flask method 'render_t"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "make-response-with-unknown-content",
+  "file": "securityeval/CWE-079/codeql_2.py",
+  "line": 12,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-79"
+  ],
+  "message": "Be careful with `flask.make_response()`. If this response is rendered onto a webpage, this could create a cross-site scripting (XSS) vulnerability. `flask.make_response()` will not autoescape HTML. If"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "make-response-with-unknown-content",
+  "file": "securityeval/CWE-079/sonar_1.py",
+  "line": 14,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-79"
+  ],
+  "message": "Be careful with `flask.make_response()`. If this response is rendered onto a webpage, this could create a cross-site scripting (XSS) vulnerability. `flask.make_response()` will not autoescape HTML. If"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "make-response-with-unknown-content",
+  "file": "securityeval/CWE-080/author_1.py",
+  "line": 12,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-79"
+  ],
+  "message": "Be careful with `flask.make_response()`. If this response is rendered onto a webpage, this could create a cross-site scripting (XSS) vulnerability. `flask.make_response()` will not autoescape HTML. If"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "raw-html-format",
+  "file": "securityeval/CWE-080/author_1.py",
+  "line": 12,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-79"
+  ],
+  "message": "Detected user input flowing into a manually constructed HTML string. You may be accidentally bypassing secure methods of rendering HTML by manually constructing HTML and this could create a cross-site"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "raw-html-format__injection",
+  "file": "securityeval/CWE-080/author_1.py",
+  "line": 12,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-79"
+  ],
+  "message": "Detected user input flowing into a manually constructed HTML string. You may be accidentally bypassing secure methods of rendering HTML by manually constructing HTML and this could create a cross-site"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "formatted-sql-query",
+  "file": "securityeval/CWE-089/author_1.py",
+  "line": 16,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-89"
+  ],
+  "message": "Detected possible formatted SQL query. Use parameterized queries instead."
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "sqlalchemy-execute-raw-query",
+  "file": "securityeval/CWE-089/author_1.py",
+  "line": 16,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-89"
+  ],
+  "message": "Avoiding SQL string concatenation: untrusted input concatenated with raw SQL query can result in SQL Injection. In order to execute raw query safely, prepared statement should be used. SQLAlchemy prov"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "formatted-sql-query",
+  "file": "securityeval/CWE-089/codeql_1.py",
+  "line": 16,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-89"
+  ],
+  "message": "Detected possible formatted SQL query. Use parameterized queries instead."
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "sqlalchemy-execute-raw-query",
+  "file": "securityeval/CWE-089/codeql_1.py",
+  "line": 16,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-89"
+  ],
+  "message": "Avoiding SQL string concatenation: untrusted input concatenated with raw SQL query can result in SQL Injection. In order to execute raw query safely, prepared statement should be used. SQLAlchemy prov"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "exec-detected",
+  "file": "securityeval/CWE-094/codeql_1.py",
+  "line": 13,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-95"
+  ],
+  "message": "Detected the use of exec(). exec() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evalu"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "exec-injection",
+  "file": "securityeval/CWE-094/codeql_1.py",
+  "line": 13,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-95"
+  ],
+  "message": "Detected user data flowing into exec. This is code injection and should be avoided."
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "user-exec-format-string",
+  "file": "securityeval/CWE-094/sonar_1.py",
+  "line": 11,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-95"
+  ],
+  "message": "Found user data in a call to 'exec'. This is extremely dangerous because it can enable an attacker to execute arbitrary remote code on the system. Instead, refactor your code to not use 'eval' and ins"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "exec-detected",
+  "file": "securityeval/CWE-094/sonar_1.py",
+  "line": 12,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-95"
+  ],
+  "message": "Detected the use of exec(). exec() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evalu"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "exec-injection",
+  "file": "securityeval/CWE-094/sonar_1.py",
+  "line": 12,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-95"
+  ],
+  "message": "Detected user data flowing into exec. This is code injection and should be avoided."
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "eval-detected",
+  "file": "securityeval/CWE-095/author_1.py",
+  "line": 5,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-95"
+  ],
+  "message": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evalu"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "command-injection-os-system",
+  "file": "securityeval/CWE-116/author_1.py",
+  "line": 14,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Request data detected in os.system. This could be vulnerable to a command injection and should be avoided. If this must be done, use the 'subprocess' module instead and pass the arguments as a list. S"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "dangerous-system-call-audit",
+  "file": "securityeval/CWE-116/author_1.py",
+  "line": 15,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Found dynamic content used in a system call. This is dangerous if external data can reach this function call because it allows a malicious actor to execute commands. Use the 'subprocess' module instea"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "dangerous-system-call__security",
+  "file": "securityeval/CWE-116/author_1.py",
+  "line": 15,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Found user-controlled data used in a system call. This could allow a malicious actor to execute commands. Use the 'subprocess' module instead, which is easier to use without accidentally exposing a co"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "os-system-injection",
+  "file": "securityeval/CWE-116/author_1.py",
+  "line": 15,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "User data detected in os.system. This could be vulnerable to a command injection and should be avoided. If this must be done, use the 'subprocess' module instead and pass the arguments as a list."
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "sqlalchemy-execute-raw-query",
+  "file": "securityeval/CWE-200/author_1.py",
+  "line": 15,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-89"
+  ],
+  "message": "Avoiding SQL string concatenation: untrusted input concatenated with raw SQL query can result in SQL Injection. In order to execute raw query safely, prepared statement should be used. SQLAlchemy prov"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "avoid_using_app_run_directly",
+  "file": "securityeval/CWE-215/codeql_1.py",
+  "line": 12,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-668"
+  ],
+  "message": "top-level app.run(...) is ignored by flask. Consider putting app.run(...) behind a guard, like inside a function"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "debug-enabled",
+  "file": "securityeval/CWE-215/codeql_1.py",
+  "line": 12,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-489"
+  ],
+  "message": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' u"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "disabled-cert-validation__security",
+  "file": "securityeval/CWE-295/codeql_1.py",
+  "line": 4,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-295"
+  ],
+  "message": "Certificate verification has been explicitly disabled. This permits insecure connections to insecure servers. Re-enable certification validation."
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "secure-set-cookie",
+  "file": "securityeval/CWE-319/author_1.py",
+  "line": 29,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-614"
+  ],
+  "message": "Found a Flask cookie with insecurely configured properties.  By default the secure, httponly and samesite ar configured insecurely. cookies should be handled securely by setting `secure=True`, `httpon"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "use-ftp-tls",
+  "file": "securityeval/CWE-319/author_2.py",
+  "line": 11,
+  "severity": "INFO",
+  "cwes": [
+   "CWE-319"
+  ],
+  "message": "The 'FTP' class sends information unencrypted. Consider using the 'FTP_TLS' class instead."
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "insufficient-rsa-key-size__security",
+  "file": "securityeval/CWE-326/author_1.py",
+  "line": 9,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-326"
+  ],
+  "message": "Detected an insufficient key size for RSA. NIST recommends a key size of 3072 or higher."
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "insufficient-dsa-key-size__security",
+  "file": "securityeval/CWE-326/author_2.py",
+  "line": 9,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-326"
+  ],
+  "message": "Detected an insufficient key size for DSA. NIST recommends a key size of 2048 or higher."
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "insecure-cipher-algorithm-des",
+  "file": "securityeval/CWE-327/codeql_1.py",
+  "line": 9,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-327"
+  ],
+  "message": "Detected DES cipher or Triple DES algorithm which is considered insecure. This algorithm is not cryptographically secure and can be reversed easily. Use a secure symmetric cipher from the cryptodome p"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "ssl-wrap-socket-is-deprecated",
+  "file": "securityeval/CWE-327/codeql_2.py",
+  "line": 11,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-326"
+  ],
+  "message": "'ssl.wrap_socket()' is deprecated. This function creates an insecure socket without server name indication or hostname matching. Instead, create an SSL context using 'ssl.SSLContext()' and use that to"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "crypto-mode-without-authentication",
+  "file": "securityeval/CWE-329/sonar_1.py",
+  "line": 10,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-327"
+  ],
+  "message": "An encryption mode of operation is being used without proper message authentication. This can potentially result in the encrypted content to be decrypted by an attacker. Consider instead use an AEAD m"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "unverified-jwt-decode",
+  "file": "securityeval/CWE-347/sonar_2.py",
+  "line": 8,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-287"
+  ],
+  "message": "Detected JWT token decoded with 'verify=False'. This bypasses any integrity checks for the token which means the token could be tampered with by malicious actors. Ensure that the JWT token is verified"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "direct-use-of-httpresponse",
+  "file": "securityeval/CWE-425/author_1.py",
+  "line": 12,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-79"
+  ],
+  "message": "Detected data rendered directly to the end user via 'HttpResponse' or a similar object. This bypasses Django's built-in cross-site scripting (XSS) defenses and could result in an XSS vulnerability. Us"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "avoid-pickle",
+  "file": "securityeval/CWE-502/author_1.py",
+  "line": 13,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-502"
+  ],
+  "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relev"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "avoid-pickle",
+  "file": "securityeval/CWE-502/codeql_1.py",
+  "line": 9,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-502"
+  ],
+  "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relev"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "avoid-cPickle",
+  "file": "securityeval/CWE-502/mitre_1.py",
+  "line": 11,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-502"
+  ],
+  "message": "Avoid using `cPickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the rele"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "avoid-pickle",
+  "file": "securityeval/CWE-502/mitre_1.py",
+  "line": 11,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-502"
+  ],
+  "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relev"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "insecure-deserialization",
+  "file": "securityeval/CWE-502/sonar_1.py",
+  "line": 11,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-502"
+  ],
+  "message": "Detected the use of an insecure deserialization library in a Flask route. These libraries are prone to code execution vulnerabilities. Ensure user data does not enter this function. To fix this, try t"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "md5-used-as-password",
+  "file": "securityeval/CWE-522/pearce_1.py",
+  "line": 17,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-327"
+  ],
+  "message": "It looks like MD5 is used as a password hash. MD5 is not considered a secure password hash because it can be cracked by an attacker in a short amount of time. Use a suitable password hashing function "
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "open-redirect__security",
+  "file": "securityeval/CWE-601/codeql_1.py",
+  "line": 11,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-601"
+  ],
+  "message": "Data from request is passed to redirect(). This is an open redirect and could be exploited. Consider using 'url_for()' to generate links to known locations. If you must use a URL to unknown pages, con"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "open-redirect",
+  "file": "securityeval/CWE-601/sonar_1.py",
+  "line": 7,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-601"
+  ],
+  "message": "Data from request (target) is passed to redirect(). This is an open redirect and could be exploited. Ensure you are redirecting to safe URLs by using django.utils.http.is_safe_url(). See https://cwe.m"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "open-redirect__security",
+  "file": "securityeval/CWE-601/sonar_2.py",
+  "line": 11,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-601"
+  ],
+  "message": "Data from request is passed to redirect(). This is an open redirect and could be exploited. Consider using 'url_for()' to generate links to known locations. If you must use a URL to unknown pages, con"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "avoid-bind-to-all-interfaces",
+  "file": "securityeval/CWE-605/author_1.py",
+  "line": 8,
+  "severity": "INFO",
+  "cwes": [
+   "CWE-200"
+  ],
+  "message": "Running `socket.bind` to 0.0.0.0, or empty string could unexpectedly expose the server publicly as it binds to all available interfaces. Consider instead getting correct address from an environment va"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "use-defused-xml",
+  "file": "securityeval/CWE-611/sonar_4.py",
+  "line": 1,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-611"
+  ],
+  "message": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential "
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "use-defused-xml",
+  "file": "securityeval/CWE-643/sonar_1.py",
+  "line": 2,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-611"
+  ],
+  "message": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential "
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "insecure-file-permissions",
+  "file": "securityeval/CWE-732/author_1.py",
+  "line": 10,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-276"
+  ],
+  "message": "These permissions `0o755` are widely permissive and grant access to more people than may be necessary. A good default is `0o644` which gives read and write access to yourself and read access to everyo"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "insecure-hash-function",
+  "file": "securityeval/CWE-759/mitre_1.py",
+  "line": 8,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-327"
+  ],
+  "message": "Detected use of an insecure MD4 or MD5 hash function. These functions have known vulnerabilities and are considered deprecated. Consider using 'SHA256' or a similar function instead."
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "use-defused-xml",
+  "file": "securityeval/CWE-776/codeql_1.py",
+  "line": 2,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-611"
+  ],
+  "message": "The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential "
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "tainted-url-host",
+  "file": "securityeval/CWE-918/codeql_1.py",
+  "line": 12,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-918"
+  ],
+  "message": "User data flows into the host portion of this manually-constructed URL. This could allow an attacker to send data to their own server, potentially exposing sensitive data such as cookies or authorizat"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "tainted-url-host__injection",
+  "file": "securityeval/CWE-918/codeql_1.py",
+  "line": 12,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-918"
+  ],
+  "message": "User data flows into the host portion of this manually-constructed URL. This could allow an attacker to send data to their own server, potentially exposing sensitive data such as cookies or authorizat"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "ssrf-injection-requests",
+  "file": "securityeval/CWE-918/codeql_2.py",
+  "line": 14,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-918"
+  ],
+  "message": "Data from request object is passed to a new server-side request. This could lead to a server-side request forgery (SSRF). To mitigate, ensure that schemes and hosts are validated against an allowlist,"
+ }
+]

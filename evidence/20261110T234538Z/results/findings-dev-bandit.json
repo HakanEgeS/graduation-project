@@ -1,0 +1,178 @@
+[
+ {
+  "tool": "bandit",
+  "rule_id": "B404",
+  "file": "dev/safe/s02_subprocess_list.py",
+  "line": 1,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Consider possible security implications associated with the subprocess module."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B607",
+  "file": "dev/safe/s02_subprocess_list.py",
+  "line": 3,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Starting a process with a partial executable path"
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B603",
+  "file": "dev/safe/s02_subprocess_list.py",
+  "line": 3,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "subprocess call - check for execution of untrusted input."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B608",
+  "file": "dev/vuln/v01_sqli.py",
+  "line": 4,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-89"
+  ],
+  "message": "Possible SQL injection vector through string-based query construction."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B404",
+  "file": "dev/vuln/v02_cmdi.py",
+  "line": 1,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Consider possible security implications associated with the subprocess module."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B602",
+  "file": "dev/vuln/v02_cmdi.py",
+  "line": 3,
+  "severity": "HIGH",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "subprocess call with shell=True identified, security issue."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B403",
+  "file": "dev/vuln/v03_pickle.py",
+  "line": 1,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-502"
+  ],
+  "message": "Consider possible security implications associated with pickle module."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B301",
+  "file": "dev/vuln/v03_pickle.py",
+  "line": 3,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-502"
+  ],
+  "message": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B105",
+  "file": "dev/vuln/v04_hardcoded_secret.py",
+  "line": 2,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-259"
+  ],
+  "message": "Possible hardcoded password: 'SuperSecret123!'"
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B324",
+  "file": "dev/vuln/v05_weak_hash.py",
+  "line": 3,
+  "severity": "HIGH",
+  "cwes": [
+   "CWE-327"
+  ],
+  "message": "Use of weak MD5 hash for security. Consider usedforsecurity=False"
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B307",
+  "file": "dev/vuln/v08_eval.py",
+  "line": 2,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Use of possibly insecure function - consider using safer ast.literal_eval."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B501",
+  "file": "dev/vuln/v09_tls_verify.py",
+  "line": 3,
+  "severity": "HIGH",
+  "cwes": [
+   "CWE-295"
+  ],
+  "message": "Call to requests with verify=False disabling SSL certificate checks, security issue."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B506",
+  "file": "dev/vuln/v10_yaml_load.py",
+  "line": 3,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-20"
+  ],
+  "message": "Use of unsafe yaml load. Allows instantiation of arbitrary objects. Consider yaml.safe_load()."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B311",
+  "file": "dev/vuln/v11_insecure_random.py",
+  "line": 3,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-330"
+  ],
+  "message": "Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B201",
+  "file": "dev/vuln/v12_flask_debug.py",
+  "line": 4,
+  "severity": "HIGH",
+  "cwes": [
+   "CWE-94"
+  ],
+  "message": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B104",
+  "file": "dev/vuln/v12_flask_debug.py",
+  "line": 4,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-605"
+  ],
+  "message": "Possible binding to all interfaces."
+ }
+]

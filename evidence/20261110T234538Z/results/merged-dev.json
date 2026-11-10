@@ -1,0 +1,397 @@
+[
+ {
+  "file": "dev/safe/s02_subprocess_list.py",
+  "line": 1,
+  "cwes": [
+   "CWE-78"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B404"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Consider possible security implications associated with the subprocess module."
+  ]
+ },
+ {
+  "file": "dev/safe/s02_subprocess_list.py",
+  "line": 3,
+  "cwes": [
+   "CWE-78"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B607",
+   "bandit:B603"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Starting a process with a partial executable path",
+   "[bandit] subprocess call - check for execution of untrusted input."
+  ]
+ },
+ {
+  "file": "dev/vuln/v01_sqli.py",
+  "line": 4,
+  "cwes": [
+   "CWE-89"
+  ],
+  "tools": [
+   "bandit",
+   "semgrep"
+  ],
+  "rules": [
+   "bandit:B608",
+   "semgrep:formatted-sql-query",
+   "semgrep:sqlalchemy-execute-raw-query"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] Possible SQL injection vector through string-based query construction.",
+   "[semgrep] Detected possible formatted SQL query. Use parameterized queries instead.",
+   "[semgrep] Avoiding SQL string concatenation: untrusted input concatenated with raw SQL query can result in SQL Injection. In order to execute raw query safely, prepared statement should be used. SQLAlchemy prov"
+  ]
+ },
+ {
+  "file": "dev/vuln/v02_cmdi.py",
+  "line": 1,
+  "cwes": [
+   "CWE-78"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B404"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Consider possible security implications associated with the subprocess module."
+  ]
+ },
+ {
+  "file": "dev/vuln/v02_cmdi.py",
+  "line": 3,
+  "cwes": [
+   "CWE-78"
+  ],
+  "tools": [
+   "bandit",
+   "semgrep"
+  ],
+  "rules": [
+   "bandit:B602",
+   "semgrep:dangerous-subprocess-use-audit",
+   "semgrep:subprocess-shell-true"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] subprocess call with shell=True identified, security issue.",
+   "[semgrep] Detected subprocess function 'check_output' without a static string. If this data can be controlled by a malicious actor, it may be an instance of command injection. Audit the use of this call to ensu",
+   "[semgrep] Found 'subprocess' function 'check_output' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables"
+  ]
+ },
+ {
+  "file": "dev/vuln/v03_pickle.py",
+  "line": 1,
+  "cwes": [
+   "CWE-502"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B403"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Consider possible security implications associated with pickle module."
+  ]
+ },
+ {
+  "file": "dev/vuln/v03_pickle.py",
+  "line": 3,
+  "cwes": [
+   "CWE-502"
+  ],
+  "tools": [
+   "bandit",
+   "semgrep"
+  ],
+  "rules": [
+   "bandit:B301",
+   "semgrep:avoid-pickle"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[bandit] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
+   "[semgrep] Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relev"
+  ]
+ },
+ {
+  "file": "dev/vuln/v04_hardcoded_secret.py",
+  "line": 2,
+  "cwes": [
+   "CWE-259"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B105"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Possible hardcoded password: 'SuperSecret123!'"
+  ]
+ },
+ {
+  "file": "dev/vuln/v05_weak_hash.py",
+  "line": 3,
+  "cwes": [
+   "CWE-327"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B324"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] Use of weak MD5 hash for security. Consider usedforsecurity=False"
+  ]
+ },
+ {
+  "file": "dev/vuln/v06_path_traversal.py",
+  "line": 6,
+  "cwes": [
+   "CWE-22",
+   "CWE-23",
+   "CWE-36",
+   "CWE-73",
+   "CWE-99"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/path-injection"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[codeql] This path depends on a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "dev/vuln/v07_xss.py",
+  "line": 6,
+  "cwes": [
+   "CWE-116",
+   "CWE-79"
+  ],
+  "tools": [
+   "codeql",
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:directly-returned-format-string",
+   "semgrep:raw-html-format",
+   "semgrep:raw-html-format__injection",
+   "codeql:py/reflective-xss"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[semgrep] Detected Flask route directly returning a formatted string. This is subject to cross-site scripting if user input can reach the string. Consider using the template engine instead and rendering pages w",
+   "[semgrep] Detected user input flowing into a manually constructed HTML string. You may be accidentally bypassing secure methods of rendering HTML by manually constructing HTML and this could create a cross-site",
+   "[semgrep] Detected user input flowing into a manually constructed HTML string. You may be accidentally bypassing secure methods of rendering HTML by manually constructing HTML and this could create a cross-site",
+   "[codeql] Cross-site scripting vulnerability due to a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "dev/vuln/v08_eval.py",
+  "line": 2,
+  "cwes": [
+   "CWE-78"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B307"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[bandit] Use of possibly insecure function - consider using safer ast.literal_eval."
+  ]
+ },
+ {
+  "file": "dev/vuln/v08_eval.py",
+  "line": 2,
+  "cwes": [
+   "CWE-95"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:eval-detected"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[semgrep] Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evalu"
+  ]
+ },
+ {
+  "file": "dev/vuln/v09_tls_verify.py",
+  "line": 3,
+  "cwes": [
+   "CWE-295"
+  ],
+  "tools": [
+   "bandit",
+   "codeql",
+   "semgrep"
+  ],
+  "rules": [
+   "bandit:B501",
+   "semgrep:disabled-cert-validation__security",
+   "codeql:py/request-without-cert-validation"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] Call to requests with verify=False disabling SSL certificate checks, security issue.",
+   "[semgrep] Certificate verification has been explicitly disabled. This permits insecure connections to insecure servers. Re-enable certification validation.",
+   "[codeql] This request may run without certificate validation because [it is disabled](1)."
+  ]
+ },
+ {
+  "file": "dev/vuln/v10_yaml_load.py",
+  "line": 3,
+  "cwes": [
+   "CWE-20"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B506"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[bandit] Use of unsafe yaml load. Allows instantiation of arbitrary objects. Consider yaml.safe_load()."
+  ]
+ },
+ {
+  "file": "dev/vuln/v10_yaml_load.py",
+  "line": 3,
+  "cwes": [
+   "CWE-502"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:avoid-pyyaml-load"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[semgrep] Detected a possible YAML deserialization vulnerability. `yaml.unsafe_load`, `yaml.Loader`, `yaml.CLoader`, and `yaml.UnsafeLoader` are all known to be unsafe methods of deserializing YAML. An attacker"
+  ]
+ },
+ {
+  "file": "dev/vuln/v11_insecure_random.py",
+  "line": 3,
+  "cwes": [
+   "CWE-330"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B311"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+  ]
+ },
+ {
+  "file": "dev/vuln/v12_flask_debug.py",
+  "line": 4,
+  "cwes": [
+   "CWE-94"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B201"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code."
+  ]
+ },
+ {
+  "file": "dev/vuln/v12_flask_debug.py",
+  "line": 4,
+  "cwes": [
+   "CWE-605"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B104"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[bandit] Possible binding to all interfaces."
+  ]
+ },
+ {
+  "file": "dev/vuln/v12_flask_debug.py",
+  "line": 4,
+  "cwes": [
+   "CWE-215",
+   "CWE-489",
+   "CWE-668"
+  ],
+  "tools": [
+   "codeql",
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:avoid_app_run_with_bad_host",
+   "codeql:py/flask-debug"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[semgrep] Running flask app with host 0.0.0.0 could expose the server publicly.",
+   "[codeql] A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger."
+  ]
+ },
+ {
+  "file": "dev/vuln/v12_flask_debug.py",
+  "line": 4,
+  "cwes": [
+   "CWE-489"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:debug-enabled"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[semgrep] Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' u"
+  ]
+ }
+]

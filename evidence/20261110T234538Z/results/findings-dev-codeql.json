@@ -1,0 +1,52 @@
+[
+ {
+  "tool": "codeql",
+  "rule_id": "py/flask-debug",
+  "file": "dev/vuln/v12_flask_debug.py",
+  "line": 4,
+  "severity": "SCORE-7.5",
+  "cwes": [
+   "CWE-215",
+   "CWE-489"
+  ],
+  "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/reflective-xss",
+  "file": "dev/vuln/v07_xss.py",
+  "line": 6,
+  "severity": "SCORE-7.8",
+  "cwes": [
+   "CWE-116",
+   "CWE-79"
+  ],
+  "message": "Cross-site scripting vulnerability due to a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/path-injection",
+  "file": "dev/vuln/v06_path_traversal.py",
+  "line": 6,
+  "severity": "SCORE-7.5",
+  "cwes": [
+   "CWE-22",
+   "CWE-23",
+   "CWE-36",
+   "CWE-73",
+   "CWE-99"
+  ],
+  "message": "This path depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/request-without-cert-validation",
+  "file": "dev/vuln/v09_tls_verify.py",
+  "line": 3,
+  "severity": "SCORE-7.5",
+  "cwes": [
+   "CWE-295"
+  ],
+  "message": "This request may run without certificate validation because [it is disabled](1)."
+ }
+]

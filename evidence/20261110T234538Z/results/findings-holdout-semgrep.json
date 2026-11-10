@@ -1,0 +1,266 @@
+[
+ {
+  "tool": "semgrep",
+  "rule_id": "directly-returned-format-string",
+  "file": "holdout/safe/h25_escaped_html.py",
+  "line": 10,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-79"
+  ],
+  "message": "Detected Flask route directly returning a formatted string. This is subject to cross-site scripting if user input can reach the string. Consider using the template engine instead and rendering pages w"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "raw-html-format",
+  "file": "holdout/safe/h25_escaped_html.py",
+  "line": 10,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-79"
+  ],
+  "message": "Detected user input flowing into a manually constructed HTML string. You may be accidentally bypassing secure methods of rendering HTML by manually constructing HTML and this could create a cross-site"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "raw-html-format__injection",
+  "file": "holdout/safe/h25_escaped_html.py",
+  "line": 10,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-79"
+  ],
+  "message": "Detected user input flowing into a manually constructed HTML string. You may be accidentally bypassing secure methods of rendering HTML by manually constructing HTML and this could create a cross-site"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "ssrf-injection-requests",
+  "file": "holdout/vuln/h02_ssrf.py",
+  "line": 9,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-918"
+  ],
+  "message": "Data from request object is passed to a new server-side request. This could lead to a server-side request forgery (SSRF). To mitigate, ensure that schemes and hosts are validated against an allowlist,"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "ssrf-requests",
+  "file": "holdout/vuln/h02_ssrf.py",
+  "line": 10,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-918"
+  ],
+  "message": "Data from request object is passed to a new server-side request. This could lead to a server-side request forgery (SSRF). To mitigate, ensure that schemes and hosts are validated against an allowlist,"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "open-redirect__security",
+  "file": "holdout/vuln/h03_open_redirect.py",
+  "line": 8,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-601"
+  ],
+  "message": "Data from request is passed to redirect(). This is an open redirect and could be exploited. Consider using 'url_for()' to generate links to known locations. If you must use a URL to unknown pages, con"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "insecure-cipher-algorithm-des",
+  "file": "holdout/vuln/h04_des_cipher.py",
+  "line": 5,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-327"
+  ],
+  "message": "Detected DES cipher or Triple DES algorithm which is considered insecure. This algorithm is not cryptographically secure and can be reversed easily. Use a secure symmetric cipher from the cryptodome p"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "insecure-file-permissions",
+  "file": "holdout/vuln/h06_chmod_world.py",
+  "line": 5,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-276"
+  ],
+  "message": "These permissions `0o777` are widely permissive and grant access to more people than may be necessary. A good default is `0o644` which gives read and write access to yourself and read access to everyo"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "user-exec",
+  "file": "holdout/vuln/h07_exec_plugin.py",
+  "line": 8,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-95"
+  ],
+  "message": "Found user data in a call to 'exec'. This is extremely dangerous because it can enable an attacker to execute arbitrary remote code on the system. Instead, refactor your code to not use 'eval' and ins"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "exec-detected",
+  "file": "holdout/vuln/h07_exec_plugin.py",
+  "line": 10,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-95"
+  ],
+  "message": "Detected the use of exec(). exec() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evalu"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "exec-injection",
+  "file": "holdout/vuln/h07_exec_plugin.py",
+  "line": 10,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-95"
+  ],
+  "message": "Detected user data flowing into exec. This is code injection and should be avoided."
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "raw-html-format",
+  "file": "holdout/vuln/h08_ssti.py",
+  "line": 9,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-79"
+  ],
+  "message": "Detected user input flowing into a manually constructed HTML string. You may be accidentally bypassing secure methods of rendering HTML by manually constructing HTML and this could create a cross-site"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "raw-html-format__injection",
+  "file": "holdout/vuln/h08_ssti.py",
+  "line": 9,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-79"
+  ],
+  "message": "Detected user input flowing into a manually constructed HTML string. You may be accidentally bypassing secure methods of rendering HTML by manually constructing HTML and this could create a cross-site"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "render-template-string",
+  "file": "holdout/vuln/h08_ssti.py",
+  "line": 10,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-96"
+  ],
+  "message": "Found a template created with string formatting. This is susceptible to server-side template injection and cross-site scripting attacks."
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "use-ftp-tls",
+  "file": "holdout/vuln/h11_cleartext_ftp.py",
+  "line": 5,
+  "severity": "INFO",
+  "cwes": [
+   "CWE-319"
+  ],
+  "message": "The 'FTP' class sends information unencrypted. Consider using the 'FTP_TLS' class instead."
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "secure-set-cookie",
+  "file": "holdout/vuln/h14_insecure_cookie.py",
+  "line": 9,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-614"
+  ],
+  "message": "Found a Flask cookie with insecurely configured properties.  By default the secure, httponly and samesite ar configured insecurely. cookies should be handled securely by setting `secure=True`, `httpon"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "sql-injection-db-cursor-execute",
+  "file": "holdout/vuln/h15_sqli_fstring_cross.py",
+  "line": 9,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-89"
+  ],
+  "message": "User-controlled data from a request is passed to 'execute()'. This could lead to a SQL injection and therefore protected information could be leaked. Instead, use django's QuerySets, which are built w"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "tainted-sql-string__injection",
+  "file": "holdout/vuln/h15_sqli_fstring_cross.py",
+  "line": 10,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-704"
+  ],
+  "message": "Detected user input used to manually construct a SQL string. This is usually bad practice because manual construction could accidentally result in a SQL injection. An attacker could use a SQL injectio"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "tainted-sql-string__injection",
+  "file": "holdout/vuln/h15_sqli_fstring_cross.py",
+  "line": 10,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-915"
+  ],
+  "message": "Detected user input used to manually construct a SQL string. This is usually bad practice because manual construction could accidentally result in a SQL injection. An attacker could use a SQL injectio"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "formatted-sql-query",
+  "file": "holdout/vuln/h15_sqli_fstring_cross.py",
+  "line": 12,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-89"
+  ],
+  "message": "Detected possible formatted SQL query. Use parameterized queries instead."
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "sqlalchemy-execute-raw-query",
+  "file": "holdout/vuln/h15_sqli_fstring_cross.py",
+  "line": 12,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-89"
+  ],
+  "message": "Avoiding SQL string concatenation: untrusted input concatenated with raw SQL query can result in SQL Injection. In order to execute raw query safely, prepared statement should be used. SQLAlchemy prov"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "command-injection-os-system",
+  "file": "holdout/vuln/h16_cmdi_fstring_cross.py",
+  "line": 9,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Request data detected in os.system. This could be vulnerable to a command injection and should be avoided. If this must be done, use the 'subprocess' module instead and pass the arguments as a list. S"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "dangerous-system-call-audit",
+  "file": "holdout/vuln/h16_cmdi_fstring_cross.py",
+  "line": 11,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Found dynamic content used in a system call. This is dangerous if external data can reach this function call because it allows a malicious actor to execute commands. Use the 'subprocess' module instea"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "dangerous-system-call__security",
+  "file": "holdout/vuln/h16_cmdi_fstring_cross.py",
+  "line": 11,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Found user-controlled data used in a system call. This could allow a malicious actor to execute commands. Use the 'subprocess' module instead, which is easier to use without accidentally exposing a co"
+ }
+]

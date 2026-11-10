@@ -78,3 +78,10 @@ def test_cwe_category_without_relations_does_not_crash():
 def test_semgrep_scans_git_ignored_folders():
     from vulnreview.adapters import semgrep_cmd
     assert "--no-git-ignore" in semgrep_cmd(Path("x"), Path("r.yaml"))
+
+
+def test_curated_rule_ids_are_unique():
+    import csv
+    from collections import Counter
+    rows = list(csv.DictReader((ROOT / "rules/semgrep-python-security.manifest.csv").open()))
+    assert max(Counter(r["rule_id"] for r in rows).values()) == 1

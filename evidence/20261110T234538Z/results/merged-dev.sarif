@@ -1,0 +1,961 @@
+{
+ "$schema": "https://docs.oasis-open.org/sarif/sarif/v2.1.0/errata01/os/schemas/sarif-schema-2.1.0.json",
+ "version": "2.1.0",
+ "runs": [
+  {
+   "tool": {
+    "driver": {
+     "name": "vulnreview",
+     "version": "0.2.0",
+     "informationUri": "https://github.com/HakanEgeS/graduation-project",
+     "rules": [
+      {
+       "id": "CWE-78",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-78"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-78"
+        ]
+       }
+      },
+      {
+       "id": "CWE-89",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-89"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-89"
+        ]
+       }
+      },
+      {
+       "id": "CWE-502",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-502"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-502"
+        ]
+       }
+      },
+      {
+       "id": "CWE-259",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-259"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-259"
+        ]
+       }
+      },
+      {
+       "id": "CWE-327",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-327"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-327"
+        ]
+       }
+      },
+      {
+       "id": "CWE-22+CWE-23+CWE-36+CWE-73+CWE-99",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-22, CWE-23, CWE-36, CWE-73, CWE-99"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-22",
+         "external/cwe/cwe-23",
+         "external/cwe/cwe-36",
+         "external/cwe/cwe-73",
+         "external/cwe/cwe-99"
+        ]
+       }
+      },
+      {
+       "id": "CWE-116+CWE-79",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-116, CWE-79"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-116",
+         "external/cwe/cwe-79"
+        ]
+       }
+      },
+      {
+       "id": "CWE-95",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-95"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-95"
+        ]
+       }
+      },
+      {
+       "id": "CWE-295",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-295"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-295"
+        ]
+       }
+      },
+      {
+       "id": "CWE-20",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-20"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-20"
+        ]
+       }
+      },
+      {
+       "id": "CWE-330",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-330"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-330"
+        ]
+       }
+      },
+      {
+       "id": "CWE-94",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-94"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-94"
+        ]
+       }
+      },
+      {
+       "id": "CWE-605",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-605"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-605"
+        ]
+       }
+      },
+      {
+       "id": "CWE-215+CWE-489+CWE-668",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-215, CWE-489, CWE-668"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-215",
+         "external/cwe/cwe-489",
+         "external/cwe/cwe-668"
+        ]
+       }
+      },
+      {
+       "id": "CWE-489",
+       "shortDescription": {
+        "text": "Merged finding mapped to CWE-489"
+       },
+       "properties": {
+        "tags": [
+         "security",
+         "external/cwe/cwe-489"
+        ]
+       }
+      }
+     ],
+     "properties": {
+      "engines": {
+       "bandit": "bandit 1.9.4",
+       "semgrep": "1.182.1",
+       "semgrep_full": "1.182.1",
+       "codeql": "2.27.4"
+      }
+     }
+    }
+   },
+   "originalUriBaseIds": {
+    "BENCHROOT": {
+     "description": {
+      "text": "Benchmark root (bench/)"
+     }
+    }
+   },
+   "results": [
+    {
+     "ruleId": "CWE-78",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Consider possible security implications associated with the subprocess module."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "dev/safe/s02_subprocess_list.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 1
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "dev/safe/s02_subprocess_list.py:1:CWE-78"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B404"
+      ],
+      "candidateCwes": [
+       "CWE-78"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-78",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Starting a process with a partial executable path | [bandit] subprocess call - check for execution of untrusted input."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "dev/safe/s02_subprocess_list.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 3
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "dev/safe/s02_subprocess_list.py:3:CWE-78"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B607",
+       "bandit:B603"
+      ],
+      "candidateCwes": [
+       "CWE-78"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-89",
+     "level": "error",
+     "message": {
+      "text": "[bandit] Possible SQL injection vector through string-based query construction. | [semgrep] Detected possible formatted SQL query. Use parameterized queries instead. | [semgrep] Avoiding SQL string concatenation: untrusted input concatenated with raw SQL query can result in SQL Injection. In order to execute raw query safely, prepared statement should be used. SQLAlchemy prov"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "dev/vuln/v01_sqli.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 4
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "dev/vuln/v01_sqli.py:4:CWE-89"
+     },
+     "properties": {
+      "tools": [
+       "bandit",
+       "semgrep"
+      ],
+      "rules": [
+       "bandit:B608",
+       "semgrep:formatted-sql-query",
+       "semgrep:sqlalchemy-execute-raw-query"
+      ],
+      "candidateCwes": [
+       "CWE-89"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-78",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Consider possible security implications associated with the subprocess module."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "dev/vuln/v02_cmdi.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 1
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "dev/vuln/v02_cmdi.py:1:CWE-78"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B404"
+      ],
+      "candidateCwes": [
+       "CWE-78"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-78",
+     "level": "error",
+     "message": {
+      "text": "[bandit] subprocess call with shell=True identified, security issue. | [semgrep] Detected subprocess function 'check_output' without a static string. If this data can be controlled by a malicious actor, it may be an instance of command injection. Audit the use of this call to ensu | [semgrep] Found 'subprocess' function 'check_output' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "dev/vuln/v02_cmdi.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 3
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "dev/vuln/v02_cmdi.py:3:CWE-78"
+     },
+     "properties": {
+      "tools": [
+       "bandit",
+       "semgrep"
+      ],
+      "rules": [
+       "bandit:B602",
+       "semgrep:dangerous-subprocess-use-audit",
+       "semgrep:subprocess-shell-true"
+      ],
+      "candidateCwes": [
+       "CWE-78"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-502",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Consider possible security implications associated with pickle module."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "dev/vuln/v03_pickle.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 1
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "dev/vuln/v03_pickle.py:1:CWE-502"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B403"
+      ],
+      "candidateCwes": [
+       "CWE-502"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-502",
+     "level": "warning",
+     "message": {
+      "text": "[bandit] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue. | [semgrep] Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relev"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "dev/vuln/v03_pickle.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 3
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "dev/vuln/v03_pickle.py:3:CWE-502"
+     },
+     "properties": {
+      "tools": [
+       "bandit",
+       "semgrep"
+      ],
+      "rules": [
+       "bandit:B301",
+       "semgrep:avoid-pickle"
+      ],
+      "candidateCwes": [
+       "CWE-502"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-259",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Possible hardcoded password: 'SuperSecret123!'"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "dev/vuln/v04_hardcoded_secret.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 2
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "dev/vuln/v04_hardcoded_secret.py:2:CWE-259"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B105"
+      ],
+      "candidateCwes": [
+       "CWE-259"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-327",
+     "level": "error",
+     "message": {
+      "text": "[bandit] Use of weak MD5 hash for security. Consider usedforsecurity=False"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "dev/vuln/v05_weak_hash.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 3
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "dev/vuln/v05_weak_hash.py:3:CWE-327"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B324"
+      ],
+      "candidateCwes": [
+       "CWE-327"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-22+CWE-23+CWE-36+CWE-73+CWE-99",
+     "level": "error",
+     "message": {
+      "text": "[codeql] This path depends on a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "dev/vuln/v06_path_traversal.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 6
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "dev/vuln/v06_path_traversal.py:6:CWE-22+CWE-23+CWE-36+CWE-73+CWE-99"
+     },
+     "properties": {
+      "tools": [
+       "codeql"
+      ],
+      "rules": [
+       "codeql:py/path-injection"
+      ],
+      "candidateCwes": [
+       "CWE-22",
+       "CWE-23",
+       "CWE-36",
+       "CWE-73",
+       "CWE-99"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-116+CWE-79",
+     "level": "error",
+     "message": {
+      "text": "[semgrep] Detected Flask route directly returning a formatted string. This is subject to cross-site scripting if user input can reach the string. Consider using the template engine instead and rendering pages w | [semgrep] Detected user input flowing into a manually constructed HTML string. You may be accidentally bypassing secure methods of rendering HTML by manually constructing HTML and this could create a cross-site | [semgrep] Detected user input flowing into a manually constructed HTML string. You may be accidentally bypassing secure methods of rendering HTML by manually constructing HTML and this could create a cross-site | [codeql] Cross-site scripting vulnerability due to a [user-provided value](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "dev/vuln/v07_xss.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 6
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "dev/vuln/v07_xss.py:6:CWE-116+CWE-79"
+     },
+     "properties": {
+      "tools": [
+       "codeql",
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:directly-returned-format-string",
+       "semgrep:raw-html-format",
+       "semgrep:raw-html-format__injection",
+       "codeql:py/reflective-xss"
+      ],
+      "candidateCwes": [
+       "CWE-116",
+       "CWE-79"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-78",
+     "level": "warning",
+     "message": {
+      "text": "[bandit] Use of possibly insecure function - consider using safer ast.literal_eval."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "dev/vuln/v08_eval.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 2
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "dev/vuln/v08_eval.py:2:CWE-78"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B307"
+      ],
+      "candidateCwes": [
+       "CWE-78"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-95",
+     "level": "warning",
+     "message": {
+      "text": "[semgrep] Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evalu"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "dev/vuln/v08_eval.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 2
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "dev/vuln/v08_eval.py:2:CWE-95"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:eval-detected"
+      ],
+      "candidateCwes": [
+       "CWE-95"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-295",
+     "level": "error",
+     "message": {
+      "text": "[bandit] Call to requests with verify=False disabling SSL certificate checks, security issue. | [semgrep] Certificate verification has been explicitly disabled. This permits insecure connections to insecure servers. Re-enable certification validation. | [codeql] This request may run without certificate validation because [it is disabled](1)."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "dev/vuln/v09_tls_verify.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 3
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "dev/vuln/v09_tls_verify.py:3:CWE-295"
+     },
+     "properties": {
+      "tools": [
+       "bandit",
+       "codeql",
+       "semgrep"
+      ],
+      "rules": [
+       "bandit:B501",
+       "semgrep:disabled-cert-validation__security",
+       "codeql:py/request-without-cert-validation"
+      ],
+      "candidateCwes": [
+       "CWE-295"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-20",
+     "level": "warning",
+     "message": {
+      "text": "[bandit] Use of unsafe yaml load. Allows instantiation of arbitrary objects. Consider yaml.safe_load()."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "dev/vuln/v10_yaml_load.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 3
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "dev/vuln/v10_yaml_load.py:3:CWE-20"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B506"
+      ],
+      "candidateCwes": [
+       "CWE-20"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-502",
+     "level": "error",
+     "message": {
+      "text": "[semgrep] Detected a possible YAML deserialization vulnerability. `yaml.unsafe_load`, `yaml.Loader`, `yaml.CLoader`, and `yaml.UnsafeLoader` are all known to be unsafe methods of deserializing YAML. An attacker"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "dev/vuln/v10_yaml_load.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 3
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "dev/vuln/v10_yaml_load.py:3:CWE-502"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:avoid-pyyaml-load"
+      ],
+      "candidateCwes": [
+       "CWE-502"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-330",
+     "level": "note",
+     "message": {
+      "text": "[bandit] Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "dev/vuln/v11_insecure_random.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 3
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "dev/vuln/v11_insecure_random.py:3:CWE-330"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B311"
+      ],
+      "candidateCwes": [
+       "CWE-330"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-94",
+     "level": "error",
+     "message": {
+      "text": "[bandit] A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "dev/vuln/v12_flask_debug.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 4
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "dev/vuln/v12_flask_debug.py:4:CWE-94"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B201"
+      ],
+      "candidateCwes": [
+       "CWE-94"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-605",
+     "level": "warning",
+     "message": {
+      "text": "[bandit] Possible binding to all interfaces."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "dev/vuln/v12_flask_debug.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 4
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "dev/vuln/v12_flask_debug.py:4:CWE-605"
+     },
+     "properties": {
+      "tools": [
+       "bandit"
+      ],
+      "rules": [
+       "bandit:B104"
+      ],
+      "candidateCwes": [
+       "CWE-605"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-215+CWE-489+CWE-668",
+     "level": "error",
+     "message": {
+      "text": "[semgrep] Running flask app with host 0.0.0.0 could expose the server publicly. | [codeql] A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger."
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "dev/vuln/v12_flask_debug.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 4
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "dev/vuln/v12_flask_debug.py:4:CWE-215+CWE-489+CWE-668"
+     },
+     "properties": {
+      "tools": [
+       "codeql",
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:avoid_app_run_with_bad_host",
+       "codeql:py/flask-debug"
+      ],
+      "candidateCwes": [
+       "CWE-215",
+       "CWE-489",
+       "CWE-668"
+      ]
+     }
+    },
+    {
+     "ruleId": "CWE-489",
+     "level": "warning",
+     "message": {
+      "text": "[semgrep] Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' u"
+     },
+     "locations": [
+      {
+       "physicalLocation": {
+        "artifactLocation": {
+         "uri": "dev/vuln/v12_flask_debug.py",
+         "uriBaseId": "BENCHROOT"
+        },
+        "region": {
+         "startLine": 4
+        }
+       }
+      }
+     ],
+     "partialFingerprints": {
+      "fileLineCwe/v1": "dev/vuln/v12_flask_debug.py:4:CWE-489"
+     },
+     "properties": {
+      "tools": [
+       "semgrep"
+      ],
+      "rules": [
+       "semgrep:debug-enabled"
+      ],
+      "candidateCwes": [
+       "CWE-489"
+      ]
+     }
+    }
+   ]
+  }
+ ]
+}

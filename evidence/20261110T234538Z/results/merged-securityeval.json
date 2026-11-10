@@ -1,0 +1,2543 @@
+[
+ {
+  "file": "securityeval/CWE-020/author_1.py",
+  "line": 10,
+  "cwes": [
+   "CWE-20"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B506"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[bandit] Use of unsafe yaml load. Allows instantiation of arbitrary objects. Consider yaml.safe_load()."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-020/author_2.py",
+  "line": 1,
+  "cwes": [
+   "CWE-20"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B405"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Using xml.etree.ElementTree to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-020/author_2.py",
+  "line": 1,
+  "cwes": [
+   "CWE-611"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:use-defused-xml"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[semgrep] The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential "
+  ]
+ },
+ {
+  "file": "securityeval/CWE-020/author_2.py",
+  "line": 8,
+  "cwes": [
+   "CWE-20"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B314"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[bandit] Using xml.etree.ElementTree.fromstring to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.fromstring with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-020/codeql_1.py",
+  "line": 10,
+  "cwes": [
+   "CWE-116",
+   "CWE-79"
+  ],
+  "tools": [
+   "codeql",
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:make-response-with-unknown-content",
+   "codeql:py/reflective-xss"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[semgrep] Be careful with `flask.make_response()`. If this response is rendered onto a webpage, this could create a cross-site scripting (XSS) vulnerability. `flask.make_response()` will not autoescape HTML. If",
+   "[codeql] Cross-site scripting vulnerability due to a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-020/codeql_2.py",
+  "line": 2,
+  "cwes": [
+   "CWE-502"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B403"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Consider possible security implications associated with pickle module."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-020/codeql_2.py",
+  "line": 15,
+  "cwes": [
+   "CWE-502"
+  ],
+  "tools": [
+   "bandit",
+   "codeql",
+   "semgrep"
+  ],
+  "rules": [
+   "bandit:B301",
+   "semgrep:avoid-pickle",
+   "semgrep:insecure-deserialization",
+   "codeql:py/unsafe-deserialization"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
+   "[semgrep] Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relev",
+   "[semgrep] Detected the use of an insecure deserialization library in a Flask route. These libraries are prone to code execution vulnerabilities. Ensure user data does not enter this function. To fix this, try t",
+   "[codeql] Unsafe deserialization depends on a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-020/codeql_2.py",
+  "line": 16,
+  "cwes": [
+   "CWE-116",
+   "CWE-79"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/reflective-xss"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[codeql] Cross-site scripting vulnerability due to a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-020/codeql_3.py",
+  "line": 14,
+  "cwes": [
+   "CWE-601"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:open-redirect__security"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[semgrep] Data from request is passed to redirect(). This is an open redirect and could be exploited. Consider using 'url_for()' to generate links to known locations. If you must use a URL to unknown pages, con"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-020/codeql_3.py",
+  "line": 15,
+  "cwes": [
+   "CWE-20"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/incomplete-hostname-regexp"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[codeql] This regular expression has an unescaped '.' before 'example.com/', so it might match more hosts than expected."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-020/codeql_3.py",
+  "line": 17,
+  "cwes": [
+   "CWE-601"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/url-redirection"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[codeql] Untrusted URL redirection depends on a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-020/codeql_4.py",
+  "line": 11,
+  "cwes": [
+   "CWE-601"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:open-redirect__security"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[semgrep] Data from request is passed to redirect(). This is an open redirect and could be exploited. Consider using 'url_for()' to generate links to known locations. If you must use a URL to unknown pages, con"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-020/codeql_4.py",
+  "line": 12,
+  "cwes": [
+   "CWE-20"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/incomplete-url-substring-sanitization"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[codeql] The string [example.com](1) may be at an arbitrary position in the sanitized URL."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-020/codeql_4.py",
+  "line": 13,
+  "cwes": [
+   "CWE-601"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/url-redirection"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[codeql] Untrusted URL redirection depends on a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-022/author_1.py",
+  "line": 13,
+  "cwes": [
+   "CWE-22",
+   "CWE-23",
+   "CWE-36",
+   "CWE-73",
+   "CWE-99"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/path-injection"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[codeql] This path depends on a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-022/author_2.py",
+  "line": 8,
+  "cwes": [
+   "CWE-22"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B310"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[bandit] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-022/author_2.py",
+  "line": 8,
+  "cwes": [
+   "CWE-939"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:dynamic-urllib-use-detected"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[semgrep] Detected a dynamic value being used with urllib. urllib supports 'file://' schemes, so a dynamic value controlled by a malicious actor may allow them to read arbitrary files. Audit uses of urllib call"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-022/codeql_1.py",
+  "line": 12,
+  "cwes": [
+   "CWE-22"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:path-traversal-open"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[semgrep] Found request data in a call to 'open'. Ensure the request data is validated or sanitized, otherwise it could result in path traversal attacks and therefore sensitive data being leaked. To mitigate, c"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-022/codeql_1.py",
+  "line": 13,
+  "cwes": [
+   "CWE-22",
+   "CWE-23",
+   "CWE-36",
+   "CWE-73",
+   "CWE-99"
+  ],
+  "tools": [
+   "codeql",
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:path-traversal-open__injection",
+   "codeql:py/path-injection"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[semgrep] Found request data in a call to 'open'. Ensure the request data is validated or sanitized, otherwise it could result in path traversal attacks.",
+   "[codeql] This path depends on a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-022/codeql_2.py",
+  "line": 11,
+  "cwes": [
+   "CWE-22",
+   "CWE-377"
+  ],
+  "tools": [
+   "bandit",
+   "codeql"
+  ],
+  "rules": [
+   "bandit:B108",
+   "codeql:py/tarslip"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] Probable insecure usage of temp file/directory.",
+   "[codeql] This file extraction depends on a [potentially untrusted source](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-078/author_1.py",
+  "line": 1,
+  "cwes": [
+   "CWE-78"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B404"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Consider possible security implications associated with the subprocess module."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-078/author_1.py",
+  "line": 8,
+  "cwes": [
+   "CWE-78"
+  ],
+  "tools": [
+   "bandit",
+   "semgrep"
+  ],
+  "rules": [
+   "bandit:B602",
+   "semgrep:dangerous-subprocess-use-audit",
+   "semgrep:subprocess-shell-true"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] subprocess call with shell=True identified, security issue.",
+   "[semgrep] Detected subprocess function 'call' without a static string. If this data can be controlled by a malicious actor, it may be an instance of command injection. Audit the use of this call to ensure it is",
+   "[semgrep] Found 'subprocess' function 'call' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables, which "
+  ]
+ },
+ {
+  "file": "securityeval/CWE-078/codeql_1.py",
+  "line": 12,
+  "cwes": [
+   "CWE-78"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:command-injection-os-system"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[semgrep] Request data detected in os.system. This could be vulnerable to a command injection and should be avoided. If this must be done, use the 'subprocess' module instead and pass the arguments as a list. S"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-078/codeql_1.py",
+  "line": 13,
+  "cwes": [
+   "CWE-78",
+   "CWE-88"
+  ],
+  "tools": [
+   "bandit",
+   "codeql",
+   "semgrep"
+  ],
+  "rules": [
+   "bandit:B605",
+   "semgrep:dangerous-system-call-audit",
+   "semgrep:dangerous-system-call__security",
+   "semgrep:os-system-injection",
+   "codeql:py/command-line-injection"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] Starting a process with a shell, possible injection detected, security issue.",
+   "[semgrep] Found dynamic content used in a system call. This is dangerous if external data can reach this function call because it allows a malicious actor to execute commands. Use the 'subprocess' module instea",
+   "[semgrep] Found user-controlled data used in a system call. This could allow a malicious actor to execute commands. Use the 'subprocess' module instead, which is easier to use without accidentally exposing a co",
+   "[semgrep] User data detected in os.system. This could be vulnerable to a command injection and should be avoided. If this must be done, use the 'subprocess' module instead and pass the arguments as a list.",
+   "[codeql] This command line depends on a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-079/codeql_1.py",
+  "line": 13,
+  "cwes": [
+   "CWE-79",
+   "CWE-94"
+  ],
+  "tools": [
+   "bandit",
+   "codeql",
+   "semgrep"
+  ],
+  "rules": [
+   "bandit:B701",
+   "semgrep:direct-use-of-jinja2",
+   "codeql:py/jinja2/autoescape-false"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] By default, jinja2 sets autoescape to False. Consider using autoescape=True or use the select_autoescape function to mitigate XSS vulnerabilities.",
+   "[semgrep] Detected direct use of jinja2. If not done properly, this may bypass HTML escaping which opens up the application to cross-site scripting (XSS) vulnerabilities. Prefer using the Flask method 'render_t",
+   "[codeql] Using jinja2 templates with autoescape=False can potentially allow XSS attacks."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-079/codeql_1.py",
+  "line": 13,
+  "cwes": [
+   "CWE-116"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:missing-autoescape-disabled"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[semgrep] Detected a Jinja2 environment without autoescaping. Jinja2 does not autoescape by default. This is dangerous if you are rendering to a browser because this allows for cross-site scripting (XSS) attack"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-079/codeql_1.py",
+  "line": 15,
+  "cwes": [
+   "CWE-79"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:direct-use-of-jinja2"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[semgrep] Detected direct use of jinja2. If not done properly, this may bypass HTML escaping which opens up the application to cross-site scripting (XSS) vulnerabilities. Prefer using the Flask method 'render_t"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-079/codeql_2.py",
+  "line": 12,
+  "cwes": [
+   "CWE-116",
+   "CWE-79"
+  ],
+  "tools": [
+   "codeql",
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:make-response-with-unknown-content",
+   "codeql:py/reflective-xss"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[semgrep] Be careful with `flask.make_response()`. If this response is rendered onto a webpage, this could create a cross-site scripting (XSS) vulnerability. `flask.make_response()` will not autoescape HTML. If",
+   "[codeql] Cross-site scripting vulnerability due to a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-079/sonar_1.py",
+  "line": 14,
+  "cwes": [
+   "CWE-116",
+   "CWE-79"
+  ],
+  "tools": [
+   "codeql",
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:make-response-with-unknown-content",
+   "codeql:py/reflective-xss"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[semgrep] Be careful with `flask.make_response()`. If this response is rendered onto a webpage, this could create a cross-site scripting (XSS) vulnerability. `flask.make_response()` will not autoescape HTML. If",
+   "[codeql] Cross-site scripting vulnerability due to a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-080/author_1.py",
+  "line": 12,
+  "cwes": [
+   "CWE-116",
+   "CWE-79"
+  ],
+  "tools": [
+   "codeql",
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:make-response-with-unknown-content",
+   "semgrep:raw-html-format",
+   "semgrep:raw-html-format__injection",
+   "codeql:py/reflective-xss"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[semgrep] Be careful with `flask.make_response()`. If this response is rendered onto a webpage, this could create a cross-site scripting (XSS) vulnerability. `flask.make_response()` will not autoescape HTML. If",
+   "[semgrep] Detected user input flowing into a manually constructed HTML string. You may be accidentally bypassing secure methods of rendering HTML by manually constructing HTML and this could create a cross-site",
+   "[semgrep] Detected user input flowing into a manually constructed HTML string. You may be accidentally bypassing secure methods of rendering HTML by manually constructing HTML and this could create a cross-site",
+   "[codeql] Cross-site scripting vulnerability due to a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-089/author_1.py",
+  "line": 8,
+  "cwes": [
+   "CWE-259"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B106"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Possible hardcoded password: ''"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-089/author_1.py",
+  "line": 16,
+  "cwes": [
+   "CWE-89"
+  ],
+  "tools": [
+   "bandit",
+   "semgrep"
+  ],
+  "rules": [
+   "bandit:B608",
+   "semgrep:formatted-sql-query",
+   "semgrep:sqlalchemy-execute-raw-query"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] Possible SQL injection vector through string-based query construction.",
+   "[semgrep] Detected possible formatted SQL query. Use parameterized queries instead.",
+   "[semgrep] Avoiding SQL string concatenation: untrusted input concatenated with raw SQL query can result in SQL Injection. In order to execute raw query safely, prepared statement should be used. SQLAlchemy prov"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-089/codeql_1.py",
+  "line": 7,
+  "cwes": [
+   "CWE-259"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B106"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Possible hardcoded password: ''"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-089/codeql_1.py",
+  "line": 16,
+  "cwes": [
+   "CWE-89"
+  ],
+  "tools": [
+   "bandit",
+   "semgrep"
+  ],
+  "rules": [
+   "bandit:B608",
+   "semgrep:formatted-sql-query",
+   "semgrep:sqlalchemy-execute-raw-query"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] Possible SQL injection vector through string-based query construction.",
+   "[semgrep] Detected possible formatted SQL query. Use parameterized queries instead.",
+   "[semgrep] Avoiding SQL string concatenation: untrusted input concatenated with raw SQL query can result in SQL Injection. In order to execute raw query safely, prepared statement should be used. SQLAlchemy prov"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-090/codeql_1.py",
+  "line": 22,
+  "cwes": [
+   "CWE-90"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/ldap-injection",
+   "codeql:py/ldap-injection"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[codeql] LDAP query parameter (DN) depends on a [user-provided value](1).",
+   "[codeql] LDAP query parameter (filter) depends on a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-090/codeql_2.py",
+  "line": 22,
+  "cwes": [
+   "CWE-90"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/ldap-injection",
+   "codeql:py/ldap-injection"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[codeql] LDAP query parameter (DN) depends on a [user-provided value](1).",
+   "[codeql] LDAP query parameter (filter) depends on a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-094/codeql_1.py",
+  "line": 13,
+  "cwes": [
+   "CWE-78"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B102"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[bandit] Use of exec detected."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-094/codeql_1.py",
+  "line": 13,
+  "cwes": [
+   "CWE-116",
+   "CWE-94",
+   "CWE-95"
+  ],
+  "tools": [
+   "codeql",
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:exec-detected",
+   "semgrep:exec-injection",
+   "codeql:py/code-injection"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[semgrep] Detected the use of exec(). exec() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evalu",
+   "[semgrep] Detected user data flowing into exec. This is code injection and should be avoided.",
+   "[codeql] This code execution depends on a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-094/sonar_1.py",
+  "line": 11,
+  "cwes": [
+   "CWE-95"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:user-exec-format-string"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[semgrep] Found user data in a call to 'exec'. This is extremely dangerous because it can enable an attacker to execute arbitrary remote code on the system. Instead, refactor your code to not use 'eval' and ins"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-094/sonar_1.py",
+  "line": 12,
+  "cwes": [
+   "CWE-78"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B102"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[bandit] Use of exec detected."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-094/sonar_1.py",
+  "line": 12,
+  "cwes": [
+   "CWE-116",
+   "CWE-94",
+   "CWE-95"
+  ],
+  "tools": [
+   "codeql",
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:exec-detected",
+   "semgrep:exec-injection",
+   "codeql:py/code-injection"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[semgrep] Detected the use of exec(). exec() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evalu",
+   "[semgrep] Detected user data flowing into exec. This is code injection and should be avoided.",
+   "[codeql] This code execution depends on a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-095/author_1.py",
+  "line": 5,
+  "cwes": [
+   "CWE-78"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B307"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[bandit] Use of possibly insecure function - consider using safer ast.literal_eval."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-095/author_1.py",
+  "line": 5,
+  "cwes": [
+   "CWE-95"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:eval-detected"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[semgrep] Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evalu"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-099/sonar_1.py",
+  "line": 12,
+  "cwes": [
+   "CWE-22",
+   "CWE-23",
+   "CWE-36",
+   "CWE-73",
+   "CWE-99"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/path-injection"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[codeql] This path depends on a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-116/author_1.py",
+  "line": 14,
+  "cwes": [
+   "CWE-78"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:command-injection-os-system"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[semgrep] Request data detected in os.system. This could be vulnerable to a command injection and should be avoided. If this must be done, use the 'subprocess' module instead and pass the arguments as a list. S"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-116/author_1.py",
+  "line": 15,
+  "cwes": [
+   "CWE-78",
+   "CWE-88"
+  ],
+  "tools": [
+   "bandit",
+   "codeql",
+   "semgrep"
+  ],
+  "rules": [
+   "bandit:B605",
+   "semgrep:dangerous-system-call-audit",
+   "semgrep:dangerous-system-call__security",
+   "semgrep:os-system-injection",
+   "codeql:py/command-line-injection"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] Starting a process with a shell, possible injection detected, security issue.",
+   "[semgrep] Found dynamic content used in a system call. This is dangerous if external data can reach this function call because it allows a malicious actor to execute commands. Use the 'subprocess' module instea",
+   "[semgrep] Found user-controlled data used in a system call. This could allow a malicious actor to execute commands. Use the 'subprocess' module instead, which is easier to use without accidentally exposing a co",
+   "[semgrep] User data detected in os.system. This could be vulnerable to a command injection and should be avoided. If this must be done, use the 'subprocess' module instead and pass the arguments as a list.",
+   "[codeql] This command line depends on a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-116/author_1.py",
+  "line": 16,
+  "cwes": [
+   "CWE-377"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B108"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[bandit] Probable insecure usage of temp file/directory."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-116/codeql_1.py",
+  "line": 11,
+  "cwes": [
+   "CWE-116",
+   "CWE-185",
+   "CWE-186",
+   "CWE-20"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/bad-tag-filter"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[codeql] This regular expression does not match script end tags like </script >."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-117/codeql_1.py",
+  "line": 15,
+  "cwes": [
+   "CWE-117"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/log-injection"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[codeql] This log entry depends on a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-1204/sonar_1.py",
+  "line": 1,
+  "cwes": [
+   "CWE-327"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B413"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] The pyCrypto library and its module AES are no longer actively maintained and have been deprecated. Consider using pyca/cryptography library."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-1204/sonar_1.py",
+  "line": 2,
+  "cwes": [
+   "CWE-327"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B413"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] The pyCrypto library and its module pad are no longer actively maintained and have been deprecated. Consider using pyca/cryptography library."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-200/author_1.py",
+  "line": 14,
+  "cwes": [
+   "CWE-89"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B608"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[bandit] Possible SQL injection vector through string-based query construction."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-200/author_1.py",
+  "line": 15,
+  "cwes": [
+   "CWE-89"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:sqlalchemy-execute-raw-query"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[semgrep] Avoiding SQL string concatenation: untrusted input concatenated with raw SQL query can result in SQL Injection. In order to execute raw query safely, prepared statement should be used. SQLAlchemy prov"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-209/codeql_1.py",
+  "line": 19,
+  "cwes": [
+   "CWE-209",
+   "CWE-497"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/stack-trace-exposure"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[codeql] [Stack trace information](1) flows to this location and may be exposed to an external user."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-215/codeql_1.py",
+  "line": 12,
+  "cwes": [
+   "CWE-94"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B201"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-215/codeql_1.py",
+  "line": 12,
+  "cwes": [
+   "CWE-215",
+   "CWE-489",
+   "CWE-668"
+  ],
+  "tools": [
+   "codeql",
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:avoid_using_app_run_directly",
+   "codeql:py/flask-debug"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[semgrep] top-level app.run(...) is ignored by flask. Consider putting app.run(...) behind a guard, like inside a function",
+   "[codeql] A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-215/codeql_1.py",
+  "line": 12,
+  "cwes": [
+   "CWE-489"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:debug-enabled"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[semgrep] Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' u"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-259/author_1.py",
+  "line": 5,
+  "cwes": [
+   "CWE-259"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B105"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Possible hardcoded password: 'admin'"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-259/author_2.py",
+  "line": 8,
+  "cwes": [
+   "CWE-259"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B106"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Possible hardcoded password: 'password'"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-295/codeql_1.py",
+  "line": 4,
+  "cwes": [
+   "CWE-295"
+  ],
+  "tools": [
+   "bandit",
+   "codeql",
+   "semgrep"
+  ],
+  "rules": [
+   "bandit:B501",
+   "semgrep:disabled-cert-validation__security",
+   "codeql:py/request-without-cert-validation"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] Call to requests with verify=False disabling SSL certificate checks, security issue.",
+   "[semgrep] Certificate verification has been explicitly disabled. This permits insecure connections to insecure servers. Re-enable certification validation.",
+   "[codeql] This request may run without certificate validation because [it is disabled](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-295/codeql_1.py",
+  "line": 4,
+  "cwes": [
+   "CWE-400"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B113"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[bandit] Call to requests without timeout"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-319/author_1.py",
+  "line": 29,
+  "cwes": [
+   "CWE-614"
+  ],
+  "tools": [
+   "codeql",
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:secure-set-cookie",
+   "codeql:py/insecure-cookie"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[semgrep] Found a Flask cookie with insecurely configured properties.  By default the secure, httponly and samesite ar configured insecurely. cookies should be handled securely by setting `secure=True`, `httpon",
+   "[codeql] Cookie is added to response without the 'secure' flag being set."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-319/author_1.py",
+  "line": 29,
+  "cwes": [
+   "CWE-1004"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/client-exposed-cookie"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[codeql] Sensitive server cookie is set without HttpOnly flag."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-319/author_2.py",
+  "line": 1,
+  "cwes": [
+   "CWE-319"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B402"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] A FTP-related module is being imported.  FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-319/author_2.py",
+  "line": 11,
+  "cwes": [
+   "CWE-319"
+  ],
+  "tools": [
+   "bandit",
+   "semgrep"
+  ],
+  "rules": [
+   "bandit:B321",
+   "semgrep:use-ftp-tls"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] FTP-related functions are being called. FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol.",
+   "[semgrep] The 'FTP' class sends information unencrypted. Consider using the 'FTP_TLS' class instead."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-326/author_1.py",
+  "line": 1,
+  "cwes": [
+   "CWE-327"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B413"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] The pyCrypto library and its module RSA are no longer actively maintained and have been deprecated. Consider using pyca/cryptography library."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-326/author_1.py",
+  "line": 9,
+  "cwes": [
+   "CWE-326"
+  ],
+  "tools": [
+   "bandit",
+   "codeql",
+   "semgrep"
+  ],
+  "rules": [
+   "bandit:B505",
+   "semgrep:insufficient-rsa-key-size__security",
+   "codeql:py/weak-crypto-key"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] RSA key sizes below 2048 bits are considered breakable. ",
+   "[semgrep] Detected an insufficient key size for RSA. NIST recommends a key size of 3072 or higher.",
+   "[codeql] Creation of an RSA key uses [1024](1) bits, which is below 2048 and considered breakable."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-326/author_2.py",
+  "line": 1,
+  "cwes": [
+   "CWE-327"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B413"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] The pyCrypto library and its module DSA are no longer actively maintained and have been deprecated. Consider using pyca/cryptography library."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-326/author_2.py",
+  "line": 9,
+  "cwes": [
+   "CWE-326"
+  ],
+  "tools": [
+   "bandit",
+   "codeql",
+   "semgrep"
+  ],
+  "rules": [
+   "bandit:B505",
+   "semgrep:insufficient-dsa-key-size__security",
+   "codeql:py/weak-crypto-key"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] DSA key sizes below 2048 bits are considered breakable. ",
+   "[semgrep] Detected an insufficient key size for DSA. NIST recommends a key size of 2048 or higher.",
+   "[codeql] Creation of an DSA key uses [1024](1) bits, which is below 2048 and considered breakable."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-327/codeql_1.py",
+  "line": 1,
+  "cwes": [
+   "CWE-327"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B413"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] The pyCrypto library and its module * are no longer actively maintained and have been deprecated. Consider using pyca/cryptography library."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-327/codeql_1.py",
+  "line": 9,
+  "cwes": [
+   "CWE-327"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:insecure-cipher-algorithm-des"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[semgrep] Detected DES cipher or Triple DES algorithm which is considered insecure. This algorithm is not cryptographically secure and can be reversed easily. Use a secure symmetric cipher from the cryptodome p"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-327/codeql_1.py",
+  "line": 10,
+  "cwes": [
+   "CWE-327"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/weak-cryptographic-algorithm"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[codeql] [The cryptographic algorithm DES](1) is broken or weak, and should not be used."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-327/codeql_2.py",
+  "line": 11,
+  "cwes": [
+   "CWE-326",
+   "CWE-327"
+  ],
+  "tools": [
+   "bandit",
+   "codeql",
+   "semgrep"
+  ],
+  "rules": [
+   "bandit:B504",
+   "semgrep:ssl-wrap-socket-is-deprecated",
+   "codeql:py/insecure-default-protocol"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] ssl.wrap_socket call with no SSL/TLS protocol version specified, the default SSLv23 could be insecure, possible security issue.",
+   "[semgrep] 'ssl.wrap_socket()' is deprecated. This function creates an insecure socket without server name indication or hostname matching. Instead, create an SSL context using 'ssl.SSLContext()' and use that to",
+   "[codeql] Call to deprecated method ssl.wrap_socket does not specify a protocol, which may result in an insecure default being used."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-327/codeql_3.py",
+  "line": 8,
+  "cwes": [
+   "CWE-327",
+   "CWE-328",
+   "CWE-916"
+  ],
+  "tools": [
+   "bandit",
+   "codeql"
+  ],
+  "rules": [
+   "bandit:B324",
+   "codeql:py/weak-sensitive-data-hashing"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] Use of weak MD5 hash for security. Consider usedforsecurity=False",
+   "[codeql] [Sensitive data (certificate)](1) is used in a hashing algorithm (MD5) that is insecure."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-327/codeql_4.py",
+  "line": 7,
+  "cwes": [
+   "CWE-327",
+   "CWE-328",
+   "CWE-916"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/weak-sensitive-data-hashing"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[codeql] [Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-329/sonar_1.py",
+  "line": 10,
+  "cwes": [
+   "CWE-327"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:crypto-mode-without-authentication"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[semgrep] An encryption mode of operation is being used without proper message authentication. This can potentially result in the encrypted content to be decrypted by an attacker. Consider instead use an AEAD m"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-330/author_1.py",
+  "line": 8,
+  "cwes": [
+   "CWE-330"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B311"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-331/author_1.py",
+  "line": 9,
+  "cwes": [
+   "CWE-330"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B311"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-339/mitre_1.py",
+  "line": 11,
+  "cwes": [
+   "CWE-330"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B311"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-347/sonar_2.py",
+  "line": 8,
+  "cwes": [
+   "CWE-287"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:unverified-jwt-decode"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[semgrep] Detected JWT token decoded with 'verify=False'. This bypasses any integrity checks for the token which means the token could be tampered with by malicious actors. Ensure that the JWT token is verified"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-377/codeql_1.py",
+  "line": 8,
+  "cwes": [
+   "CWE-377"
+  ],
+  "tools": [
+   "bandit",
+   "codeql"
+  ],
+  "rules": [
+   "bandit:B306",
+   "codeql:py/insecure-temporary-file"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] Use of insecure and deprecated function (mktemp).",
+   "[codeql] Call to deprecated function tempfile.mktemp may be insecure."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-379/sonar_1.py",
+  "line": 10,
+  "cwes": [
+   "CWE-377"
+  ],
+  "tools": [
+   "bandit",
+   "codeql"
+  ],
+  "rules": [
+   "bandit:B306",
+   "codeql:py/insecure-temporary-file"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] Use of insecure and deprecated function (mktemp).",
+   "[codeql] Call to deprecated function tempfile.mktemp may be insecure."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-400/sonar_1.py",
+  "line": 18,
+  "cwes": [
+   "CWE-400"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/regex-injection"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[codeql] This regular expression depends on a [user-provided value](1) and is executed by [re.search](2)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-425/author_1.py",
+  "line": 12,
+  "cwes": [
+   "CWE-79"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:direct-use-of-httpresponse"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[semgrep] Detected data rendered directly to the end user via 'HttpResponse' or a similar object. This bypasses Django's built-in cross-site scripting (XSS) defenses and could result in an XSS vulnerability. Us"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-434/pearce_1.py",
+  "line": 12,
+  "cwes": [
+   "CWE-22",
+   "CWE-23",
+   "CWE-36",
+   "CWE-73",
+   "CWE-99"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/path-injection"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[codeql] This path depends on a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-434/pearce_2.py",
+  "line": 15,
+  "cwes": [
+   "CWE-22",
+   "CWE-23",
+   "CWE-36",
+   "CWE-73",
+   "CWE-99"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/path-injection"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[codeql] This path depends on a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-454/author_1.py",
+  "line": 11,
+  "cwes": [
+   "CWE-259"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B105"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Possible hardcoded password: 'admin'"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-502/author_1.py",
+  "line": 1,
+  "cwes": [
+   "CWE-502"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B403"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Consider possible security implications associated with pickle module."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-502/author_1.py",
+  "line": 13,
+  "cwes": [
+   "CWE-502"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:avoid-pickle"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[semgrep] Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relev"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-502/codeql_1.py",
+  "line": 2,
+  "cwes": [
+   "CWE-502"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B403"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Consider possible security implications associated with pickle module."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-502/codeql_1.py",
+  "line": 9,
+  "cwes": [
+   "CWE-502"
+  ],
+  "tools": [
+   "bandit",
+   "semgrep"
+  ],
+  "rules": [
+   "bandit:B301",
+   "semgrep:avoid-pickle"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[bandit] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
+   "[semgrep] Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relev"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-502/mitre_1.py",
+  "line": 11,
+  "cwes": [
+   "CWE-502"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:avoid-cPickle",
+   "semgrep:avoid-pickle"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[semgrep] Avoid using `cPickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the rele",
+   "[semgrep] Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relev"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-502/sonar_1.py",
+  "line": 11,
+  "cwes": [
+   "CWE-20"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B506"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[bandit] Use of unsafe yaml load. Allows instantiation of arbitrary objects. Consider yaml.safe_load()."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-502/sonar_1.py",
+  "line": 11,
+  "cwes": [
+   "CWE-502"
+  ],
+  "tools": [
+   "codeql",
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:insecure-deserialization",
+   "codeql:py/unsafe-deserialization"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[semgrep] Detected the use of an insecure deserialization library in a Flask route. These libraries are prone to code execution vulnerabilities. Ensure user data does not enter this function. To fix this, try t",
+   "[codeql] Unsafe deserialization depends on a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-521/sonar_2.py",
+  "line": 11,
+  "cwes": [
+   "CWE-259"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B105"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Possible hardcoded password: ''"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-522/author_1.py",
+  "line": 9,
+  "cwes": [
+   "CWE-259"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B106"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Possible hardcoded password: ''"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-522/pearce_1.py",
+  "line": 17,
+  "cwes": [
+   "CWE-327",
+   "CWE-328",
+   "CWE-916"
+  ],
+  "tools": [
+   "bandit",
+   "codeql",
+   "semgrep"
+  ],
+  "rules": [
+   "bandit:B324",
+   "semgrep:md5-used-as-password",
+   "codeql:py/weak-sensitive-data-hashing"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] Use of weak MD5 hash for security. Consider usedforsecurity=False",
+   "[semgrep] It looks like MD5 is used as a password hash. MD5 is not considered a secure password hash because it can be cracked by an attacker in a short amount of time. Use a suitable password hashing function ",
+   "[codeql] [Sensitive data (password)](1) is used in a hashing algorithm (MD5) that is insecure for password hashing, since it is not a computationally expensive hash function."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-522/pearce_1.py",
+  "line": 18,
+  "cwes": [
+   "CWE-259"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B106"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Possible hardcoded password: ''"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-601/codeql_1.py",
+  "line": 11,
+  "cwes": [
+   "CWE-601"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:open-redirect__security"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[semgrep] Data from request is passed to redirect(). This is an open redirect and could be exploited. Consider using 'url_for()' to generate links to known locations. If you must use a URL to unknown pages, con"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-601/codeql_1.py",
+  "line": 12,
+  "cwes": [
+   "CWE-601"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/url-redirection"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[codeql] Untrusted URL redirection depends on a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-601/sonar_1.py",
+  "line": 7,
+  "cwes": [
+   "CWE-601"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:open-redirect"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[semgrep] Data from request (target) is passed to redirect(). This is an open redirect and could be exploited. Ensure you are redirecting to safe URLs by using django.utils.http.is_safe_url(). See https://cwe.m"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-601/sonar_2.py",
+  "line": 11,
+  "cwes": [
+   "CWE-601"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:open-redirect__security"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[semgrep] Data from request is passed to redirect(). This is an open redirect and could be exploited. Consider using 'url_for()' to generate links to known locations. If you must use a URL to unknown pages, con"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-601/sonar_2.py",
+  "line": 12,
+  "cwes": [
+   "CWE-601"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/url-redirection"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[codeql] Untrusted URL redirection depends on a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-605/author_1.py",
+  "line": 8,
+  "cwes": [
+   "CWE-200"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:avoid-bind-to-all-interfaces"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[semgrep] Running `socket.bind` to 0.0.0.0, or empty string could unexpectedly expose the server publicly as it binds to all available interfaces. Consider instead getting correct address from an environment va"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-605/author_1.py",
+  "line": 9,
+  "cwes": [
+   "CWE-605"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B104"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[bandit] Possible binding to all interfaces."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-605/author_1.py",
+  "line": 9,
+  "cwes": [
+   "CWE-200"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/bind-socket-all-network-interfaces"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[codeql] Binding a socket to all interfaces (using ['0.0.0.0'](1)) is a security risk."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-611/author_1.py",
+  "line": 17,
+  "cwes": [
+   "CWE-611",
+   "CWE-827"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/xxe"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[codeql] XML parsing depends on a [user-provided value](1) without guarding against external entity expansion."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-611/codeql_1.py",
+  "line": 13,
+  "cwes": [
+   "CWE-611",
+   "CWE-827"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/xxe"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[codeql] XML parsing depends on a [user-provided value](1) without guarding against external entity expansion."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-611/sonar_4.py",
+  "line": 1,
+  "cwes": [
+   "CWE-20"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B406"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Using xml.sax to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.sax with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-611/sonar_4.py",
+  "line": 1,
+  "cwes": [
+   "CWE-611"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:use-defused-xml"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[semgrep] The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential "
+  ]
+ },
+ {
+  "file": "securityeval/CWE-611/sonar_4.py",
+  "line": 7,
+  "cwes": [
+   "CWE-20"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B317"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[bandit] Using xml.sax.make_parser to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.sax.make_parser with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-641/sonar_1.py",
+  "line": 13,
+  "cwes": [
+   "CWE-22",
+   "CWE-23",
+   "CWE-36",
+   "CWE-73",
+   "CWE-99"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/path-injection"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[codeql] This path depends on a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-643/sonar_1.py",
+  "line": 2,
+  "cwes": [
+   "CWE-20"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B405"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Using xml.etree.ElementTree to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-643/sonar_1.py",
+  "line": 2,
+  "cwes": [
+   "CWE-611"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:use-defused-xml"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[semgrep] The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential "
+  ]
+ },
+ {
+  "file": "securityeval/CWE-643/sonar_1.py",
+  "line": 4,
+  "cwes": [
+   "CWE-20"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B314"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[bandit] Using xml.etree.ElementTree.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.parse with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-643/sonar_1.py",
+  "line": 17,
+  "cwes": [
+   "CWE-643"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/xpath-injection"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[codeql] XPath expression depends on a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-703/author_3.py",
+  "line": 6,
+  "cwes": [
+   "CWE-703"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B101"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-730/codeql_1.py",
+  "line": 13,
+  "cwes": [
+   "CWE-400"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/regex-injection"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[codeql] This regular expression depends on a [user-provided value](1) and is executed by [re.search](2)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-730/codeql_2.py",
+  "line": 12,
+  "cwes": [
+   "CWE-400"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/regex-injection"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[codeql] This regular expression depends on a [user-provided value](1) and is executed by [re.search](2)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-732/author_1.py",
+  "line": 10,
+  "cwes": [
+   "CWE-276",
+   "CWE-732"
+  ],
+  "tools": [
+   "bandit",
+   "codeql",
+   "semgrep"
+  ],
+  "rules": [
+   "bandit:B103",
+   "semgrep:insecure-file-permissions",
+   "codeql:py/overly-permissive-file"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] Chmod setting a permissive mask 0o755 on file (test.bin).",
+   "[semgrep] These permissions `0o755` are widely permissive and grant access to more people than may be necessary. A good default is `0o644` which gives read and write access to yourself and read access to everyo",
+   "[codeql] Overly permissive mask in chmod sets file to world readable."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-732/author_1.py",
+  "line": 11,
+  "cwes": [
+   "CWE-78"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B605",
+   "bandit:B607"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Starting a process with a shell: Seems safe, but may be changed in the future, consider rewriting without shell",
+   "[bandit] Starting a process with a partial executable path"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-759/mitre_1.py",
+  "line": 8,
+  "cwes": [
+   "CWE-327"
+  ],
+  "tools": [
+   "bandit",
+   "semgrep"
+  ],
+  "rules": [
+   "bandit:B324",
+   "semgrep:insecure-hash-function"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[bandit] Use of weak MD5 hash for security. Consider usedforsecurity=False",
+   "[semgrep] Detected use of an insecure MD4 or MD5 hash function. These functions have known vulnerabilities and are considered deprecated. Consider using 'SHA256' or a similar function instead."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-759/mitre_1.py",
+  "line": 9,
+  "cwes": [
+   "CWE-327",
+   "CWE-328",
+   "CWE-916"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/weak-sensitive-data-hashing"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[codeql] [Sensitive data (password)](1) is used in a hashing algorithm (MD5) that is insecure for password hashing, since it is not a computationally expensive hash function."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-776/codeql_1.py",
+  "line": 2,
+  "cwes": [
+   "CWE-20"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B405"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Using xml.etree.ElementTree to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-776/codeql_1.py",
+  "line": 2,
+  "cwes": [
+   "CWE-611"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:use-defused-xml"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[semgrep] The Python documentation recommends using `defusedxml` instead of `xml` because the native Python `xml` library is vulnerable to XML External Entity (XXE) attacks. These attacks can leak confidential "
+  ]
+ },
+ {
+  "file": "securityeval/CWE-776/codeql_1.py",
+  "line": 14,
+  "cwes": [
+   "CWE-20"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B314"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[bandit] Using xml.etree.ElementTree.fromstring to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.fromstring with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-776/codeql_1.py",
+  "line": 14,
+  "cwes": [
+   "CWE-400",
+   "CWE-776"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/xml-bomb"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[codeql] XML parsing depends on a [user-provided value](1) without guarding against uncontrolled entity expansion."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-798/author_1.py",
+  "line": 7,
+  "cwes": [
+   "CWE-259"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B106"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Possible hardcoded password: 'password'"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-798/codeql_1.py",
+  "line": 12,
+  "cwes": [
+   "CWE-259"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B105"
+  ],
+  "severity": "LOW",
+  "messages": [
+   "[bandit] Possible hardcoded password: 'myPa55word'"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-918/codeql_1.py",
+  "line": 12,
+  "cwes": [
+   "CWE-918"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:tainted-url-host",
+   "semgrep:tainted-url-host__injection"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[semgrep] User data flows into the host portion of this manually-constructed URL. This could allow an attacker to send data to their own server, potentially exposing sensitive data such as cookies or authorizat",
+   "[semgrep] User data flows into the host portion of this manually-constructed URL. This could allow an attacker to send data to their own server, potentially exposing sensitive data such as cookies or authorizat"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-918/codeql_1.py",
+  "line": 13,
+  "cwes": [
+   "CWE-400"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B113"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[bandit] Call to requests without timeout"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-918/codeql_1.py",
+  "line": 13,
+  "cwes": [
+   "CWE-918"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/full-ssrf"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[codeql] The full URL of this request depends on a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-918/codeql_1.py",
+  "line": 14,
+  "cwes": [
+   "CWE-116",
+   "CWE-79"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/reflective-xss"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[codeql] Cross-site scripting vulnerability due to a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-918/codeql_2.py",
+  "line": 14,
+  "cwes": [
+   "CWE-918"
+  ],
+  "tools": [
+   "semgrep"
+  ],
+  "rules": [
+   "semgrep:ssrf-injection-requests"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[semgrep] Data from request object is passed to a new server-side request. This could lead to a server-side request forgery (SSRF). To mitigate, ensure that schemes and hosts are validated against an allowlist,"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-918/codeql_2.py",
+  "line": 16,
+  "cwes": [
+   "CWE-400"
+  ],
+  "tools": [
+   "bandit"
+  ],
+  "rules": [
+   "bandit:B113"
+  ],
+  "severity": "MEDIUM",
+  "messages": [
+   "[bandit] Call to requests without timeout"
+  ]
+ },
+ {
+  "file": "securityeval/CWE-918/codeql_2.py",
+  "line": 16,
+  "cwes": [
+   "CWE-918"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/partial-ssrf"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[codeql] Part of the URL of this request depends on a [user-provided value](1)."
+  ]
+ },
+ {
+  "file": "securityeval/CWE-918/codeql_2.py",
+  "line": 17,
+  "cwes": [
+   "CWE-116",
+   "CWE-79"
+  ],
+  "tools": [
+   "codeql"
+  ],
+  "rules": [
+   "codeql:py/reflective-xss"
+  ],
+  "severity": "HIGH",
+  "messages": [
+   "[codeql] Cross-site scripting vulnerability due to a [user-provided value](1)."
+  ]
+ }
+]

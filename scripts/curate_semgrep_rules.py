@@ -5,8 +5,9 @@ Procedure (documented in docs/semgrep_rule_curation.md):
   2. Keep a rule only if   metadata.category == "security"
                       AND  "python" is in languages
                       AND  metadata.cwe is present (so every kept finding has a CWE).
-  3. Keep rules whose ID repeats in another file, renamed <id>__<folder> so no rule
-     is lost and every ID in the combined file is unique.
+  3. Keep rules whose ID repeats in another file, renamed <id>__<path-slug> (the
+     rule file's folder path relative to the rules root) so no rule is lost; the
+     script fails if any ID is still not unique.
   4. Write all kept rules into ONE config file and a manifest CSV listing
      rule id, source file, CWE(s), subcategory and confidence.
 The rule texts stay under the Semgrep Rules License and are therefore NOT
@@ -55,13 +56,16 @@ def main() -> None:
                 continue
             if rule["id"] in seen:
                 stats["duplicate_renamed"] += 1
-                rule = dict(rule, id=f'{rule["id"]}__{f.parent.name}')
+                slug = "-".join(f.parent.relative_to(a.rules_dir).parts)
+                rule = dict(rule, id=f'{rule["id"]}__{slug}')
             seen.add(rule["id"])
             kept.append(rule)
             cwes = cwe if isinstance(cwe, list) else [cwe]
             manifest.append([rule["id"], f.relative_to(a.rules_dir).as_posix(),
                              "; ".join(str(c).split(":")[0] for c in cwes),
                              "; ".join(meta.get("subcategory", []) or []), meta.get("confidence", "")])
+    ids = [r["id"] for r in kept]
+    assert len(ids) == len(set(ids)), "duplicate rule IDs after renaming"
     a.out.parent.mkdir(parents=True, exist_ok=True)
     a.out.write_text(yaml.safe_dump({"rules": kept}, sort_keys=False, allow_unicode=True))
     with a.manifest.open("w", newline="") as fh:
