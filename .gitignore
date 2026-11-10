@@ -6,3 +6,4 @@ rules/semgrep-python-security.yaml
 datasets/securityeval/cases/
 datasets/securityeval/_clone/
 evidence/*/work/
+review/label_review_key.csv
