@@ -20,6 +20,7 @@ import argparse
 import datetime as dt
 import hashlib
 import json
+import os
 import platform
 import statistics
 import subprocess
@@ -36,6 +37,8 @@ from .merge import merge, split_unmapped
 from .sarif import to_sarif, validate
 
 ROOT = Path(__file__).resolve().parent.parent
+os.environ.setdefault("SEMGREP_ENABLE_VERSION_CHECK", "0")   # no network call on start-up
+os.environ.setdefault("SEMGREP_SEND_METRICS", "off")
 SPLITS = {
     "dev": (ROOT / "bench/dev", ROOT / "bench/dev/labels_dev.csv", "dev"),
     "holdout": (ROOT / "bench/holdout", ROOT / "bench/holdout/labels_holdout.csv", "holdout"),
@@ -58,7 +61,7 @@ class Tee:
 
 def sh(cmd: list[str]) -> str:
     try:
-        return subprocess.run(cmd, capture_output=True, text=True).stdout.strip()
+        return subprocess.run(cmd, capture_output=True, text=True, timeout=60).stdout.strip()
     except Exception as e:  # noqa: BLE001
         return f"unavailable ({e})"
 
@@ -97,7 +100,7 @@ def main() -> int:
         "python": sys.version.split()[0], "vulnreview": __version__,
         "repo_commit": sh(["git", "-C", str(ROOT), "rev-parse", "HEAD"]),
         "repo_dirty": bool(sh(["git", "-C", str(ROOT), "status", "--porcelain", "--", "vulnreview", "bench", "scripts"])),
-        "bandit": sh(["bandit", "--version"]).splitlines()[0] if sh(["bandit", "--version"]) else "?",
+        "bandit": (sh(["bandit", "--version"]).splitlines() or ["?"])[0],
         "semgrep": sh(["semgrep", "--version"]),
         "semgrep_rules_config": str(a.semgrep_rules),
         "semgrep_rules_commit": sh(["git", "-C", str(a.semgrep_full), "rev-parse", "HEAD"]) if a.semgrep_full else "see rules manifest",
