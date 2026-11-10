@@ -1,0 +1,31 @@
+digraph G {
+  graph [rankdir=TB, fontname="Arial", fontsize=13, nodesep=0.35, ranksep=0.45, pad=0.2, bgcolor=white, newrank=true, labeljust=l];
+  node  [shape=box, style="rounded,filled", fontname="Arial", fontsize=12, fillcolor="#d7ecd9", color="#1a7f37", penwidth=1.3, margin="0.18,0.08"];
+  edge  [color="#555555", arrowsize=0.7];
+  A [label="Source code directory\n(PR input planned)"];
+  B [label="Orchestrator\nscan_pipeline.py (Python 3.13)"];
+  subgraph cluster_det { label="1  Detection layer"; style="rounded"; color="#9a9a95";
+    C [label="Bandit adapter\n(Python AST rules)"]; D [label="Semgrep adapter\n(pattern + taint rules)"];
+    E [label="CodeQL adapter\n(data-flow queries)", fillcolor="#f4f4f2", color="#8a8a85", style="rounded,filled,dashed"]; {rank=same; C; D; E;} }
+  subgraph cluster_norm { label="2  Normalisation layer"; style="rounded"; color="#9a9a95";
+    F [label="Unified finding schema\nCWE filter + line-level merge"];
+    G [label="SARIF 2.1.0 export", fillcolor="#f4f4f2", color="#8a8a85", style="rounded,filled,dashed"];
+    N [label="Evaluation harness\n(labelled benchmark)"]; {rank=same; G; F; N;} G -> F [style=invis];  }
+  subgraph cluster_ai { label="3  AI review layer"; style="rounded"; color="#9a9a95";
+    node [fillcolor="#f4f4f2", color="#8a8a85", style="rounded,filled,dashed"];
+    H [label="LLM triage\ntrue / false positive"]; I [label="CWE explanation\n+ fix suggestion"];
+    J [label="Local model (Ollama)\nor hosted LLM API", shape=cylinder, style="filled,dashed"]; {rank=same; J; H; I;} J -> H [style=invis];  }
+  subgraph cluster_out { label="4  Output layer"; style="rounded"; color="#9a9a95";
+    K [label="CLI / JSON report"];
+    L [label="GitHub Actions\nPR comment", fillcolor="#f4f4f2", color="#8a8a85", style="rounded,filled,dashed"];
+    M [label="Web dashboard", fillcolor="#f4f4f2", color="#8a8a85", style="rounded,filled,dashed"]; {rank=same; K; L; M;} }
+  subgraph cluster_leg { label="Legend"; style="rounded"; color="#c3c2b7"; fontsize=11;
+    X [label="Implemented (cycle 1)", fontsize=10]; Y [label="Planned", fontsize=10, fillcolor="#f4f4f2", color="#8a8a85", style="rounded,filled,dashed"]; {rank=same; X; Y;} X->Y [style=invis]; }
+  A -> B; B -> C; B -> D; B -> E [style=dashed];
+  C -> F; D -> F; E -> F [style=dashed];
+  F -> G [style=dashed, constraint=false]; F -> N;
+  F -> H [style=dashed]; H -> I [style=dashed]; H -> J [style=dotted, dir=both, constraint=false];
+  I -> K [style=dashed]; I -> L [style=dashed]; I -> M [style=dashed];
+  {rank=same; A; X;} 
+  X -> A [style=invis];
+}

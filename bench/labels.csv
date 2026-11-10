@@ -1,0 +1,19 @@
+file,vulnerable,cwe,description
+v01_sqli.py,1,CWE-89,SQL injection via string formatting
+v02_cmdi.py,1,CWE-78,OS command injection via shell=True
+v03_pickle.py,1,CWE-502,Deserialization of untrusted data with pickle
+v04_hardcoded_secret.py,1,CWE-798,Hard-coded credential
+v05_weak_hash.py,1,CWE-328,MD5 used for password hashing
+v06_path_traversal.py,1,CWE-22,Path traversal in file download
+v07_xss.py,1,CWE-79,Reflected XSS by string concatenation
+v08_eval.py,1,CWE-95,eval() on user input
+v09_tls_verify.py,1,CWE-295,TLS certificate verification disabled
+v10_yaml_load.py,1,CWE-502,Unsafe YAML loader
+v11_insecure_random.py,1,CWE-330,Non-cryptographic PRNG for security token
+v12_flask_debug.py,1,CWE-489,Flask debug mode enabled in production
+s01_sqli_param.py,0,-,Parameterized query
+s02_subprocess_list.py,0,-,subprocess with argument list
+s03_json.py,0,-,JSON deserialization
+s04_env_secret.py,0,-,Secret read from environment
+s05_strong_hash.py,0,-,PBKDF2 with salt
+s06_secrets_token.py,0,-,secrets module token

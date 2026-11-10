@@ -1,0 +1,27 @@
+Filtered 3 non-security finding(s) without CWE mapping
+Bandit :  16 findings in 0.17s
+Semgrep:  14 findings in 118.88s
+Merged :  15 unique findings -> results/findings.json
+
+FILE                       LINE  CWE       SEV     TOOLS
+s02_subprocess_list.py        1  CWE-78    LOW     bandit
+s02_subprocess_list.py        3  CWE-78    LOW     bandit
+v01_sqli.py                   4  CWE-89    MEDIUM  bandit+semgrep
+v02_cmdi.py                   1  CWE-78    LOW     bandit
+v02_cmdi.py                   3  CWE-78    HIGH    bandit+semgrep
+v03_pickle.py                 1  CWE-502   LOW     bandit
+v03_pickle.py                 3  CWE-502   MEDIUM  bandit+semgrep
+v04_hardcoded_secret.py       2  CWE-259   LOW     bandit
+v05_weak_hash.py              3  CWE-327   HIGH    bandit+semgrep
+v07_xss.py                    6  CWE-79    WARNING semgrep
+v08_eval.py                   2  CWE-78    MEDIUM  bandit+semgrep
+v09_tls_verify.py             3  CWE-295   HIGH    bandit+semgrep
+v10_yaml_load.py              3  CWE-20    MEDIUM  bandit+semgrep
+v11_insecure_random.py        3  CWE-330   LOW     bandit
+v12_flask_debug.py            4  CWE-94    HIGH    bandit+semgrep
+
+File-level evaluation on labelled benchmark:
+TOOL      TP  FP  FN  TN   PREC    REC     F1
+bandit    10   1   2   5  0.909  0.833  0.870
+semgrep    9   0   3   6  1.000  0.750  0.857
+union     11   1   1   5  0.917  0.917  0.917

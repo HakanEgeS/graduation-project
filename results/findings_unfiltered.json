@@ -1,0 +1,275 @@
+{
+  "target": "bench",
+  "runtime_s": {
+    "bandit": 0.16,
+    "semgrep": 120.34
+  },
+  "raw_counts": {
+    "bandit": 16,
+    "semgrep": 17
+  },
+  "merged_findings": [
+    {
+      "tool": "bandit",
+      "rule_id": "B404",
+      "file": "s02_subprocess_list.py",
+      "line": 1,
+      "severity": "LOW",
+      "cwe": "CWE-78",
+      "message": "Consider possible security implications associated with the subprocess module.",
+      "tools": [
+        "bandit"
+      ]
+    },
+    {
+      "tool": "bandit",
+      "rule_id": "B607",
+      "file": "s02_subprocess_list.py",
+      "line": 3,
+      "severity": "LOW",
+      "cwe": "CWE-78",
+      "message": "Starting a process with a partial executable path",
+      "tools": [
+        "bandit"
+      ]
+    },
+    {
+      "tool": "semgrep",
+      "rule_id": "use-raise-for-status",
+      "file": "s04_env_secret.py",
+      "line": 3,
+      "severity": "WARNING",
+      "cwe": "-",
+      "message": "There's an HTTP request made with requests, but the raise_for_status() utility method isn't used. This can result in request errors going unnoticed and your cod",
+      "tools": [
+        "semgrep"
+      ]
+    },
+    {
+      "tool": "bandit",
+      "rule_id": "B608",
+      "file": "v01_sqli.py",
+      "line": 4,
+      "severity": "MEDIUM",
+      "cwe": "CWE-89",
+      "message": "Possible SQL injection vector through string-based query construction.",
+      "tools": [
+        "bandit",
+        "semgrep"
+      ]
+    },
+    {
+      "tool": "bandit",
+      "rule_id": "B404",
+      "file": "v02_cmdi.py",
+      "line": 1,
+      "severity": "LOW",
+      "cwe": "CWE-78",
+      "message": "Consider possible security implications associated with the subprocess module.",
+      "tools": [
+        "bandit"
+      ]
+    },
+    {
+      "tool": "bandit",
+      "rule_id": "B602",
+      "file": "v02_cmdi.py",
+      "line": 3,
+      "severity": "HIGH",
+      "cwe": "CWE-78",
+      "message": "subprocess call with shell=True identified, security issue.",
+      "tools": [
+        "bandit",
+        "semgrep"
+      ]
+    },
+    {
+      "tool": "bandit",
+      "rule_id": "B403",
+      "file": "v03_pickle.py",
+      "line": 1,
+      "severity": "LOW",
+      "cwe": "CWE-502",
+      "message": "Consider possible security implications associated with pickle module.",
+      "tools": [
+        "bandit"
+      ]
+    },
+    {
+      "tool": "bandit",
+      "rule_id": "B301",
+      "file": "v03_pickle.py",
+      "line": 3,
+      "severity": "MEDIUM",
+      "cwe": "CWE-502",
+      "message": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.",
+      "tools": [
+        "bandit",
+        "semgrep"
+      ]
+    },
+    {
+      "tool": "bandit",
+      "rule_id": "B105",
+      "file": "v04_hardcoded_secret.py",
+      "line": 2,
+      "severity": "LOW",
+      "cwe": "CWE-259",
+      "message": "Possible hardcoded password: 'SuperSecret123!'",
+      "tools": [
+        "bandit"
+      ]
+    },
+    {
+      "tool": "semgrep",
+      "rule_id": "use-raise-for-status",
+      "file": "v04_hardcoded_secret.py",
+      "line": 4,
+      "severity": "WARNING",
+      "cwe": "-",
+      "message": "There's an HTTP request made with requests, but the raise_for_status() utility method isn't used. This can result in request errors going unnoticed and your cod",
+      "tools": [
+        "semgrep"
+      ]
+    },
+    {
+      "tool": "bandit",
+      "rule_id": "B324",
+      "file": "v05_weak_hash.py",
+      "line": 3,
+      "severity": "HIGH",
+      "cwe": "CWE-327",
+      "message": "Use of weak MD5 hash for security. Consider usedforsecurity=False",
+      "tools": [
+        "bandit",
+        "semgrep"
+      ]
+    },
+    {
+      "tool": "semgrep",
+      "rule_id": "directly-returned-format-string",
+      "file": "v07_xss.py",
+      "line": 6,
+      "severity": "WARNING",
+      "cwe": "CWE-79",
+      "message": "Detected Flask route directly returning a formatted string. This is subject to cross-site scripting if user input can reach the string. Consider using the templ",
+      "tools": [
+        "semgrep"
+      ]
+    },
+    {
+      "tool": "bandit",
+      "rule_id": "B307",
+      "file": "v08_eval.py",
+      "line": 2,
+      "severity": "MEDIUM",
+      "cwe": "CWE-78",
+      "message": "Use of possibly insecure function - consider using safer ast.literal_eval.",
+      "tools": [
+        "bandit",
+        "semgrep"
+      ]
+    },
+    {
+      "tool": "bandit",
+      "rule_id": "B501",
+      "file": "v09_tls_verify.py",
+      "line": 3,
+      "severity": "HIGH",
+      "cwe": "CWE-295",
+      "message": "Call to requests with verify=False disabling SSL certificate checks, security issue.",
+      "tools": [
+        "bandit",
+        "semgrep"
+      ]
+    },
+    {
+      "tool": "bandit",
+      "rule_id": "B506",
+      "file": "v10_yaml_load.py",
+      "line": 3,
+      "severity": "MEDIUM",
+      "cwe": "CWE-20",
+      "message": "Use of unsafe yaml load. Allows instantiation of arbitrary objects. Consider yaml.safe_load().",
+      "tools": [
+        "bandit",
+        "semgrep"
+      ]
+    },
+    {
+      "tool": "bandit",
+      "rule_id": "B311",
+      "file": "v11_insecure_random.py",
+      "line": 3,
+      "severity": "LOW",
+      "cwe": "CWE-330",
+      "message": "Standard pseudo-random generators are not suitable for security/cryptographic purposes.",
+      "tools": [
+        "bandit"
+      ]
+    },
+    {
+      "tool": "bandit",
+      "rule_id": "B201",
+      "file": "v12_flask_debug.py",
+      "line": 4,
+      "severity": "HIGH",
+      "cwe": "CWE-94",
+      "message": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code.",
+      "tools": [
+        "bandit",
+        "semgrep"
+      ]
+    }
+  ],
+  "evaluation": {
+    "bandit": {
+      "TP": 10,
+      "FP": 1,
+      "FN": 2,
+      "TN": 5,
+      "precision": 0.909,
+      "recall": 0.833,
+      "f1": 0.87,
+      "missed": [
+        "v06_path_traversal.py",
+        "v07_xss.py"
+      ],
+      "false_alarms": [
+        "s02_subprocess_list.py"
+      ]
+    },
+    "semgrep": {
+      "TP": 10,
+      "FP": 1,
+      "FN": 2,
+      "TN": 5,
+      "precision": 0.909,
+      "recall": 0.833,
+      "f1": 0.87,
+      "missed": [
+        "v06_path_traversal.py",
+        "v11_insecure_random.py"
+      ],
+      "false_alarms": [
+        "s04_env_secret.py"
+      ]
+    },
+    "union": {
+      "TP": 11,
+      "FP": 2,
+      "FN": 1,
+      "TN": 4,
+      "precision": 0.846,
+      "recall": 0.917,
+      "f1": 0.88,
+      "missed": [
+        "v06_path_traversal.py"
+      ],
+      "false_alarms": [
+        "s02_subprocess_list.py",
+        "s04_env_secret.py"
+      ]
+    }
+  }
+}
