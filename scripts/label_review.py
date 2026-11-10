@@ -79,7 +79,14 @@ def score(a):
     key = {r["review_id"]: r["case_id"] for r in csv.DictReader((ROOT / "review/label_review_key.csv").open())}
     pairs, cwe_agree, line_agree, n_both_vul = [], {"exact": 0, "related": 0, "incorrect": 0}, 0, 0
     rows = []
-    for f in csv.DictReader(Path(a.form).open(newline="", encoding="utf-8-sig")):
+    if a.form.endswith(".xlsx"):
+        import openpyxl
+        ws = openpyxl.load_workbook(a.form).active
+        vals = [["" if c is None else str(c) for c in r] for r in ws.iter_rows(values_only=True)]
+        form_rows = [dict(zip(vals[0], r)) for r in vals[1:] if r[0]]
+    else:
+        form_rows = list(csv.DictReader(Path(a.form).open(newline="", encoding="utf-8-sig")))
+    for f in form_rows:
         lab = labels[key[f["review_id"]]]
         rv = f[FORM_COLS[1]].strip().lower().startswith("y")
         lv = lab["label"] == "vulnerable"
