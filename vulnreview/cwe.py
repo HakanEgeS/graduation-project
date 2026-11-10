@@ -41,6 +41,8 @@ def parents(cwe_id: int) -> frozenset[int]:
     except Exception:
         return frozenset()
     text = getattr(w, "related_weaknesses", "") or ""
+    if isinstance(text, (tuple, list)):          # cwe2 returns a tuple for some entries
+        text = "::".join(str(t) for t in text)
     out = set()
     for entry in text.split("::"):
         m = re.search(r"NATURE:ChildOf:CWE ID:(\d+):VIEW ID:1000\b", entry)

@@ -67,3 +67,14 @@ def test_wilson_interval_bounds():
 def test_sarif_export_validates_against_oasis_schema():
     doc = to_sarif(merge([F("bandit", 4, ["CWE-89"]), F("semgrep", 4, ["CWE-89"])]), "test", {"bandit": "x"})
     assert validate(doc, ROOT / "schemas/sarif-schema-2.1.0.json") == []
+
+
+def test_cwe_category_without_relations_does_not_crash():
+    # CWE-730 is a category; cwe2 returns (None,) for its relations
+    assert cwe.parents(730) == frozenset()
+    assert cwe.agreement("CWE-730", ["CWE-400"]) in ("related", "incorrect")
+
+
+def test_semgrep_scans_git_ignored_folders():
+    from vulnreview.adapters import semgrep_cmd
+    assert "--no-git-ignore" in semgrep_cmd(Path("x"), Path("r.yaml"))

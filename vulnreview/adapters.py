@@ -70,14 +70,15 @@ def run_bandit(target: Path, raw_dir: Path, prefix: str) -> RunResult:
 
 # ---------------------------------------------------------------- Semgrep
 def semgrep_cmd(target: Path, rules: Path) -> list[str]:
+    # --no-git-ignore: scan every file even if the dataset folder is git-ignored
     return ["semgrep", "scan", "--config", str(rules), "--json", "--metrics=off",
-            "--disable-version-check", "--quiet", str(target)]
+            "--disable-version-check", "--no-git-ignore", "--quiet", str(target)]
 
 
-def run_semgrep(target: Path, rules: Path, raw_dir: Path, prefix: str) -> RunResult:
+def run_semgrep(target: Path, rules: Path, raw_dir: Path, prefix: str, tag: str = "semgrep") -> RunResult:
     cmd = semgrep_cmd(target, rules)
     proc, secs = _run(cmd)
-    raw = raw_dir / f"semgrep-{prefix or 'scan'}.json"
+    raw = raw_dir / f"{tag}-{prefix or 'scan'}.json"
     raw.write_text(proc.stdout)
     data = json.loads(proc.stdout or "{}")
     out = []
@@ -89,7 +90,7 @@ def run_semgrep(target: Path, rules: Path, raw_dir: Path, prefix: str) -> RunRes
         out.append(Finding("semgrep", r["check_id"].split(".")[-1], _rel(r["path"], target, prefix),
                            r["start"]["line"], (r["extra"].get("severity") or "INFO").upper(), cwes,
                            (r["extra"].get("message") or "").strip().split("\n")[0][:200]))
-    return RunResult("semgrep", out, secs, cmd, raw, proc.returncode)
+    return RunResult(tag, out, secs, cmd, raw, proc.returncode)
 
 
 # ---------------------------------------------------------------- CodeQL

@@ -115,7 +115,7 @@ def main() -> int:
     engines = {"bandit": lambda t, p, rd: ad.run_bandit(t, rd, p),
                "semgrep": lambda t, p, rd: ad.run_semgrep(t, a.semgrep_rules, rd, p)}
     if a.semgrep_full:
-        engines["semgrep_full"] = lambda t, p, rd: ad.run_semgrep(t, a.semgrep_full, rd, p + "-full")
+        engines["semgrep_full"] = lambda t, p, rd: ad.run_semgrep(t, a.semgrep_full, rd, p, tag="semgrep_full")
     if a.codeql:
         engines["codeql"] = lambda t, p, rd: ad.run_codeql(a.codeql, t, rd, work, p)
 
