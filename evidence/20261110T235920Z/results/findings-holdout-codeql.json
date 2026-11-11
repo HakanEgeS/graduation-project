@@ -1,0 +1,176 @@
+[
+ {
+  "tool": "codeql",
+  "rule_id": "py/sql-injection",
+  "file": "holdout/vuln/h15_sqli_fstring_cross.py",
+  "line": 12,
+  "severity": "SCORE-8.8",
+  "cwes": [
+   "CWE-89"
+  ],
+  "message": "This SQL query depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/insecure-temporary-file",
+  "file": "holdout/vuln/h05_mktemp.py",
+  "line": 5,
+  "severity": "SCORE-7.0",
+  "cwes": [
+   "CWE-377"
+  ],
+  "message": "Call to deprecated function tempfile.mktemp may be insecure."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/xpath-injection",
+  "file": "holdout/vuln/h10_xpath_injection.py",
+  "line": 11,
+  "severity": "SCORE-9.8",
+  "cwes": [
+   "CWE-643"
+  ],
+  "message": "XPath expression depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/reflective-xss",
+  "file": "holdout/vuln/h02_ssrf.py",
+  "line": 11,
+  "severity": "SCORE-7.8",
+  "cwes": [
+   "CWE-116",
+   "CWE-79"
+  ],
+  "message": "Cross-site scripting vulnerability due to a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/reflective-xss",
+  "file": "holdout/vuln/h08_ssti.py",
+  "line": 10,
+  "severity": "SCORE-7.8",
+  "cwes": [
+   "CWE-116",
+   "CWE-79"
+  ],
+  "message": "Cross-site scripting vulnerability due to a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/ldap-injection",
+  "file": "holdout/vuln/h09_ldap_injection.py",
+  "line": 12,
+  "severity": "SCORE-9.8",
+  "cwes": [
+   "CWE-90"
+  ],
+  "message": "LDAP query parameter (filter) depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/full-ssrf",
+  "file": "holdout/vuln/h02_ssrf.py",
+  "line": 10,
+  "severity": "SCORE-9.1",
+  "cwes": [
+   "CWE-918"
+  ],
+  "message": "The full URL of this request depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/url-redirection",
+  "file": "holdout/vuln/h03_open_redirect.py",
+  "line": 9,
+  "severity": "SCORE-6.1",
+  "cwes": [
+   "CWE-601"
+  ],
+  "message": "Untrusted URL redirection depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/weak-cryptographic-algorithm",
+  "file": "holdout/vuln/h04_des_cipher.py",
+  "line": 6,
+  "severity": "SCORE-7.5",
+  "cwes": [
+   "CWE-327"
+  ],
+  "message": "[The block mode ECB](1) is broken or weak, and should not be used.\n[The cryptographic algorithm DES](2) is broken or weak, and should not be used."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/path-injection",
+  "file": "holdout/vuln/h17_path_join_open.py",
+  "line": 12,
+  "severity": "SCORE-7.5",
+  "cwes": [
+   "CWE-22",
+   "CWE-23",
+   "CWE-36",
+   "CWE-73",
+   "CWE-99"
+  ],
+  "message": "This path depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/command-line-injection",
+  "file": "holdout/vuln/h16_cmdi_fstring_cross.py",
+  "line": 11,
+  "severity": "SCORE-9.8",
+  "cwes": [
+   "CWE-78",
+   "CWE-88"
+  ],
+  "message": "This command line depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/code-injection",
+  "file": "holdout/vuln/h07_exec_plugin.py",
+  "line": 10,
+  "severity": "SCORE-9.3",
+  "cwes": [
+   "CWE-116",
+   "CWE-94",
+   "CWE-95"
+  ],
+  "message": "This code execution depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/template-injection",
+  "file": "holdout/vuln/h08_ssti.py",
+  "line": 10,
+  "severity": "SCORE-9.3",
+  "cwes": [
+   "CWE-74"
+  ],
+  "message": "This template construction depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/overly-permissive-file",
+  "file": "holdout/vuln/h06_chmod_world.py",
+  "line": 5,
+  "severity": "SCORE-7.8",
+  "cwes": [
+   "CWE-732"
+  ],
+  "message": "Overly permissive mask in chmod sets file to world writable."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/log-injection",
+  "file": "holdout/vuln/h13_log_injection.py",
+  "line": 11,
+  "severity": "SCORE-6.1",
+  "cwes": [
+   "CWE-117"
+  ],
+  "message": "This log entry depends on a [user-provided value](1)."
+ }
+]

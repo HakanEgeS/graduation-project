@@ -1,0 +1,53 @@
+vulnreview 0.2.0 run 20261110T235920Z
+  repo_commit: 35f2813a15e586efd09b00a3dd54b265b141451e
+  bandit: bandit 1.9.4
+  semgrep: 1.182.1
+  codeql: 2.27.4
+startup bandit        mean 0.15s sd 0.00
+startup semgrep       mean 4.62s sd 0.05
+startup semgrep_full  mean 20.87s sd 0.23
+startup codeql        mean 18.88s sd 0.54
+
+=== split: dev  (18 labelled cases)  target=bench/dev
+bandit          16 raw,   0 without CWE | total 0.15±0.00s (n=5), scan-only ≈0.00s, deterministic=True
+semgrep         14 raw,   0 without CWE | total 4.84±0.17s (n=5), scan-only ≈0.22s, deterministic=True
+semgrep_full    17 raw,   3 without CWE | total 20.92±0.34s (n=5), scan-only ≈0.05s, deterministic=True
+codeql           4 raw,   0 without CWE | total 20.61±0.30s (n=3), scan-only ≈1.74s, deterministic=True
+
+ENGINE                       RECALL [95% CI]        CWE-EXACT  E/R/I/M      REC-PREC  OFF  SAFE
+bandit                       0.833 [0.55-0.95]     0.417      5/2/3/2        0.733    2   1/6
+semgrep                      0.750 [0.47-0.91]     0.667      8/1/0/3        1.000    0   0/6
+semgrep_full                 0.750 [0.47-0.91]     0.667      8/1/0/3        1.000    0   0/6
+codeql                       0.333 [0.14-0.61]     0.333      4/0/0/8        1.000    0   0/6
+union(bandit+semgrep+codeql) 1.000 [0.76-1.00]     0.833      10/2/0/0        0.810    2   1/6
+SARIF 2.1.0 schema validation (dev): PASS
+
+=== split: holdout  (26 labelled cases)  target=bench/holdout
+bandit           9 raw,   0 without CWE | total 0.18±0.02s (n=5), scan-only ≈0.03s, deterministic=True
+semgrep         24 raw,   0 without CWE | total 4.76±0.08s (n=5), scan-only ≈0.14s, deterministic=True
+semgrep_full    28 raw,   4 without CWE | total 21.01±0.17s (n=5), scan-only ≈0.13s, deterministic=True
+codeql          15 raw,   0 without CWE | total 23.53±0.48s (n=3), scan-only ≈4.65s, deterministic=True
+
+ENGINE                       RECALL [95% CI]        CWE-EXACT  E/R/I/M      REC-PREC  OFF  SAFE
+bandit                       0.353 [0.17-0.59]     0.294      5/0/1/11       0.667    3   0/9
+semgrep                      0.529 [0.31-0.74]     0.353      6/3/0/8        0.500    8   1/9
+semgrep_full                 0.529 [0.31-0.74]     0.353      6/3/0/8        0.500    8   1/9
+codeql                       0.706 [0.47-0.87]     0.647      11/1/0/5        0.857    2   0/9
+union(bandit+semgrep+codeql) 0.882 [0.66-0.97]     0.824      14/1/0/2        0.548   13   1/9
+SARIF 2.1.0 schema validation (holdout): PASS
+
+=== split: securityeval  (121 labelled cases)  target=datasets/securityeval/cases
+bandit          67 raw,   0 without CWE | total 0.25±0.01s (n=5), scan-only ≈0.10s, deterministic=True
+semgrep         70 raw,   0 without CWE | total 5.39±0.07s (n=5), scan-only ≈0.77s, deterministic=True
+semgrep_full    99 raw,  29 without CWE | total 22.37±0.12s (n=5), scan-only ≈1.50s, deterministic=True
+codeql          59 raw,   0 without CWE | total 27.54±0.56s (n=3), scan-only ≈8.67s, deterministic=True
+
+ENGINE                       RECALL [95% CI]        CWE-EXACT  E/R/I/M      REC-PREC  OFF  SAFE
+bandit                       0.405 [0.32-0.49]     0.190      23/7/19/72         nan    -   0/0
+semgrep                      0.397 [0.31-0.49]     0.207      25/7/16/73         nan    -   0/0
+semgrep_full                 0.397 [0.31-0.49]     0.207      25/7/16/73         nan    -   0/0
+codeql                       0.421 [0.34-0.51]     0.306      37/7/7/70         nan    -   0/0
+union(bandit+semgrep+codeql) 0.661 [0.57-0.74]     0.455      55/11/14/41         nan    -   0/0
+SARIF 2.1.0 schema validation (securityeval): PASS
+
+Evidence written to /home/claude/repo/graduation-project/evidence/20261110T235920Z (216 hashed files)

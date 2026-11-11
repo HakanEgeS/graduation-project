@@ -1,0 +1,704 @@
+[
+ {
+  "tool": "codeql",
+  "rule_id": "py/bad-tag-filter",
+  "file": "securityeval/CWE-116/codeql_1.py",
+  "line": 11,
+  "severity": "SCORE-7.8",
+  "cwes": [
+   "CWE-116",
+   "CWE-185",
+   "CWE-186",
+   "CWE-20"
+  ],
+  "message": "This regular expression does not match script end tags like </script >."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/unsafe-deserialization",
+  "file": "securityeval/CWE-020/codeql_2.py",
+  "line": 15,
+  "severity": "SCORE-9.8",
+  "cwes": [
+   "CWE-502"
+  ],
+  "message": "Unsafe deserialization depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/unsafe-deserialization",
+  "file": "securityeval/CWE-502/sonar_1.py",
+  "line": 11,
+  "severity": "SCORE-9.8",
+  "cwes": [
+   "CWE-502"
+  ],
+  "message": "Unsafe deserialization depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/xxe",
+  "file": "securityeval/CWE-611/author_1.py",
+  "line": 17,
+  "severity": "SCORE-9.1",
+  "cwes": [
+   "CWE-611",
+   "CWE-827"
+  ],
+  "message": "XML parsing depends on a [user-provided value](1) without guarding against external entity expansion."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/xxe",
+  "file": "securityeval/CWE-611/codeql_1.py",
+  "line": 13,
+  "severity": "SCORE-9.1",
+  "cwes": [
+   "CWE-611",
+   "CWE-827"
+  ],
+  "message": "XML parsing depends on a [user-provided value](1) without guarding against external entity expansion."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/stack-trace-exposure",
+  "file": "securityeval/CWE-209/codeql_1.py",
+  "line": 19,
+  "severity": "SCORE-5.4",
+  "cwes": [
+   "CWE-209",
+   "CWE-497"
+  ],
+  "message": "[Stack trace information](1) flows to this location and may be exposed to an external user."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/flask-debug",
+  "file": "securityeval/CWE-215/codeql_1.py",
+  "line": 12,
+  "severity": "SCORE-7.5",
+  "cwes": [
+   "CWE-215",
+   "CWE-489"
+  ],
+  "message": "A Flask app appears to be run in debug mode. This may allow an attacker to run arbitrary code through the debugger."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/insecure-temporary-file",
+  "file": "securityeval/CWE-377/codeql_1.py",
+  "line": 8,
+  "severity": "SCORE-7.0",
+  "cwes": [
+   "CWE-377"
+  ],
+  "message": "Call to deprecated function tempfile.mktemp may be insecure."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/insecure-temporary-file",
+  "file": "securityeval/CWE-379/sonar_1.py",
+  "line": 10,
+  "severity": "SCORE-7.0",
+  "cwes": [
+   "CWE-377"
+  ],
+  "message": "Call to deprecated function tempfile.mktemp may be insecure."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/xpath-injection",
+  "file": "securityeval/CWE-643/sonar_1.py",
+  "line": 17,
+  "severity": "SCORE-9.8",
+  "cwes": [
+   "CWE-643"
+  ],
+  "message": "XPath expression depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/reflective-xss",
+  "file": "securityeval/CWE-080/author_1.py",
+  "line": 12,
+  "severity": "SCORE-7.8",
+  "cwes": [
+   "CWE-116",
+   "CWE-79"
+  ],
+  "message": "Cross-site scripting vulnerability due to a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/reflective-xss",
+  "file": "securityeval/CWE-918/codeql_1.py",
+  "line": 14,
+  "severity": "SCORE-7.8",
+  "cwes": [
+   "CWE-116",
+   "CWE-79"
+  ],
+  "message": "Cross-site scripting vulnerability due to a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/reflective-xss",
+  "file": "securityeval/CWE-020/codeql_1.py",
+  "line": 10,
+  "severity": "SCORE-7.8",
+  "cwes": [
+   "CWE-116",
+   "CWE-79"
+  ],
+  "message": "Cross-site scripting vulnerability due to a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/reflective-xss",
+  "file": "securityeval/CWE-020/codeql_2.py",
+  "line": 16,
+  "severity": "SCORE-7.8",
+  "cwes": [
+   "CWE-116",
+   "CWE-79"
+  ],
+  "message": "Cross-site scripting vulnerability due to a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/reflective-xss",
+  "file": "securityeval/CWE-918/codeql_2.py",
+  "line": 17,
+  "severity": "SCORE-7.8",
+  "cwes": [
+   "CWE-116",
+   "CWE-79"
+  ],
+  "message": "Cross-site scripting vulnerability due to a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/reflective-xss",
+  "file": "securityeval/CWE-079/codeql_2.py",
+  "line": 12,
+  "severity": "SCORE-7.8",
+  "cwes": [
+   "CWE-116",
+   "CWE-79"
+  ],
+  "message": "Cross-site scripting vulnerability due to a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/reflective-xss",
+  "file": "securityeval/CWE-079/sonar_1.py",
+  "line": 14,
+  "severity": "SCORE-7.8",
+  "cwes": [
+   "CWE-116",
+   "CWE-79"
+  ],
+  "message": "Cross-site scripting vulnerability due to a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/ldap-injection",
+  "file": "securityeval/CWE-090/codeql_1.py",
+  "line": 22,
+  "severity": "SCORE-9.8",
+  "cwes": [
+   "CWE-90"
+  ],
+  "message": "LDAP query parameter (DN) depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/ldap-injection",
+  "file": "securityeval/CWE-090/codeql_1.py",
+  "line": 22,
+  "severity": "SCORE-9.8",
+  "cwes": [
+   "CWE-90"
+  ],
+  "message": "LDAP query parameter (filter) depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/ldap-injection",
+  "file": "securityeval/CWE-090/codeql_2.py",
+  "line": 22,
+  "severity": "SCORE-9.8",
+  "cwes": [
+   "CWE-90"
+  ],
+  "message": "LDAP query parameter (DN) depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/ldap-injection",
+  "file": "securityeval/CWE-090/codeql_2.py",
+  "line": 22,
+  "severity": "SCORE-9.8",
+  "cwes": [
+   "CWE-90"
+  ],
+  "message": "LDAP query parameter (filter) depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/insecure-cookie",
+  "file": "securityeval/CWE-319/author_1.py",
+  "line": 29,
+  "severity": "SCORE-5.0",
+  "cwes": [
+   "CWE-614"
+  ],
+  "message": "Cookie is added to response without the 'secure' flag being set."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/full-ssrf",
+  "file": "securityeval/CWE-918/codeql_1.py",
+  "line": 13,
+  "severity": "SCORE-9.1",
+  "cwes": [
+   "CWE-918"
+  ],
+  "message": "The full URL of this request depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/url-redirection",
+  "file": "securityeval/CWE-601/codeql_1.py",
+  "line": 12,
+  "severity": "SCORE-6.1",
+  "cwes": [
+   "CWE-601"
+  ],
+  "message": "Untrusted URL redirection depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/url-redirection",
+  "file": "securityeval/CWE-020/codeql_3.py",
+  "line": 17,
+  "severity": "SCORE-6.1",
+  "cwes": [
+   "CWE-601"
+  ],
+  "message": "Untrusted URL redirection depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/url-redirection",
+  "file": "securityeval/CWE-020/codeql_4.py",
+  "line": 13,
+  "severity": "SCORE-6.1",
+  "cwes": [
+   "CWE-601"
+  ],
+  "message": "Untrusted URL redirection depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/url-redirection",
+  "file": "securityeval/CWE-601/sonar_2.py",
+  "line": 12,
+  "severity": "SCORE-6.1",
+  "cwes": [
+   "CWE-601"
+  ],
+  "message": "Untrusted URL redirection depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/regex-injection",
+  "file": "securityeval/CWE-730/codeql_1.py",
+  "line": 13,
+  "severity": "SCORE-7.5",
+  "cwes": [
+   "CWE-400"
+  ],
+  "message": "This regular expression depends on a [user-provided value](1) and is executed by [re.search](2)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/regex-injection",
+  "file": "securityeval/CWE-730/codeql_2.py",
+  "line": 12,
+  "severity": "SCORE-7.5",
+  "cwes": [
+   "CWE-400"
+  ],
+  "message": "This regular expression depends on a [user-provided value](1) and is executed by [re.search](2)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/regex-injection",
+  "file": "securityeval/CWE-400/sonar_1.py",
+  "line": 18,
+  "severity": "SCORE-7.5",
+  "cwes": [
+   "CWE-400"
+  ],
+  "message": "This regular expression depends on a [user-provided value](1) and is executed by [re.search](2)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/weak-sensitive-data-hashing",
+  "file": "securityeval/CWE-327/codeql_3.py",
+  "line": 8,
+  "severity": "SCORE-7.5",
+  "cwes": [
+   "CWE-327",
+   "CWE-328",
+   "CWE-916"
+  ],
+  "message": "[Sensitive data (certificate)](1) is used in a hashing algorithm (MD5) that is insecure."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/weak-sensitive-data-hashing",
+  "file": "securityeval/CWE-327/codeql_4.py",
+  "line": 7,
+  "severity": "SCORE-7.5",
+  "cwes": [
+   "CWE-327",
+   "CWE-328",
+   "CWE-916"
+  ],
+  "message": "[Sensitive data (password)](1) is used in a hashing algorithm (SHA256) that is insecure for password hashing, since it is not a computationally expensive hash function."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/weak-sensitive-data-hashing",
+  "file": "securityeval/CWE-759/mitre_1.py",
+  "line": 9,
+  "severity": "SCORE-7.5",
+  "cwes": [
+   "CWE-327",
+   "CWE-328",
+   "CWE-916"
+  ],
+  "message": "[Sensitive data (password)](1) is used in a hashing algorithm (MD5) that is insecure for password hashing, since it is not a computationally expensive hash function."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/weak-sensitive-data-hashing",
+  "file": "securityeval/CWE-522/pearce_1.py",
+  "line": 17,
+  "severity": "SCORE-7.5",
+  "cwes": [
+   "CWE-327",
+   "CWE-328",
+   "CWE-916"
+  ],
+  "message": "[Sensitive data (password)](1) is used in a hashing algorithm (MD5) that is insecure for password hashing, since it is not a computationally expensive hash function."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/weak-cryptographic-algorithm",
+  "file": "securityeval/CWE-327/codeql_1.py",
+  "line": 10,
+  "severity": "SCORE-7.5",
+  "cwes": [
+   "CWE-327"
+  ],
+  "message": "[The cryptographic algorithm DES](1) is broken or weak, and should not be used."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/insecure-default-protocol",
+  "file": "securityeval/CWE-327/codeql_2.py",
+  "line": 11,
+  "severity": "SCORE-7.5",
+  "cwes": [
+   "CWE-327"
+  ],
+  "message": "Call to deprecated method ssl.wrap_socket does not specify a protocol, which may result in an insecure default being used."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/weak-crypto-key",
+  "file": "securityeval/CWE-326/author_1.py",
+  "line": 9,
+  "severity": "SCORE-7.5",
+  "cwes": [
+   "CWE-326"
+  ],
+  "message": "Creation of an RSA key uses [1024](1) bits, which is below 2048 and considered breakable."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/weak-crypto-key",
+  "file": "securityeval/CWE-326/author_2.py",
+  "line": 9,
+  "severity": "SCORE-7.5",
+  "cwes": [
+   "CWE-326"
+  ],
+  "message": "Creation of an DSA key uses [1024](1) bits, which is below 2048 and considered breakable."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/path-injection",
+  "file": "securityeval/CWE-022/author_1.py",
+  "line": 13,
+  "severity": "SCORE-7.5",
+  "cwes": [
+   "CWE-22",
+   "CWE-23",
+   "CWE-36",
+   "CWE-73",
+   "CWE-99"
+  ],
+  "message": "This path depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/path-injection",
+  "file": "securityeval/CWE-022/codeql_1.py",
+  "line": 13,
+  "severity": "SCORE-7.5",
+  "cwes": [
+   "CWE-22",
+   "CWE-23",
+   "CWE-36",
+   "CWE-73",
+   "CWE-99"
+  ],
+  "message": "This path depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/path-injection",
+  "file": "securityeval/CWE-434/pearce_1.py",
+  "line": 12,
+  "severity": "SCORE-7.5",
+  "cwes": [
+   "CWE-22",
+   "CWE-23",
+   "CWE-36",
+   "CWE-73",
+   "CWE-99"
+  ],
+  "message": "This path depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/path-injection",
+  "file": "securityeval/CWE-434/pearce_2.py",
+  "line": 15,
+  "severity": "SCORE-7.5",
+  "cwes": [
+   "CWE-22",
+   "CWE-23",
+   "CWE-36",
+   "CWE-73",
+   "CWE-99"
+  ],
+  "message": "This path depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/path-injection",
+  "file": "securityeval/CWE-099/sonar_1.py",
+  "line": 12,
+  "severity": "SCORE-7.5",
+  "cwes": [
+   "CWE-22",
+   "CWE-23",
+   "CWE-36",
+   "CWE-73",
+   "CWE-99"
+  ],
+  "message": "This path depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/path-injection",
+  "file": "securityeval/CWE-641/sonar_1.py",
+  "line": 13,
+  "severity": "SCORE-7.5",
+  "cwes": [
+   "CWE-22",
+   "CWE-23",
+   "CWE-36",
+   "CWE-73",
+   "CWE-99"
+  ],
+  "message": "This path depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/command-line-injection",
+  "file": "securityeval/CWE-116/author_1.py",
+  "line": 15,
+  "severity": "SCORE-9.8",
+  "cwes": [
+   "CWE-78",
+   "CWE-88"
+  ],
+  "message": "This command line depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/command-line-injection",
+  "file": "securityeval/CWE-078/codeql_1.py",
+  "line": 13,
+  "severity": "SCORE-9.8",
+  "cwes": [
+   "CWE-78",
+   "CWE-88"
+  ],
+  "message": "This command line depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/client-exposed-cookie",
+  "file": "securityeval/CWE-319/author_1.py",
+  "line": 29,
+  "severity": "SCORE-5.0",
+  "cwes": [
+   "CWE-1004"
+  ],
+  "message": "Sensitive server cookie is set without HttpOnly flag."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/bind-socket-all-network-interfaces",
+  "file": "securityeval/CWE-605/author_1.py",
+  "line": 9,
+  "severity": "SCORE-6.5",
+  "cwes": [
+   "CWE-200"
+  ],
+  "message": "Binding a socket to all interfaces (using ['0.0.0.0'](1)) is a security risk."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/incomplete-url-substring-sanitization",
+  "file": "securityeval/CWE-020/codeql_4.py",
+  "line": 12,
+  "severity": "SCORE-7.8",
+  "cwes": [
+   "CWE-20"
+  ],
+  "message": "The string [example.com](1) may be at an arbitrary position in the sanitized URL."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/incomplete-hostname-regexp",
+  "file": "securityeval/CWE-020/codeql_3.py",
+  "line": 15,
+  "severity": "SCORE-7.8",
+  "cwes": [
+   "CWE-20"
+  ],
+  "message": "This regular expression has an unescaped '.' before 'example.com/', so it might match more hosts than expected."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/code-injection",
+  "file": "securityeval/CWE-094/codeql_1.py",
+  "line": 13,
+  "severity": "SCORE-9.3",
+  "cwes": [
+   "CWE-116",
+   "CWE-94",
+   "CWE-95"
+  ],
+  "message": "This code execution depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/code-injection",
+  "file": "securityeval/CWE-094/sonar_1.py",
+  "line": 12,
+  "severity": "SCORE-9.3",
+  "cwes": [
+   "CWE-116",
+   "CWE-94",
+   "CWE-95"
+  ],
+  "message": "This code execution depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/xml-bomb",
+  "file": "securityeval/CWE-776/codeql_1.py",
+  "line": 14,
+  "severity": "SCORE-7.5",
+  "cwes": [
+   "CWE-400",
+   "CWE-776"
+  ],
+  "message": "XML parsing depends on a [user-provided value](1) without guarding against uncontrolled entity expansion."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/jinja2/autoescape-false",
+  "file": "securityeval/CWE-079/codeql_1.py",
+  "line": 13,
+  "severity": "SCORE-7.8",
+  "cwes": [
+   "CWE-79"
+  ],
+  "message": "Using jinja2 templates with autoescape=False can potentially allow XSS attacks."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/request-without-cert-validation",
+  "file": "securityeval/CWE-295/codeql_1.py",
+  "line": 4,
+  "severity": "SCORE-7.5",
+  "cwes": [
+   "CWE-295"
+  ],
+  "message": "This request may run without certificate validation because [it is disabled](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/partial-ssrf",
+  "file": "securityeval/CWE-918/codeql_2.py",
+  "line": 16,
+  "severity": "SCORE-9.1",
+  "cwes": [
+   "CWE-918"
+  ],
+  "message": "Part of the URL of this request depends on a [user-provided value](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/overly-permissive-file",
+  "file": "securityeval/CWE-732/author_1.py",
+  "line": 10,
+  "severity": "SCORE-7.8",
+  "cwes": [
+   "CWE-732"
+  ],
+  "message": "Overly permissive mask in chmod sets file to world readable."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/tarslip",
+  "file": "securityeval/CWE-022/codeql_2.py",
+  "line": 11,
+  "severity": "SCORE-7.5",
+  "cwes": [
+   "CWE-22"
+  ],
+  "message": "This file extraction depends on a [potentially untrusted source](1)."
+ },
+ {
+  "tool": "codeql",
+  "rule_id": "py/log-injection",
+  "file": "securityeval/CWE-117/codeql_1.py",
+  "line": 15,
+  "severity": "SCORE-6.1",
+  "cwes": [
+   "CWE-117"
+  ],
+  "message": "This log entry depends on a [user-provided value](1)."
+ }
+]

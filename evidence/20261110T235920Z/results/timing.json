@@ -1,0 +1,246 @@
+{
+ "startup": {
+  "bandit": {
+   "n": 3,
+   "mean": 0.147,
+   "sd": 0.004,
+   "min": 0.143,
+   "max": 0.151,
+   "runs": [
+    0.143,
+    0.146,
+    0.151
+   ]
+  },
+  "semgrep": {
+   "n": 3,
+   "mean": 4.622,
+   "sd": 0.049,
+   "min": 4.566,
+   "max": 4.654,
+   "runs": [
+    4.648,
+    4.654,
+    4.566
+   ]
+  },
+  "semgrep_full": {
+   "n": 3,
+   "mean": 20.874,
+   "sd": 0.227,
+   "min": 20.612,
+   "max": 21.006,
+   "runs": [
+    20.612,
+    21.005,
+    21.006
+   ]
+  },
+  "codeql": {
+   "n": 3,
+   "mean": 18.876,
+   "sd": 0.543,
+   "min": 18.453,
+   "max": 19.489,
+   "runs": [
+    18.688,
+    19.489,
+    18.453
+   ]
+  }
+ },
+ "splits": {
+  "dev": {
+   "bandit": {
+    "n": 5,
+    "mean": 0.15,
+    "sd": 0.002,
+    "min": 0.148,
+    "max": 0.152,
+    "runs": [
+     0.152,
+     0.148,
+     0.151,
+     0.149,
+     0.148
+    ],
+    "deterministic": true,
+    "scan_only_mean": 0.003
+   },
+   "semgrep": {
+    "n": 5,
+    "mean": 4.84,
+    "sd": 0.166,
+    "min": 4.601,
+    "max": 5.062,
+    "runs": [
+     4.601,
+     4.889,
+     5.062,
+     4.807,
+     4.842
+    ],
+    "deterministic": true,
+    "scan_only_mean": 0.218
+   },
+   "semgrep_full": {
+    "n": 5,
+    "mean": 20.921,
+    "sd": 0.338,
+    "min": 20.493,
+    "max": 21.289,
+    "runs": [
+     21.289,
+     21.242,
+     20.757,
+     20.493,
+     20.824
+    ],
+    "deterministic": true,
+    "scan_only_mean": 0.047
+   },
+   "codeql": {
+    "n": 3,
+    "mean": 20.614,
+    "sd": 0.303,
+    "min": 20.305,
+    "max": 20.91,
+    "runs": [
+     20.305,
+     20.91,
+     20.625
+    ],
+    "deterministic": true,
+    "scan_only_mean": 1.738
+   }
+  },
+  "holdout": {
+   "bandit": {
+    "n": 5,
+    "mean": 0.176,
+    "sd": 0.021,
+    "min": 0.158,
+    "max": 0.206,
+    "runs": [
+     0.164,
+     0.158,
+     0.161,
+     0.19,
+     0.206
+    ],
+    "deterministic": true,
+    "scan_only_mean": 0.029
+   },
+   "semgrep": {
+    "n": 5,
+    "mean": 4.76,
+    "sd": 0.08,
+    "min": 4.699,
+    "max": 4.895,
+    "runs": [
+     4.766,
+     4.726,
+     4.699,
+     4.713,
+     4.895
+    ],
+    "deterministic": true,
+    "scan_only_mean": 0.138
+   },
+   "semgrep_full": {
+    "n": 5,
+    "mean": 21.007,
+    "sd": 0.168,
+    "min": 20.818,
+    "max": 21.267,
+    "runs": [
+     20.818,
+     20.98,
+     21.049,
+     20.921,
+     21.267
+    ],
+    "deterministic": true,
+    "scan_only_mean": 0.133
+   },
+   "codeql": {
+    "n": 3,
+    "mean": 23.526,
+    "sd": 0.485,
+    "min": 23.032,
+    "max": 24.002,
+    "runs": [
+     23.032,
+     23.545,
+     24.002
+    ],
+    "deterministic": true,
+    "scan_only_mean": 4.65
+   }
+  },
+  "securityeval": {
+   "bandit": {
+    "n": 5,
+    "mean": 0.247,
+    "sd": 0.007,
+    "min": 0.24,
+    "max": 0.257,
+    "runs": [
+     0.243,
+     0.257,
+     0.253,
+     0.242,
+     0.24
+    ],
+    "deterministic": true,
+    "scan_only_mean": 0.1
+   },
+   "semgrep": {
+    "n": 5,
+    "mean": 5.395,
+    "sd": 0.066,
+    "min": 5.305,
+    "max": 5.471,
+    "runs": [
+     5.305,
+     5.405,
+     5.438,
+     5.356,
+     5.471
+    ],
+    "deterministic": true,
+    "scan_only_mean": 0.773
+   },
+   "semgrep_full": {
+    "n": 5,
+    "mean": 22.369,
+    "sd": 0.115,
+    "min": 22.237,
+    "max": 22.483,
+    "runs": [
+     22.463,
+     22.483,
+     22.402,
+     22.237,
+     22.258
+    ],
+    "deterministic": true,
+    "scan_only_mean": 1.495
+   },
+   "codeql": {
+    "n": 3,
+    "mean": 27.543,
+    "sd": 0.558,
+    "min": 26.907,
+    "max": 27.952,
+    "runs": [
+     26.907,
+     27.768,
+     27.952
+    ],
+    "deterministic": true,
+    "scan_only_mean": 8.667
+   }
+  }
+ }
+}

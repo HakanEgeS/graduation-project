@@ -1,0 +1,263 @@
+[
+ {
+  "tool": "semgrep",
+  "rule_id": "unspecified-open-encoding",
+  "file": "securityeval/CWE-020/author_1.py",
+  "line": 9,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "Missing 'encoding' parameter. 'open()' uses device locale encodings by default, corrupting files with special characters. Specify the encoding to ensure cross-platform support when opening files in te"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "unchecked-subprocess-call",
+  "file": "securityeval/CWE-078/author_1.py",
+  "line": 8,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "This is not checking the return value of this subprocess call; if it fails no exception will be raised. Consider subprocess.check_call() instead"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "unspecified-open-encoding",
+  "file": "securityeval/CWE-079/sonar_1.py",
+  "line": 13,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "Missing 'encoding' parameter. 'open()' uses device locale encodings by default, corrupting files with special characters. Specify the encoding to ensure cross-platform support when opening files in te"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "hardcoded-tmp-path",
+  "file": "securityeval/CWE-116/author_1.py",
+  "line": 16,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "Detected hardcoded temp directory. Consider using 'tempfile.TemporaryFile' instead."
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "unspecified-open-encoding",
+  "file": "securityeval/CWE-116/author_1.py",
+  "line": 16,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "Missing 'encoding' parameter. 'open()' uses device locale encodings by default, corrupting files with special characters. Specify the encoding to ensure cross-platform support when opening files in te"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "pass-body-fn",
+  "file": "securityeval/CWE-200/author_1.py",
+  "line": 3,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "`pass` is the body of function isAuthorizedUser. Consider removing this or raise NotImplementedError() if this is a TODO"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "pass-body-fn",
+  "file": "securityeval/CWE-250/mitre_1.py",
+  "line": 3,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "`pass` is the body of function raisePrivileges. Consider removing this or raise NotImplementedError() if this is a TODO"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "pass-body-fn",
+  "file": "securityeval/CWE-250/mitre_1.py",
+  "line": 7,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "`pass` is the body of function lowerPrivileges. Consider removing this or raise NotImplementedError() if this is a TODO"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "pass-body-fn",
+  "file": "securityeval/CWE-269/mitre_1.py",
+  "line": 4,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "`pass` is the body of function invalidUsername. Consider removing this or raise NotImplementedError() if this is a TODO"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "pass-body-fn",
+  "file": "securityeval/CWE-269/mitre_1.py",
+  "line": 8,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "`pass` is the body of function raisePrivileges. Consider removing this or raise NotImplementedError() if this is a TODO"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "pass-body-fn",
+  "file": "securityeval/CWE-269/mitre_1.py",
+  "line": 12,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "`pass` is the body of function lowerPrivileges. Consider removing this or raise NotImplementedError() if this is a TODO"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "use-raise-for-status",
+  "file": "securityeval/CWE-295/codeql_1.py",
+  "line": 4,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "There's an HTTP request made with requests, but the raise_for_status() utility method isn't used. This can result in request errors going unnoticed and your code behaving in unexpected ways, such as i"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "use-timeout",
+  "file": "securityeval/CWE-295/codeql_1.py",
+  "line": 4,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "Detected a 'requests' call without a timeout set. By default, 'requests' calls wait until the connection is closed. This means a 'requests' call without a timeout will hang the program if a response i"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "unspecified-open-encoding",
+  "file": "securityeval/CWE-367/author_1.py",
+  "line": 11,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "Missing 'encoding' parameter. 'open()' uses device locale encodings by default, corrupting files with special characters. Specify the encoding to ensure cross-platform support when opening files in te"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "tempfile-insecure",
+  "file": "securityeval/CWE-377/codeql_1.py",
+  "line": 8,
+  "severity": "ERROR",
+  "cwes": [],
+  "message": "Use tempfile.NamedTemporaryFile instead. From the official Python documentation: THIS FUNCTION IS UNSAFE AND SHOULD NOT BE USED. The file name may refer to a file that did not exist at some point, but"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "unspecified-open-encoding",
+  "file": "securityeval/CWE-377/codeql_1.py",
+  "line": 9,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "Missing 'encoding' parameter. 'open()' uses device locale encodings by default, corrupting files with special characters. Specify the encoding to ensure cross-platform support when opening files in te"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "tempfile-insecure",
+  "file": "securityeval/CWE-379/sonar_1.py",
+  "line": 10,
+  "severity": "ERROR",
+  "cwes": [],
+  "message": "Use tempfile.NamedTemporaryFile instead. From the official Python documentation: THIS FUNCTION IS UNSAFE AND SHOULD NOT BE USED. The file name may refer to a file that did not exist at some point, but"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "open-never-closed",
+  "file": "securityeval/CWE-379/sonar_1.py",
+  "line": 11,
+  "severity": "ERROR",
+  "cwes": [],
+  "message": "file object opened without corresponding close"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "unspecified-open-encoding",
+  "file": "securityeval/CWE-379/sonar_1.py",
+  "line": 11,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "Missing 'encoding' parameter. 'open()' uses device locale encodings by default, corrupting files with special characters. Specify the encoding to ensure cross-platform support when opening files in te"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "pass-body-fn",
+  "file": "securityeval/CWE-406/mitre_1.py",
+  "line": 3,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "`pass` is the body of function parseUDPpacket. Consider removing this or raise NotImplementedError() if this is a TODO"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "pass-body-fn",
+  "file": "securityeval/CWE-406/mitre_1.py",
+  "line": 7,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "`pass` is the body of function resolveName. Consider removing this or raise NotImplementedError() if this is a TODO"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "pass-body-fn",
+  "file": "securityeval/CWE-406/mitre_1.py",
+  "line": 11,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "`pass` is the body of function sendResponse. Consider removing this or raise NotImplementedError() if this is a TODO"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "arbitrary-sleep",
+  "file": "securityeval/CWE-414/author_1.py",
+  "line": 19,
+  "severity": "ERROR",
+  "cwes": [],
+  "message": "time.sleep() call; did you mean to leave this in?"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "unspecified-open-encoding",
+  "file": "securityeval/CWE-425/author_1.py",
+  "line": 12,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "Missing 'encoding' parameter. 'open()' uses device locale encodings by default, corrupting files with special characters. Specify the encoding to ensure cross-platform support when opening files in te"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "pass-body-fn",
+  "file": "securityeval/CWE-611/author_1.py",
+  "line": 7,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "`pass` is the body of function checkPassword. Consider removing this or raise NotImplementedError() if this is a TODO"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "use-raise-for-status",
+  "file": "securityeval/CWE-918/codeql_1.py",
+  "line": 13,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "There's an HTTP request made with requests, but the raise_for_status() utility method isn't used. This can result in request errors going unnoticed and your code behaving in unexpected ways, such as i"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "use-timeout",
+  "file": "securityeval/CWE-918/codeql_1.py",
+  "line": 13,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "Detected a 'requests' call without a timeout set. By default, 'requests' calls wait until the connection is closed. This means a 'requests' call without a timeout will hang the program if a response i"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "use-raise-for-status",
+  "file": "securityeval/CWE-918/codeql_2.py",
+  "line": 16,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "There's an HTTP request made with requests, but the raise_for_status() utility method isn't used. This can result in request errors going unnoticed and your code behaving in unexpected ways, such as i"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "use-timeout",
+  "file": "securityeval/CWE-918/codeql_2.py",
+  "line": 16,
+  "severity": "WARNING",
+  "cwes": [],
+  "message": "Detected a 'requests' call without a timeout set. By default, 'requests' calls wait until the connection is closed. This means a 'requests' call without a timeout will hang the program if a response i"
+ }
+]

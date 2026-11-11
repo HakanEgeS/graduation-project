@@ -1,0 +1,156 @@
+[
+ {
+  "tool": "semgrep",
+  "rule_id": "formatted-sql-query",
+  "file": "dev/vuln/v01_sqli.py",
+  "line": 4,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-89"
+  ],
+  "message": "Detected possible formatted SQL query. Use parameterized queries instead."
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "sqlalchemy-execute-raw-query",
+  "file": "dev/vuln/v01_sqli.py",
+  "line": 4,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-89"
+  ],
+  "message": "Avoiding SQL string concatenation: untrusted input concatenated with raw SQL query can result in SQL Injection. In order to execute raw query safely, prepared statement should be used. SQLAlchemy prov"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "dangerous-subprocess-use-audit",
+  "file": "dev/vuln/v02_cmdi.py",
+  "line": 3,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Detected subprocess function 'check_output' without a static string. If this data can be controlled by a malicious actor, it may be an instance of command injection. Audit the use of this call to ensu"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "subprocess-shell-true",
+  "file": "dev/vuln/v02_cmdi.py",
+  "line": 3,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Found 'subprocess' function 'check_output' with 'shell=True'. This is dangerous because this call will spawn the command using a shell process. Doing so propagates current shell settings and variables"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "avoid-pickle",
+  "file": "dev/vuln/v03_pickle.py",
+  "line": 3,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-502"
+  ],
+  "message": "Avoid using `pickle`, which is known to lead to code execution vulnerabilities. When unpickling, the serialized data could be manipulated to run arbitrary code. Instead, consider serializing the relev"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "insecure-hash-algorithm-md5__lang-security",
+  "file": "dev/vuln/v05_weak_hash.py",
+  "line": 3,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-327"
+  ],
+  "message": "Detected MD5 hash algorithm which is considered insecure. MD5 is not collision resistant and is therefore not suitable as a cryptographic signature. Use SHA256 or SHA3 instead."
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "directly-returned-format-string",
+  "file": "dev/vuln/v07_xss.py",
+  "line": 6,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-79"
+  ],
+  "message": "Detected Flask route directly returning a formatted string. This is subject to cross-site scripting if user input can reach the string. Consider using the template engine instead and rendering pages w"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "raw-html-format",
+  "file": "dev/vuln/v07_xss.py",
+  "line": 6,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-79"
+  ],
+  "message": "Detected user input flowing into a manually constructed HTML string. You may be accidentally bypassing secure methods of rendering HTML by manually constructing HTML and this could create a cross-site"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "raw-html-format__flask-security-injection",
+  "file": "dev/vuln/v07_xss.py",
+  "line": 6,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-79"
+  ],
+  "message": "Detected user input flowing into a manually constructed HTML string. You may be accidentally bypassing secure methods of rendering HTML by manually constructing HTML and this could create a cross-site"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "eval-detected",
+  "file": "dev/vuln/v08_eval.py",
+  "line": 2,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-95"
+  ],
+  "message": "Detected the use of eval(). eval() can be dangerous if used to evaluate dynamic content. If this content can be input from outside the program, this may be a code injection vulnerability. Ensure evalu"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "disabled-cert-validation__requests-security",
+  "file": "dev/vuln/v09_tls_verify.py",
+  "line": 3,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-295"
+  ],
+  "message": "Certificate verification has been explicitly disabled. This permits insecure connections to insecure servers. Re-enable certification validation."
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "avoid-pyyaml-load",
+  "file": "dev/vuln/v10_yaml_load.py",
+  "line": 3,
+  "severity": "ERROR",
+  "cwes": [
+   "CWE-502"
+  ],
+  "message": "Detected a possible YAML deserialization vulnerability. `yaml.unsafe_load`, `yaml.Loader`, `yaml.CLoader`, and `yaml.UnsafeLoader` are all known to be unsafe methods of deserializing YAML. An attacker"
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "avoid_app_run_with_bad_host",
+  "file": "dev/vuln/v12_flask_debug.py",
+  "line": 4,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-668"
+  ],
+  "message": "Running flask app with host 0.0.0.0 could expose the server publicly."
+ },
+ {
+  "tool": "semgrep",
+  "rule_id": "debug-enabled",
+  "file": "dev/vuln/v12_flask_debug.py",
+  "line": 4,
+  "severity": "WARNING",
+  "cwes": [
+   "CWE-489"
+  ],
+  "message": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled as it will leak sensitive information. Instead, consider using Flask configuration variables or setting 'debug' u"
+ }
+]

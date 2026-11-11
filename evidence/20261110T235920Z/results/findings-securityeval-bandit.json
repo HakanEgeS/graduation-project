@@ -1,0 +1,739 @@
+[
+ {
+  "tool": "bandit",
+  "rule_id": "B506",
+  "file": "securityeval/CWE-020/author_1.py",
+  "line": 10,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-20"
+  ],
+  "message": "Use of unsafe yaml load. Allows instantiation of arbitrary objects. Consider yaml.safe_load()."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B405",
+  "file": "securityeval/CWE-020/author_2.py",
+  "line": 1,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-20"
+  ],
+  "message": "Using xml.etree.ElementTree to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B314",
+  "file": "securityeval/CWE-020/author_2.py",
+  "line": 8,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-20"
+  ],
+  "message": "Using xml.etree.ElementTree.fromstring to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.fromstring with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called"
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B403",
+  "file": "securityeval/CWE-020/codeql_2.py",
+  "line": 2,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-502"
+  ],
+  "message": "Consider possible security implications associated with pickle module."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B301",
+  "file": "securityeval/CWE-020/codeql_2.py",
+  "line": 15,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-502"
+  ],
+  "message": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B310",
+  "file": "securityeval/CWE-022/author_2.py",
+  "line": 8,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-22"
+  ],
+  "message": "Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B108",
+  "file": "securityeval/CWE-022/codeql_2.py",
+  "line": 11,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-377"
+  ],
+  "message": "Probable insecure usage of temp file/directory."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B404",
+  "file": "securityeval/CWE-078/author_1.py",
+  "line": 1,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Consider possible security implications associated with the subprocess module."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B602",
+  "file": "securityeval/CWE-078/author_1.py",
+  "line": 8,
+  "severity": "HIGH",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "subprocess call with shell=True identified, security issue."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B605",
+  "file": "securityeval/CWE-078/codeql_1.py",
+  "line": 13,
+  "severity": "HIGH",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Starting a process with a shell, possible injection detected, security issue."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B701",
+  "file": "securityeval/CWE-079/codeql_1.py",
+  "line": 13,
+  "severity": "HIGH",
+  "cwes": [
+   "CWE-94"
+  ],
+  "message": "By default, jinja2 sets autoescape to False. Consider using autoescape=True or use the select_autoescape function to mitigate XSS vulnerabilities."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B106",
+  "file": "securityeval/CWE-089/author_1.py",
+  "line": 8,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-259"
+  ],
+  "message": "Possible hardcoded password: ''"
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B608",
+  "file": "securityeval/CWE-089/author_1.py",
+  "line": 16,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-89"
+  ],
+  "message": "Possible SQL injection vector through string-based query construction."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B106",
+  "file": "securityeval/CWE-089/codeql_1.py",
+  "line": 7,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-259"
+  ],
+  "message": "Possible hardcoded password: ''"
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B608",
+  "file": "securityeval/CWE-089/codeql_1.py",
+  "line": 16,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-89"
+  ],
+  "message": "Possible SQL injection vector through string-based query construction."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B102",
+  "file": "securityeval/CWE-094/codeql_1.py",
+  "line": 13,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Use of exec detected."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B102",
+  "file": "securityeval/CWE-094/sonar_1.py",
+  "line": 12,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Use of exec detected."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B307",
+  "file": "securityeval/CWE-095/author_1.py",
+  "line": 5,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Use of possibly insecure function - consider using safer ast.literal_eval."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B605",
+  "file": "securityeval/CWE-116/author_1.py",
+  "line": 15,
+  "severity": "HIGH",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Starting a process with a shell, possible injection detected, security issue."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B108",
+  "file": "securityeval/CWE-116/author_1.py",
+  "line": 16,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-377"
+  ],
+  "message": "Probable insecure usage of temp file/directory."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B413",
+  "file": "securityeval/CWE-1204/sonar_1.py",
+  "line": 1,
+  "severity": "HIGH",
+  "cwes": [
+   "CWE-327"
+  ],
+  "message": "The pyCrypto library and its module AES are no longer actively maintained and have been deprecated. Consider using pyca/cryptography library."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B413",
+  "file": "securityeval/CWE-1204/sonar_1.py",
+  "line": 2,
+  "severity": "HIGH",
+  "cwes": [
+   "CWE-327"
+  ],
+  "message": "The pyCrypto library and its module pad are no longer actively maintained and have been deprecated. Consider using pyca/cryptography library."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B608",
+  "file": "securityeval/CWE-200/author_1.py",
+  "line": 14,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-89"
+  ],
+  "message": "Possible SQL injection vector through string-based query construction."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B201",
+  "file": "securityeval/CWE-215/codeql_1.py",
+  "line": 12,
+  "severity": "HIGH",
+  "cwes": [
+   "CWE-94"
+  ],
+  "message": "A Flask app appears to be run with debug=True, which exposes the Werkzeug debugger and allows the execution of arbitrary code."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B105",
+  "file": "securityeval/CWE-259/author_1.py",
+  "line": 5,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-259"
+  ],
+  "message": "Possible hardcoded password: 'admin'"
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B106",
+  "file": "securityeval/CWE-259/author_2.py",
+  "line": 8,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-259"
+  ],
+  "message": "Possible hardcoded password: 'password'"
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B501",
+  "file": "securityeval/CWE-295/codeql_1.py",
+  "line": 4,
+  "severity": "HIGH",
+  "cwes": [
+   "CWE-295"
+  ],
+  "message": "Call to requests with verify=False disabling SSL certificate checks, security issue."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B113",
+  "file": "securityeval/CWE-295/codeql_1.py",
+  "line": 4,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-400"
+  ],
+  "message": "Call to requests without timeout"
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B402",
+  "file": "securityeval/CWE-319/author_2.py",
+  "line": 1,
+  "severity": "HIGH",
+  "cwes": [
+   "CWE-319"
+  ],
+  "message": "A FTP-related module is being imported.  FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B321",
+  "file": "securityeval/CWE-319/author_2.py",
+  "line": 11,
+  "severity": "HIGH",
+  "cwes": [
+   "CWE-319"
+  ],
+  "message": "FTP-related functions are being called. FTP is considered insecure. Use SSH/SFTP/SCP or some other encrypted protocol."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B413",
+  "file": "securityeval/CWE-326/author_1.py",
+  "line": 1,
+  "severity": "HIGH",
+  "cwes": [
+   "CWE-327"
+  ],
+  "message": "The pyCrypto library and its module RSA are no longer actively maintained and have been deprecated. Consider using pyca/cryptography library."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B505",
+  "file": "securityeval/CWE-326/author_1.py",
+  "line": 9,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-326"
+  ],
+  "message": "RSA key sizes below 2048 bits are considered breakable. "
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B413",
+  "file": "securityeval/CWE-326/author_2.py",
+  "line": 1,
+  "severity": "HIGH",
+  "cwes": [
+   "CWE-327"
+  ],
+  "message": "The pyCrypto library and its module DSA are no longer actively maintained and have been deprecated. Consider using pyca/cryptography library."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B505",
+  "file": "securityeval/CWE-326/author_2.py",
+  "line": 9,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-326"
+  ],
+  "message": "DSA key sizes below 2048 bits are considered breakable. "
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B413",
+  "file": "securityeval/CWE-327/codeql_1.py",
+  "line": 1,
+  "severity": "HIGH",
+  "cwes": [
+   "CWE-327"
+  ],
+  "message": "The pyCrypto library and its module * are no longer actively maintained and have been deprecated. Consider using pyca/cryptography library."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B504",
+  "file": "securityeval/CWE-327/codeql_2.py",
+  "line": 11,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-327"
+  ],
+  "message": "ssl.wrap_socket call with no SSL/TLS protocol version specified, the default SSLv23 could be insecure, possible security issue."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B324",
+  "file": "securityeval/CWE-327/codeql_3.py",
+  "line": 8,
+  "severity": "HIGH",
+  "cwes": [
+   "CWE-327"
+  ],
+  "message": "Use of weak MD5 hash for security. Consider usedforsecurity=False"
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B311",
+  "file": "securityeval/CWE-330/author_1.py",
+  "line": 8,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-330"
+  ],
+  "message": "Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B311",
+  "file": "securityeval/CWE-331/author_1.py",
+  "line": 9,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-330"
+  ],
+  "message": "Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B311",
+  "file": "securityeval/CWE-339/mitre_1.py",
+  "line": 11,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-330"
+  ],
+  "message": "Standard pseudo-random generators are not suitable for security/cryptographic purposes."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B306",
+  "file": "securityeval/CWE-377/codeql_1.py",
+  "line": 8,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-377"
+  ],
+  "message": "Use of insecure and deprecated function (mktemp)."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B306",
+  "file": "securityeval/CWE-379/sonar_1.py",
+  "line": 10,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-377"
+  ],
+  "message": "Use of insecure and deprecated function (mktemp)."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B105",
+  "file": "securityeval/CWE-454/author_1.py",
+  "line": 11,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-259"
+  ],
+  "message": "Possible hardcoded password: 'admin'"
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B403",
+  "file": "securityeval/CWE-502/author_1.py",
+  "line": 1,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-502"
+  ],
+  "message": "Consider possible security implications associated with pickle module."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B403",
+  "file": "securityeval/CWE-502/codeql_1.py",
+  "line": 2,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-502"
+  ],
+  "message": "Consider possible security implications associated with pickle module."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B301",
+  "file": "securityeval/CWE-502/codeql_1.py",
+  "line": 9,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-502"
+  ],
+  "message": "Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B506",
+  "file": "securityeval/CWE-502/sonar_1.py",
+  "line": 11,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-20"
+  ],
+  "message": "Use of unsafe yaml load. Allows instantiation of arbitrary objects. Consider yaml.safe_load()."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B105",
+  "file": "securityeval/CWE-521/sonar_2.py",
+  "line": 11,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-259"
+  ],
+  "message": "Possible hardcoded password: ''"
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B106",
+  "file": "securityeval/CWE-522/author_1.py",
+  "line": 9,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-259"
+  ],
+  "message": "Possible hardcoded password: ''"
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B324",
+  "file": "securityeval/CWE-522/pearce_1.py",
+  "line": 17,
+  "severity": "HIGH",
+  "cwes": [
+   "CWE-327"
+  ],
+  "message": "Use of weak MD5 hash for security. Consider usedforsecurity=False"
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B106",
+  "file": "securityeval/CWE-522/pearce_1.py",
+  "line": 18,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-259"
+  ],
+  "message": "Possible hardcoded password: ''"
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B104",
+  "file": "securityeval/CWE-605/author_1.py",
+  "line": 9,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-605"
+  ],
+  "message": "Possible binding to all interfaces."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B406",
+  "file": "securityeval/CWE-611/sonar_4.py",
+  "line": 1,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-20"
+  ],
+  "message": "Using xml.sax to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.sax with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B317",
+  "file": "securityeval/CWE-611/sonar_4.py",
+  "line": 7,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-20"
+  ],
+  "message": "Using xml.sax.make_parser to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.sax.make_parser with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called"
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B405",
+  "file": "securityeval/CWE-643/sonar_1.py",
+  "line": 2,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-20"
+  ],
+  "message": "Using xml.etree.ElementTree to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B314",
+  "file": "securityeval/CWE-643/sonar_1.py",
+  "line": 4,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-20"
+  ],
+  "message": "Using xml.etree.ElementTree.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.parse with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called"
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B101",
+  "file": "securityeval/CWE-703/author_3.py",
+  "line": 6,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-703"
+  ],
+  "message": "Use of assert detected. The enclosed code will be removed when compiling to optimised byte code."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B103",
+  "file": "securityeval/CWE-732/author_1.py",
+  "line": 10,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-732"
+  ],
+  "message": "Chmod setting a permissive mask 0o755 on file (test.bin)."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B605",
+  "file": "securityeval/CWE-732/author_1.py",
+  "line": 11,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Starting a process with a shell: Seems safe, but may be changed in the future, consider rewriting without shell"
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B607",
+  "file": "securityeval/CWE-732/author_1.py",
+  "line": 11,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-78"
+  ],
+  "message": "Starting a process with a partial executable path"
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B324",
+  "file": "securityeval/CWE-759/mitre_1.py",
+  "line": 8,
+  "severity": "HIGH",
+  "cwes": [
+   "CWE-327"
+  ],
+  "message": "Use of weak MD5 hash for security. Consider usedforsecurity=False"
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B405",
+  "file": "securityeval/CWE-776/codeql_1.py",
+  "line": 2,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-20"
+  ],
+  "message": "Using xml.etree.ElementTree to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree with the equivalent defusedxml package, or make sure defusedxml.defuse_stdlib() is called."
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B314",
+  "file": "securityeval/CWE-776/codeql_1.py",
+  "line": 14,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-20"
+  ],
+  "message": "Using xml.etree.ElementTree.fromstring to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.fromstring with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called"
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B106",
+  "file": "securityeval/CWE-798/author_1.py",
+  "line": 7,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-259"
+  ],
+  "message": "Possible hardcoded password: 'password'"
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B105",
+  "file": "securityeval/CWE-798/codeql_1.py",
+  "line": 12,
+  "severity": "LOW",
+  "cwes": [
+   "CWE-259"
+  ],
+  "message": "Possible hardcoded password: 'myPa55word'"
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B113",
+  "file": "securityeval/CWE-918/codeql_1.py",
+  "line": 13,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-400"
+  ],
+  "message": "Call to requests without timeout"
+ },
+ {
+  "tool": "bandit",
+  "rule_id": "B113",
+  "file": "securityeval/CWE-918/codeql_2.py",
+  "line": 16,
+  "severity": "MEDIUM",
+  "cwes": [
+   "CWE-400"
+  ],
+  "message": "Call to requests without timeout"
+ }
+]
