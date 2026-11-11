@@ -195,6 +195,8 @@ def main() -> int:
     import shutil
     shutil.rmtree(work, ignore_errors=True)
     inputs = sorted(p for s in a.splits for p in [SPLITS[s][1], *SPLITS[s][0].rglob("*.py")])
+    log(f"\nEvidence written to {out} (SHA256SUMS covers outputs and inputs)")
+    log.fh.close()
     lines = []
     for p in sorted(out.rglob("*")) + inputs:
         if p.is_file() and p.name != "SHA256SUMS":
@@ -202,7 +204,7 @@ def main() -> int:
             rel = p.relative_to(out) if out in p.parents else Path("REPO") / p.relative_to(ROOT)
             lines.append(f"{h}  {rel.as_posix()}")
     (out / "SHA256SUMS").write_text("\n".join(lines) + "\n")
-    log(f"\nEvidence written to {out} ({len(lines)} hashed files)")
+    print(f"{len(lines)} files hashed")   # console only: console.log is already closed and hashed
     return 0
 
 

@@ -6,7 +6,7 @@ object that matches VERDICT_SCHEMA. Nothing else is sent.
 
 Safeguards
 * Privacy: a non-local endpoint is refused unless --allow-hosted is given AND every
-  finding comes from a synthetic or public dataset root (PUBLIC_ROOTS).
+  finding resolves inside the synthetic or public data folders (PUBLIC_DIRS).
 * Reproducibility: temperature 0 and a fixed seed by default; the exact model name,
   the model digest reported by Ollama (when available), all parameters, the full
   prompt, its SHA-256, the raw response, the parsed verdict and the latency are
@@ -31,7 +31,6 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parent.parent
-PUBLIC_ROOTS = ("dev/", "holdout/", "securityeval/")   # synthetic (own) or public datasets
 CONTEXT_LINES = 8
 
 VERDICT_SCHEMA = {
@@ -81,13 +80,23 @@ def build_prompt(rec: dict, src_root: Path) -> str:
     )
 
 
-def check_privacy(endpoint: str, records: list[dict], allow_hosted: bool) -> None:
+PUBLIC_DIRS = (ROOT / "bench", ROOT / "datasets" / "securityeval")   # synthetic (own) or public code
+
+
+def check_privacy(endpoint: str, records: list[dict], allow_hosted: bool, src_root: Path) -> None:
+    """Local endpoints are always allowed. A hosted endpoint needs --allow-hosted AND every
+    finding's file must resolve inside one of PUBLIC_DIRS (checked on the real path, so a
+    folder that merely happens to be called 'dev/' elsewhere does not pass)."""
     host = urlparse(endpoint).hostname or ""
     if host in ("localhost", "127.0.0.1", "::1"):
         return
     if not allow_hosted:
         raise SystemExit(f"Refusing hosted endpoint {host}: pass --allow-hosted (synthetic/public code only).")
-    private = [r["file"] for r in records if not r["file"].startswith(PUBLIC_ROOTS)]
+    private = []
+    for r in records:
+        real = (src_root / r["file"]).resolve()
+        if not any(real.is_relative_to(d.resolve()) for d in PUBLIC_DIRS):
+            private.append(r["file"])
     if private:
         raise SystemExit(f"Refusing to send non-public code to {host}: {private[:3]} ...")
 
@@ -153,7 +162,7 @@ def main() -> int:
 
     records = json.loads(a.findings.read_text())[: a.limit]
     if a.backend == "openai":
-        check_privacy(a.endpoint, records, a.allow_hosted)
+        check_privacy(a.endpoint, records, a.allow_hosted, a.root)
     run_id = dt.datetime.now(dt.timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     out = a.out or ROOT / "llm_logs" / f"{run_id}-{a.findings.stem}.jsonl"
     out.parent.mkdir(parents=True, exist_ok=True)
